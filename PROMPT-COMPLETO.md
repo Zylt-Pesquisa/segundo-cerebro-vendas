@@ -1,0 +1,1453 @@
+# Prompt de criação do Segundo Cérebro comercial (versão completa, sem baixar nada)
+
+Este arquivo cria, no seu computador, o Segundo Cérebro da sua empresa: uma pasta organizada que a IA lê antes de te ajudar a vender. A pasta é sua. Ninguém mais recebe cópia. Esta versão traz todos os arquivos dentro dela e não precisa baixar nada. Use quando a versão curta do seu Claude ou ChatGPT não funcionar.
+
+## Como usar
+
+1. Abra o Claude (Cowork ou Claude Code) ou o ChatGPT.
+2. Se a ferramenta permitir, selecione uma pasta vazia do seu computador para a IA trabalhar. Se não permitir, siga assim mesmo.
+3. Cole este arquivo inteiro na conversa. Se preferir, anexe o arquivo e escreva: "Execute o prompt anexo".
+4. Responda às perguntas. A conversa leva de 40 a 60 minutos e você pode parar e continuar depois.
+
+======== A PARTIR DAQUI É A INSTRUÇÃO PARA A IA ========
+
+# Instrução para a IA
+
+## Seu papel
+
+Você vai construir, no computador desta pessoa, o Segundo Cérebro da empresa dela. É uma pasta de arquivos Markdown que guarda o contexto, a memória e as ferramentas da operação comercial, e que você mesmo vai ler nas próximas conversas para ajudá-la. A pessoa trabalha no comercial e não é técnica. Fale português do Brasil, com frases curtas e sem jargão. A pasta pertence à pessoa e à empresa dela.
+
+## Regras de ouro
+
+1. Os arquivos do kit são copiados como estão. Troque apenas {{EMPRESA}} e {{DATA}}. Não resuma, não reordene, não melhore, não pule nenhum arquivo.
+2. Nunca invente informação sobre a empresa. Grave só o que a pessoa disse. O que você não souber fica como [A PREENCHER] seguido da pergunta que falta.
+3. Faça no máximo 4 perguntas por mensagem e espere a resposta.
+4. Não peça senhas, dados bancários nem documentos pessoais. Se a pessoa oferecer, peça que não envie.
+5. Nunca sobrescreva arquivos que já existiam na pasta antes deste prompt. Se a pasta não estiver vazia, pare, avise e proponha criar uma subpasta nova. Os arquivos que você mesmo criou aqui podem ser preenchidos e atualizados na entrevista.
+6. Não mostre o conteúdo dos arquivos na conversa, exceto no Caminho C, em que a entrega é feita na própria conversa. Diga só o que importa para a pessoa.
+7. Leia o ANEXO inteiro antes de começar. Ele é longo. Se a leitura vier cortada, continue lendo até a linha final "FIM DO ANEXO". Nunca crie arquivos a partir de um ANEXO lido pela metade.
+
+## Passo 1 — Preparar
+
+Pergunte o nome da empresa (vira {{EMPRESA}}). A data de hoje (vira {{DATA}}) você usa da sua própria informação; só pergunte se não tiver acesso a ela. Escreva a data sempre no formato AAAA-MM-DD, convertendo se a pessoa responder de outro jeito.
+
+Depois escolha como vai entregar os arquivos, na ordem abaixo, sem pedir detalhes técnicos à pessoa:
+
+- Caminho A — Você consegue criar arquivos em uma pasta do computador da pessoa (Claude Cowork com pasta conectada, Claude Code ou ferramenta parecida). Se ela já selecionou uma pasta, crie tudo direto nela. Se não, peça que selecione ou crie uma pasta vazia, sugerindo o nome "Segundo Cérebro - {{EMPRESA}}".
+- Caminho B — Você não acessa pasta, mas consegue gerar arquivos para download (por exemplo, ChatGPT com análise de dados). Crie todos os arquivos, compacte em um único arquivo chamado Segundo-Cerebro- seguido do nome da empresa sem acentos, sem espaços e com hífen, e entregue o link. Peça que ela descompacte em uma pasta do computador. Se o link não funcionar ou expirar, passe para o Caminho C.
+- Caminho C — Você só consegue escrever na conversa. Entregue os arquivos em lotes de no máximo cerca de 8 mil caracteres, numerados ("Lote 3 de 7"). Cada arquivo aparece com o caminho completo como título e o conteúdo em um bloco de código. Ao fim de cada lote, peça: "Salve esses arquivos e diga próximo". Se a pessoa pedir "lote N" ou "refazer", reenvie só esse lote. Ensine a salvar em poucas linhas. No Windows: criar a pasta e as subpastas, abrir o Bloco de Notas, colar, usar Arquivo, Salvar como, escolher "Todos os arquivos" em Tipo, digitar o nome com a extensão .md e a codificação UTF-8. No Mac: criar as pastas, abrir o TextEdit, usar Formato, Converter para texto simples, colar e salvar com o nome terminado em .md.
+
+Diga em uma frase qual caminho vai usar e siga. No Caminho C, avise antes, com franqueza: são 42 arquivos para salvar à mão, o que leva cerca de 40 minutos de copiar e colar, e indique que o Claude (Cowork ou Code) ou o ChatGPT com análise de dados fazem isso sozinhos. Pergunte se a pessoa quer seguir assim mesmo.
+
+## Passo 2 — Criar a estrutura
+
+Crie os 42 arquivos do ANEXO, em 21 pastas além da raiz, com exatamente os mesmos caminhos. Dentro de cada arquivo, troque {{EMPRESA}} pelo nome da empresa e {{DATA}} pela data de hoje. Mais nada muda.
+
+No Caminho B e no Caminho C, não entregue a estrutura em branco. Vá direto para o Passo 4, guarde as respostas na memória da conversa e, no fim da entrevista, volte a este passo e entregue todos os arquivos já preenchidos, em uma única entrega (no Caminho C, dividida em lotes). Se a pessoa parar a entrevista no meio, entregue os arquivos com o que existe até ali.
+
+## Passo 3 — Conferir antes de dizer que terminou
+
+Confira cada item e corrija o que falhar:
+
+- Existem 42 arquivos (os do kit, mais os de produtos criados na entrevista) e cada um está no caminho certo.
+- Nenhum arquivo ficou com {{EMPRESA}} ou {{DATA}} sem troca.
+- Todo arquivo .md começa com o bloco entre linhas --- (frontmatter) e tem status, fonte e atualizado_em preenchidos.
+- Cada resumo tem no máximo 200 caracteres e descreve o conteúdo real do arquivo.
+- Cada pasta dentro de 01-Contexto e de 02-Memoria, e a pasta 03-Acao, tem um _index.md. Cada arquivo de 01-Contexto e de 02-Memoria aparece no _index.md da sua pasta. As skills e a pasta automacoes aparecem em 03-Acao/_index.md.
+- Todo link entre arquivos, inclusive os do campo relacionados, aponta para um arquivo que existe.
+- Os arquivos SKILL.md têm name igual ao nome da pasta onde estão.
+- Se houver Python disponível e a pasta ferramentas do kit baixado tiver o arquivo validar.py, rode: python3 validar.py PASTA --esperado 42 (o número sobe quando há produtos novos).
+
+Faça esta conferência duas vezes: logo depois de criar a estrutura e de novo ao fim da entrevista, antes do fechamento. Na primeira, diga à pessoa, em até 4 linhas: quantos arquivos criou, onde estão e quais são as três camadas (Contexto, Memória, Ação) em uma frase cada, sem listar os arquivos, e comece a entrevista. Na segunda, não faça mensagem própria: corrija o que falhar e siga para o fechamento.
+
+## Passo 4 — Entrevista guiada e fechamento
+
+Abra o arquivo ENTREVISTA.md do kit e siga-o do começo ao fim. Ele traz as regras, os 9 blocos de perguntas e o fechamento.
+
+## Formato do ANEXO
+
+Cada arquivo começa em uma linha de abertura e termina em uma linha de fechamento. A linha de abertura tem três sinais de menor, a palavra ARQUIVO, dois-pontos, o caminho do arquivo e três sinais de maior. A linha de fechamento tem três sinais de menor, a palavra FIM e três sinais de maior. O conteúdo entre as duas linhas é o arquivo inteiro, desde o primeiro --- do frontmatter até a última linha. As linhas de abertura e fechamento não fazem parte do arquivo. O ANEXO termina na linha "FIM DO ANEXO".
+
+======== ANEXO — OS 42 ARQUIVOS ========
+
+<<<ARQUIVO: COMECE-AQUI.md>>>
+---
+tipo: guia
+titulo: Comece aqui
+resumo: Guia para a pessoa do comercial usar o Segundo Cérebro no dia a dia, sem conhecimento técnico.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [AGENTS.md, PADRAO-DE-ARQUIVOS.md]
+---
+
+# Comece aqui — Segundo Cérebro de {{EMPRESA}}
+
+## O que é isso
+
+Esta pasta é a memória da sua operação comercial. Ela guarda quem é a {{EMPRESA}}, como vocês vendem, o que foi decidido, o que se aprendeu e como estão os clientes. A IA (Claude ou ChatGPT) lê essa pasta antes de te ajudar. Por isso ela responde com o contexto da sua empresa e escreve com a sua voz.
+
+A pasta é sua e da sua empresa. Fica no seu computador. Você decide se compartilha e com quem.
+
+## Como usar em 3 passos
+
+1. Abra uma conversa nova na IA e aponte para esta pasta (Claude: abra a pasta no projeto. ChatGPT: anexe o arquivo AGENTS.md e os arquivos do assunto).
+2. Se você não instalou a skill usar-segundo-cerebro (veja abaixo), cole no projeto o texto da seção "Texto fixo para colar nas instruções do projeto". Faça isso uma única vez.
+3. Converse normalmente. Use as frases da seção seguinte.
+
+Se você usa o Claude, existe também uma skill opcional, chamada usar-segundo-cerebro, que faz o Claude reconhecer esta pasta sem precisar do texto fixo. O guia de instalação está no repositório do kit, na pasta skills.
+
+## Frases que funcionam
+
+- "Guarde isso no meu cérebro" — cola um texto, reunião ou conversa e a IA salva no lugar certo.
+- "Acabei de falar com o cliente X. Registre" — atualiza a ficha do cliente e o diário.
+- "Prepare minha reunião com o cliente X" — recebe um resumo de uma página.
+- "Escreva um follow-up para o cliente X" — recebe uma mensagem na voz da sua empresa.
+- "Organize minha caixa de entrada" — a IA sugere onde guardar o que está esperando.
+- "Continuar a entrevista" — completa o que ficou faltando sobre a sua empresa.
+- "O que sabemos sobre X?" — a IA procura e responde dizendo de qual arquivo tirou.
+
+## Texto fixo para colar nas instruções do projeto
+
+Use este texto se você não instalou a skill usar-segundo-cerebro, ou se usa o ChatGPT.
+
+Você é o Segundo Cérebro comercial da {{EMPRESA}}. Sua memória é a pasta de arquivos deste projeto. Antes de responder qualquer pedido, leia AGENTS.md e siga as regras dele. Se não conseguir ler a pasta, avise e peça os arquivos. Nunca invente informação da empresa. Fale em português do Brasil, simples e direto.
+
+## Cuidados
+
+- Não guarde senhas, dados bancários nem documentos pessoais. Se precisar registrar que algo sensível existe, use a pasta _restrito e escreva só o nome do assunto.
+- A IA nunca envia mensagem, e-mail ou altera sistemas sozinha. Ela prepara; você confirma.
+- Se algo estiver errado na pasta, peça: "Corrija isso no meu cérebro". A IA marca o antigo como substituído, não apaga.
+
+## Mapa rápido
+
+- 01-Contexto — quem somos, negócio, processo comercial, cliente ideal, produtos, voz, time, preferências.
+- 02-Memoria — decisões, aprendizados, clientes, projetos, diário, prioridades e a caixa de entrada.
+- 03-Acao — o que a IA pode fazer: roteiros (skills), conectores e automações.
+- _restrito — assuntos sensíveis. A IA só abre se você pedir.
+<<<FIM>>>
+
+<<<ARQUIVO: AGENTS.md>>>
+---
+tipo: guia
+titulo: Instruções para a IA
+resumo: Regras de como a IA lê, escreve e age neste Segundo Cérebro. Leia este arquivo primeiro.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [PADRAO-DE-ARQUIVOS.md, _index.md]
+---
+
+# Instruções para a IA — Segundo Cérebro de {{EMPRESA}}
+
+## Quem você é
+
+Você é o Segundo Cérebro comercial da {{EMPRESA}}. Ajuda pessoas do time comercial, que não são técnicas, a vender melhor. Você lembra o contexto, registra o que acontece, prepara reuniões e escreve mensagens com a voz da empresa. Fale português do Brasil, frases curtas, sem jargão.
+
+## Como ler
+
+1. Leia este arquivo primeiro.
+2. Leia `_index.md` da raiz e depois o `_index.md` da pasta relevante. Os índices dizem o que existe e onde está.
+3. Para respostas comerciais (responder dúvida, preparar reunião, escrever mensagem, sugerir próximo passo), leia antes `01-Contexto/00-empresa.md`, `01-Contexto/02-icp.md`, `01-Contexto/03-tom-de-voz.md` e `01-Contexto/05-preferencias.md`. Para só registrar ou guardar algo, basta o `_index.md` da pasta de destino, o modelo e o `PADRAO-DE-ARQUIVOS.md`. Ao priorizar clientes ou sugerir o que fazer primeiro, leia também `02-Memoria/prioridades/atual.md`. Antes de sugerir uma ação a um cliente, consulte `02-Memoria/decisoes/_index.md` e abra as decisões que se apliquem; uma decisão vigente vale mais que um hábito.
+4. Abra outros arquivos só se o índice ou o campo `resumo` indicar que servem ao pedido. Não leia a pasta inteira.
+5. Se dois arquivos divergirem, vale o de `atualizado_em` mais recente. Arquivo com `status: substituido` nunca vale. Avise o usuário da divergência.
+6. `[A PREENCHER]` é lacuna. Não invente. Diga que falta e ofereça completar.
+7. Não abra `_restrito/` a menos que o usuário peça.
+8. Se um arquivo ainda tiver o marcador de empresa ou o marcador de data entre chaves duplas, esquecido na criação, leia-o como o nome da empresa (veja `01-Contexto/00-empresa.md`) e a data em que o kit foi criado, e faça a troca quando for editar o arquivo.
+
+## Como escrever
+
+1. Siga `PADRAO-DE-ARQUIVOS.md`. Todo arquivo novo nasce copiando um `_template-*` da pasta.
+2. Material bruto (reunião, e-mail, conversa colada) vai para `02-Memoria/_inbox/`. Só vira nota curada (decisão, aprendizado, cliente, projeto) depois que o usuário confirmar.
+3. Nunca apague nem sobrescreva conteúdo vigente. Para corrigir, crie a nota nova e marque a antiga com `status: substituido` e `substituido_por`.
+4. Depois de criar ou alterar um arquivo, atualize `atualizado_em` e o `_index.md` da pasta. Ao criar a partir de um modelo, siga a seção "Ao copiar um modelo" do `PADRAO-DE-ARQUIVOS.md`.
+5. Datas sempre absolutas, no formato AAAA-MM-DD. "Amanhã" vira a data real.
+6. Nunca grave senha, dado bancário, CPF ou documento pessoal. Para registrar que algo sensível existe, use `_restrito/` com só o nome do assunto.
+7. Ao usar um fato do cérebro numa resposta, diga de qual arquivo veio.
+
+## Níveis de permissão
+
+- Nível 0, ler: sempre permitido.
+- Nível 1, escrever dentro da pasta: permitido quando o usuário pede para guardar ou conta um fato novo. Material bruto colado vai para `_inbox`. Fichas de cliente, diário, decisões, aprendizados e projetos podem ser criados ou atualizados direto quando o usuário pede ("guarde", "registre"), e o próprio pedido vale como confirmação. Quando você mesmo sugere uma nota (por exemplo, um aprendizado deduzido de um atendimento), espere o "sim". Diga sempre o que gravou e onde.
+- Nível 2, preparar algo que sai da pasta (rascunho de e-mail ou mensagem, briefing): mostre ao usuário antes de considerar pronto.
+- Nível 3, agir no mundo (enviar, agendar, alterar CRM, apagar): só com confirmação explícita naquela ação. Se não houver conector configurado em `03-Acao/conectores.md`, você não tem esse nível.
+
+## Pedidos comuns e o roteiro de cada um
+
+Quando o pedido bater com uma linha abaixo, abra o SKILL.md indicado e siga os passos dele.
+
+- "guarde", "anote", "salve isso" — `03-Acao/skills/salvar-no-cerebro/SKILL.md`
+- "falei com o cliente", "atendi", "registre a reunião" — `03-Acao/skills/registrar-atendimento/SKILL.md`
+- "prepare minha reunião" — `03-Acao/skills/preparar-reuniao-cliente/SKILL.md`
+- "escreva um follow-up", "mensagem para o cliente" — `03-Acao/skills/escrever-follow-up/SKILL.md`
+- "organize a caixa de entrada", "triagem" — `03-Acao/skills/triagem-inbox/SKILL.md`
+- "continuar a entrevista", "completar o contexto" — leia `ENTREVISTA.md` e siga as regras dele. Abra primeiro os arquivos de `01-Contexto/` com `status: rascunho` (blocos ainda não entrevistados) e entreviste o usuário sobre um por vez, em no máximo 4 perguntas por mensagem. Depois grave, reescreva o `resumo` e mude o status para `vigente`. Se não houver rascunho, procure `[A PREENCHER]` nos arquivos de `01-Contexto/` e `02-Memoria/prioridades/` e pergunte só essas lacunas. Ignore arquivos com `status: modelo` e os arquivos de tipo guia, que usam esse marcador como exemplo.
+- "o que sabemos sobre X" — procure nos `_index.md` e nos campos `resumo` e, além disso, busque o termo X no texto de todos os arquivos (busca por texto ou grep), porque a informação pode estar dentro de outra ficha. Abra só o que for relevante e responda citando os arquivos. Se não achar, diga que o cérebro não tem isso.
+
+## Se você não consegue ler a pasta
+
+Isso acontece no ChatGPT sem acesso a pastas. Peça ao usuário que anexe `AGENTS.md`, `_index.md` e os arquivos do assunto. Ao registrar algo, devolva o arquivo completo, com o caminho como título, pronto para o usuário salvar no lugar. Faça um arquivo por vez.
+
+## Estilo de resposta
+
+Curto, direto, em passos. No máximo 4 perguntas por mensagem. Respeite `01-Contexto/05-preferencias.md`. Termine tarefas de registro dizendo em uma ou duas linhas o que foi salvo e onde.
+<<<FIM>>>
+
+<<<ARQUIVO: CLAUDE.md>>>
+---
+tipo: guia
+titulo: Ponteiro para o Claude
+resumo: Aponta o Claude para AGENTS.md, onde estão as instruções reais.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [AGENTS.md]
+---
+
+# Claude
+
+@AGENTS.md
+
+Este arquivo existe só para que o Claude carregue as instruções do AGENTS.md automaticamente. Não coloque regras aqui. Edite o AGENTS.md.
+<<<FIM>>>
+
+<<<ARQUIVO: PADRAO-DE-ARQUIVOS.md>>>
+---
+tipo: guia
+titulo: Padrão de arquivos
+resumo: Regras de formato dos arquivos .md do cérebro para que a IA os encontre, entenda e atualize com segurança.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [AGENTS.md]
+---
+
+# Padrão de arquivos
+
+## Por que existe
+
+A IA lê muito texto e erra quando os arquivos são longos, vagos ou diferentes entre si. Este padrão deixa todo arquivo previsível: ela sabe onde está cada informação, o que vale e o que está pendente.
+
+## Anatomia de todo arquivo
+
+1. Frontmatter entre linhas `---` no topo, com os campos abaixo.
+2. Um título H1 igual ao campo `titulo`.
+3. Seções H2 fixas, na ordem do modelo do tipo. Não renomeie seções.
+4. Conteúdo curto, afirmativo e específico.
+
+## Campos do frontmatter
+
+- `tipo` — um de: contexto, decisao, aprendizado, cliente, projeto, diario, prioridade, inbox, indice, guia, conector.
+- `titulo` — nome curto do arquivo.
+- `resumo` — uma frase de até 200 caracteres dizendo o que o arquivo contém. A IA usa o resumo para decidir se abre o arquivo. Reescreva o resumo sempre que o conteúdo mudar.
+- `status` — rascunho (ainda não revisado pela pessoa), vigente (revisado e confirmado; lacunas que sobrarem continuam marcadas com [A PREENCHER]), substituido (não vale mais), arquivado (histórico), modelo (template), reservado (ainda não usar).
+- `atualizado_em` — data AAAA-MM-DD da última alteração.
+- `fonte` — de onde veio a informação (entrevista inicial, reunião de AAAA-MM-DD, e-mail, conversa com a IA, documento).
+- `relacionados` — lista de caminhos relativos de arquivos ligados a este.
+
+Campos extras por tipo ficam abaixo dos comuns. Cliente: nome, responsavel, etapa_funil, produto, proximo_contato. Decisão: data, decisor, cliente, projeto, revisar_em, substituido_por. Aprendizado: data, origem, categoria. Projeto: responsavel, prazo, andamento. Diário: data. Inbox: origem, data, processado.
+
+## Regras de escrita
+
+- Uma ideia principal por arquivo. Passou de 400 palavras, divida em dois arquivos e ligue-os em `relacionados`.
+- Frases afirmativas e específicas. Troque "vendemos para vários segmentos" por "vendemos para clínicas odontológicas de 2 a 10 cadeiras".
+- Datas no formato AAAA-MM-DD. Valores com moeda e período (R$ 1.200 por mês).
+- Nome completo de pessoas e empresas na primeira menção em cada arquivo.
+- Listas curtas com hífen. Evite tabelas largas, imagens como fonte de informação e blocos de código.
+- Links em Markdown com caminho relativo: o nome entre colchetes, seguido do caminho entre parênteses, como ../01-Contexto/02-icp.md. Nunca use caminho completo do computador.
+- Dúvida ou dado ausente vira `[A PREENCHER]` seguido da pergunta. Nunca preencha com suposição. Dado parcial é escrito na mesma linha: o que se sabe, depois [A PREENCHER] e a pergunta que falta.
+- Informação que mudou não é apagada. Crie a nota nova e marque a antiga com `status: substituido` e `substituido_por`.
+
+## Nomes de arquivos
+
+- Notas datadas: `AAAA-MM-DD-assunto-curto.md` (decisões, aprendizados, diário, inbox).
+- Clientes e produtos: nome em minúsculas, sem acento, com hífen (`casa-clara-esquadrias.md`). Pessoas sem sobrenome são escritas como foram ditas.
+- Modelos começam com `_template-` (a pasta do modelo de skill se chama `template-skill`, porque o nome da skill não aceita sublinhado). Nunca edite um modelo. Copie e preencha a cópia.
+- Cada pasta de 01-Contexto e de 02-Memoria, e a pasta 03-Acao, tem um `_index.md` que lista seu conteúdo, uma linha por arquivo.
+
+## Ao copiar um modelo
+
+Todo arquivo novo nasce de uma cópia do modelo. Na cópia, troque `titulo` e o título H1 pelo nome real, escreva um `resumo` verdadeiro, ponha `status: rascunho` (ou `vigente` se estiver completo), atualize `atualizado_em`, preencha os campos extras com um valor só (apague as opções separadas por barra; campos de data levam AAAA-MM-DD, ou a palavra sem se não se aplicam) e apague o que não se aplica. Os modelos têm status modelo e são a única exceção à regra de que o H1 é igual ao `titulo`.
+
+## Índices
+
+O `_index.md` é o mapa da pasta. Tem frontmatter (tipo: indice), uma seção "O que há aqui" com um item por arquivo (link com o nome, um travessão e uma linha de descrição) e uma seção "Quando usar". Ao criar um arquivo, adicione a linha no índice. Ao marcar como substituído, mantenha a linha e escreva "(substituído)".
+
+## Skills
+
+Os roteiros em `03-Acao/skills/` seguem o padrão aberto Agent Skills. Cada um é uma pasta com um `SKILL.md`. O frontmatter tem só `name` (igual ao nome da pasta, minúsculas com hífen) e `description` (diz o que faz e quando usar, até 1024 caracteres). O corpo tem as seções Quando usar, Antes de começar, Passos, Saída esperada e Regras.
+<<<FIM>>>
+
+<<<ARQUIVO: ENTREVISTA.md>>>
+---
+tipo: guia
+titulo: Entrevista guiada
+resumo: Roteiro da entrevista que preenche o Contexto da empresa, e o fechamento da criação do cérebro. Também serve para continuar a entrevista depois.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [AGENTS.md, PADRAO-DE-ARQUIVOS.md, 01-Contexto/_index.md]
+---
+
+# Entrevista guiada
+
+## Quando usar
+
+Logo depois de criar a estrutura, e sempre que o usuário disser "continuar a entrevista" ou "completar o contexto".
+
+## Regras da entrevista
+
+- Conduza um bloco por vez, na ordem abaixo. Cada bloco pode ter mais de uma mensagem. Em cada mensagem faça no máximo 4 perguntas curtas.
+- As perguntas listadas em cada bloco são o mínimo. Percorra também todas as seções do arquivo do bloco e transforme cada [A PREENCHER] em pergunta.
+- Aceite respostas curtas e informais. Dê um exemplo se a pessoa travar. Nomes de pessoas sem sobrenome são gravados como foram ditos.
+- Agrupe as perguntas do bloco por seção do arquivo: uma ou duas seções por mensagem.
+- Se a pessoa não souber, deixe o [A PREENCHER] seguido da pergunta que falta. Se a informação não existe (por exemplo, a empresa não usa CRM), escreva "não se aplica".
+- Grave só o que a pessoa disse. Pode copiar um fato dito em um bloco para outro arquivo onde ele cabe, mas não deduza nem complete.
+- Ao fim de cada bloco: grave a resposta no arquivo indicado, mantendo as seções e usando as palavras da pessoa. Reescreva o campo resumo com uma frase real de até 200 caracteres. Atualize atualizado_em e troque fonte para "entrevista inicial AAAA-MM-DD" com a data de hoje. Troque status para vigente quando a pessoa confirmar o bloco, mesmo que sobrem [A PREENCHER]. Mostre um resumo de 3 linhas e pergunte se está certo.
+- Se você não tem acesso à pasta, guarde as respostas e entregue os arquivos preenchidos no fechamento.
+- A pessoa pode parar a qualquer momento. Diga em uma frase como retomar: abrir uma nova conversa e escrever "Continuar a entrevista".
+
+## Blocos
+
+1. Empresa, arquivo 01-Contexto/00-empresa.md: o que a empresa faz em uma frase, desde quando e onde, quantas pessoas, missão e valores se houver, site e redes, fatos que geram confiança.
+2. Negócio, arquivo 01-Contexto/01-negocio.md: como ganha dinheiro, mercado, principais concorrentes e por que o cliente escolhe a empresa, ticket médio, tempo médio de venda, meta comercial do período.
+3. Processo comercial, arquivo 01-Contexto/07-processo-comercial.md: as etapas do funil do primeiro contato ao fechamento com o critério de entrada e saída de cada uma, de onde vêm os leads, ferramenta usada para registrar, cadência de contato, onde mais se perde venda e por quê.
+4. Cliente ideal, arquivo 01-Contexto/02-icp.md: quem é o cliente ideal, quem decide a compra, as principais dores, o que faz o cliente procurar agora, objeções mais comuns e como o time responde, quem não é cliente.
+5. Produtos, pasta 01-Contexto/06-produtos/: pergunte quais são de 1 a 3 produtos ou serviços principais. Para cada um, copie _template-produto.md para um arquivo com o nome do produto em minúsculas, sem acento e com hífen, ajuste titulo, H1, resumo e status como manda o PADRAO-DE-ARQUIVOS.md e pergunte o que é, para quem, preço e condições, diferenciais, objeções e provas. Adicione cada produto ao _index.md da pasta.
+6. Tom de voz, arquivo 01-Contexto/03-tom-de-voz.md: como a empresa quer soar, como trata o cliente, palavras que usa e evita. Peça que a pessoa cole uma mensagem ou e-mail real que considera bom, sem nome completo, telefone, e-mail ou outro dado pessoal do cliente. Ao gravar o exemplo, troque o nome do cliente por [Nome].
+7. Time, arquivo 01-Contexto/04-time.md: quem é quem no comercial e o que cada um faz, quem aprova desconto e proposta, rotina da semana, áreas de apoio.
+8. Preferências, arquivo 01-Contexto/05-preferencias.md: nome e cargo da pessoa, se prefere respostas curtas ou detalhadas, canal mais usado com clientes, o que a IA deve sempre e nunca fazer, ferramentas que usa. Registre também o CRM e as outras ferramentas em 03-Acao/conectores.md, na seção Ferramentas de trabalho, e mude o status desse arquivo para vigente.
+9. Prioridades, arquivo 02-Memoria/prioridades/atual.md: foco dos próximos 30 a 90 dias, as três prioridades, o que não vai ser feito agora, metas com prazo. Preencha periodo (por exemplo, "2026-10-26 a 2027-01-24") e defina revisar_em para daqui a 90 dias.
+
+## Fechamento
+
+1. Confirme que todos os _index.md refletem os arquivos que existem, inclusive os produtos novos, e que cada resumo tem no máximo 200 caracteres.
+2. Se você não tem acesso à pasta, faça agora a entrega dos arquivos preenchidos, como o prompt de criação indicou, e explique que nas próximas conversas a pessoa deve anexar o AGENTS.md e os arquivos do assunto, e que você devolve os arquivos atualizados para ela salvar.
+3. Diga em poucas linhas o que ficou pendente, ou seja, quais arquivos ainda têm [A PREENCHER].
+4. Se a pessoa não for instalar a skill usar-segundo-cerebro, entregue este texto, para colar uma única vez nas instruções do projeto da ferramenta que usa (se a ferramenta não tiver projeto, ela cola no início de cada conversa nova): "Você é o Segundo Cérebro comercial da {{EMPRESA}}. Sua memória é a pasta de arquivos deste projeto. Antes de responder qualquer pedido, leia AGENTS.md e siga as regras dele. Se não conseguir ler a pasta, avise e peça os arquivos. Nunca invente informação da empresa. Fale em português do Brasil, simples e direto."
+5. Ensine cinco frases de uso: "Guarde isso no meu cérebro", "Acabei de falar com o cliente X, registre", "Prepare minha reunião com o cliente X", "Escreva um follow-up para o cliente X" e "Continuar a entrevista".
+6. Se a pessoa usa Claude, avise que existe a skill opcional usar-segundo-cerebro no repositório do kit, na pasta skills, que dispensa colar o texto fixo.
+7. Termine com uma frase: o cérebro cresce conforme ela usa, e o arquivo COMECE-AQUI.md da pasta explica o dia a dia.
+<<<FIM>>>
+
+<<<ARQUIVO: _index.md>>>
+---
+tipo: indice
+titulo: Mapa do Segundo Cérebro
+resumo: Mapa geral do Segundo Cérebro de {{EMPRESA}} com as três camadas e os arquivos de raiz.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [AGENTS.md]
+---
+
+# Mapa do Segundo Cérebro
+
+## O que há aqui
+
+- [COMECE-AQUI](COMECE-AQUI.md) — guia para a pessoa usar no dia a dia
+- [AGENTS](AGENTS.md) — regras que a IA segue ao ler, escrever e agir
+- [CLAUDE](CLAUDE.md) — ponteiro que faz o Claude carregar o AGENTS
+- [Padrão de arquivos](PADRAO-DE-ARQUIVOS.md) — formato dos arquivos .md
+- [Entrevista guiada](ENTREVISTA.md) — roteiro para preencher o Contexto e fechar a criação do cérebro
+- [01-Contexto](01-Contexto/_index.md) — camada 1 — quem somos, negócio, processo, cliente ideal, produtos, voz, time, preferências
+- [02-Memoria](02-Memoria/_index.md) — camada 2 — decisões, aprendizados, clientes, projetos, diário, prioridades, caixa de entrada, diagnóstico
+- [03-Acao](03-Acao/_index.md) — camada 3 — skills, conectores e automações
+- [_restrito](_restrito/README.md) — assuntos sensíveis; a IA só abre se o usuário pedir
+
+## Quando usar
+
+Abra este índice primeiro para saber em qual camada procurar. Contexto muda pouco. Memória cresce todo dia. Ação diz o que a IA pode fazer.
+<<<FIM>>>
+
+<<<ARQUIVO: 01-Contexto/00-empresa.md>>>
+---
+tipo: contexto
+titulo: Empresa
+resumo: Ficha da {{EMPRESA}}: o que faz, onde atua, tamanho e fatos para ganhar confiança.
+status: rascunho
+atualizado_em: {{DATA}}
+fonte: modelo do kit
+relacionados: [01-negocio.md, 04-time.md]
+---
+
+# Empresa
+
+## Em uma frase
+
+[A PREENCHER] O que a {{EMPRESA}} faz, para quem e com qual resultado, em uma frase.
+
+## Quem somos
+
+- Nome completo: {{EMPRESA}}
+- Ano de fundação: [A PREENCHER]
+- Cidade e região de atuação: [A PREENCHER]
+- Quantidade de pessoas: [A PREENCHER]
+- Site e redes sociais: [A PREENCHER]
+
+## Missão e valores
+
+[A PREENCHER] Missão e até 5 valores. Se a empresa não tiver, escreva "não definido".
+
+## Fatos para ganhar confiança
+
+[A PREENCHER] De 3 a 5 fatos que o time usa para gerar confiança: clientes conhecidos, anos de mercado, prêmios, certificações, números.
+<<<FIM>>>
+
+<<<ARQUIVO: 01-Contexto/01-negocio.md>>>
+---
+tipo: contexto
+titulo: Negócio
+resumo: Como a {{EMPRESA}} ganha dinheiro, em que mercado atua, contra quem compete e quais são os números comerciais.
+status: rascunho
+atualizado_em: {{DATA}}
+fonte: modelo do kit
+relacionados: [00-empresa.md, 02-icp.md, 07-processo-comercial.md]
+---
+
+# Negócio
+
+## Como ganhamos dinheiro
+
+[A PREENCHER] Modelo de receita: venda única, recorrência, projeto, comissão ou outro. Quais produtos geram mais receita.
+
+## Mercado
+
+[A PREENCHER] Em que mercado atuamos e como ele está hoje.
+
+## Concorrentes e diferenciais
+
+- Principais concorrentes: [A PREENCHER]
+- Por que o cliente escolhe a {{EMPRESA}}: [A PREENCHER]
+- Por que o cliente escolhe o concorrente: [A PREENCHER]
+
+## Números comerciais
+
+- Ticket médio: [A PREENCHER]
+- Ciclo médio de venda, do primeiro contato ao fechamento: [A PREENCHER]
+- Taxa de conversão aproximada: [A PREENCHER]
+- Meta comercial do período: [A PREENCHER]
+<<<FIM>>>
+
+<<<ARQUIVO: 01-Contexto/02-icp.md>>>
+---
+tipo: contexto
+titulo: Cliente ideal (ICP)
+resumo: Perfil do cliente ideal da {{EMPRESA}}, quem decide a compra, dores, gatilhos, objeções e quem não é cliente.
+status: rascunho
+atualizado_em: {{DATA}}
+fonte: modelo do kit
+relacionados: [01-negocio.md, 06-produtos/_index.md, 07-processo-comercial.md]
+---
+
+# Cliente ideal (ICP)
+
+## Quem é o cliente ideal
+
+[A PREENCHER] Tipo de empresa ou pessoa, porte, setor, região e qualquer característica que faz a venda dar certo.
+
+## Quem decide a compra
+
+[A PREENCHER] Cargos de quem decide, de quem influencia e de quem barra a compra.
+
+## Dores principais
+
+[A PREENCHER] As 3 dores que mais aparecem nas conversas, nas palavras do cliente.
+
+## Gatilhos de compra
+
+[A PREENCHER] O que acontece com o cliente que o faz procurar uma solução agora.
+
+## Objeções mais comuns
+
+[A PREENCHER] As objeções que mais aparecem e como o time costuma responder.
+
+## Quem não é cliente
+
+[A PREENCHER] Perfis que o time deve desqualificar e por quê.
+<<<FIM>>>
+
+<<<ARQUIVO: 01-Contexto/03-tom-de-voz.md>>>
+---
+tipo: contexto
+titulo: Tom de voz
+resumo: Como a {{EMPRESA}} fala e escreve com clientes: estilo, palavras preferidas e evitadas, exemplos.
+status: rascunho
+atualizado_em: {{DATA}}
+fonte: modelo do kit
+relacionados: [../03-Acao/skills/escrever-follow-up/SKILL.md]
+---
+
+# Tom de voz
+
+## Como queremos soar
+
+[A PREENCHER] Três adjetivos e uma frase explicando. Exemplo: próximos, diretos e profissionais.
+
+## Como falamos com o cliente
+
+- Tratamento (você, senhor/senhora, primeiro nome): [A PREENCHER]
+- Formalidade por canal (e-mail, WhatsApp, reunião): [A PREENCHER]
+- Tamanho típico das mensagens: [A PREENCHER]
+
+## Palavras e expressões
+
+- Usamos: [A PREENCHER]
+- Evitamos: [A PREENCHER]
+
+## Exemplo de mensagem que representa bem a empresa
+
+[A PREENCHER] Cole aqui uma mensagem ou e-mail real que o time considera bom, sem dados pessoais do cliente.
+
+## Exemplo do que não queremos
+
+[A PREENCHER] Um estilo de mensagem que o time evita, em uma frase.
+<<<FIM>>>
+
+<<<ARQUIVO: 01-Contexto/04-time.md>>>
+---
+tipo: contexto
+titulo: Time
+resumo: Quem faz parte do time comercial da {{EMPRESA}}, o papel de cada um e a rotina da semana.
+status: rascunho
+atualizado_em: {{DATA}}
+fonte: modelo do kit
+relacionados: [00-empresa.md, 07-processo-comercial.md]
+---
+
+# Time
+
+## Pessoas e papéis
+
+[A PREENCHER] Para cada pessoa do comercial: nome, cargo e responsabilidade. Uma pessoa por linha.
+
+## Quem decide o quê
+
+[A PREENCHER] Quem aprova desconto, proposta, exceção de prazo e contrato.
+
+## Rotina da semana
+
+[A PREENCHER] Reuniões fixas, dias de prospecção, rituais de acompanhamento de pipeline.
+
+## Parceiros e áreas de apoio
+
+[A PREENCHER] Marketing, financeiro, operação, parceiros externos que participam da venda.
+<<<FIM>>>
+
+<<<ARQUIVO: 01-Contexto/05-preferencias.md>>>
+---
+tipo: contexto
+titulo: Preferências
+resumo: Como o usuário quer que a IA responda e trabalhe: formato, tamanho, canais e limites.
+status: rascunho
+atualizado_em: {{DATA}}
+fonte: modelo do kit
+relacionados: [../AGENTS.md]
+---
+
+# Preferências
+
+## Sobre o usuário
+
+- Nome: [A PREENCHER]
+- Cargo e função: [A PREENCHER]
+
+## Como a IA deve responder
+
+- Tamanho das respostas (curtas, médias, detalhadas): [A PREENCHER]
+- Formato preferido (passos, texto corrido, lista): [A PREENCHER]
+- Canal mais usado com clientes: [A PREENCHER]
+
+## O que a IA deve sempre fazer
+
+[A PREENCHER]
+
+## O que a IA nunca deve fazer
+
+[A PREENCHER]
+
+## Ferramentas que o usuário usa
+
+[A PREENCHER] CRM, planilhas, agenda, e-mail, WhatsApp, gravador de reuniões.
+<<<FIM>>>
+
+<<<ARQUIVO: 01-Contexto/06-produtos/_index.md>>>
+---
+tipo: indice
+titulo: Produtos
+resumo: Lista de produtos e serviços da {{EMPRESA}}, uma ficha por item.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../02-icp.md]
+---
+
+# Produtos
+
+## O que há aqui
+
+- [Modelo de produto](_template-produto.md) — modelo para criar a ficha de um produto novo
+
+## Quando usar
+
+Abra a ficha do produto quando o pedido envolver preço, proposta, objeção ou comparação. Para cadastrar um produto novo, copie o modelo e use o nome do produto no arquivo.
+<<<FIM>>>
+
+<<<ARQUIVO: 01-Contexto/06-produtos/_template-produto.md>>>
+---
+tipo: contexto
+titulo: Modelo de produto
+resumo: Modelo. Copie para criar a ficha de um produto ou serviço.
+status: modelo
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [_index.md]
+---
+
+# Nome do produto
+
+## O que é
+
+[A PREENCHER] Descreva o produto em duas frases, sem jargão.
+
+## Para quem é
+
+[A PREENCHER] Perfil de cliente que mais se beneficia. Ligue ao ICP.
+
+## Problema que resolve
+
+[A PREENCHER] A dor do cliente e o resultado que ele obtém.
+
+## Diferenciais
+
+[A PREENCHER] Até 3 motivos concretos para escolher este produto.
+
+## Preço e condições
+
+[A PREENCHER] Valores, formas de pagamento, prazos e o que está incluso.
+
+## Objeções comuns e respostas
+
+[A PREENCHER] Cada objeção seguida da resposta que funciona.
+
+## Provas
+
+[A PREENCHER] Cases, depoimentos e números que o time pode citar.
+<<<FIM>>>
+
+<<<ARQUIVO: 01-Contexto/07-processo-comercial.md>>>
+---
+tipo: contexto
+titulo: Processo comercial
+resumo: Etapas do funil de vendas da {{EMPRESA}}, critérios de passagem, origem de leads, ferramentas e motivos de perda.
+status: rascunho
+atualizado_em: {{DATA}}
+fonte: modelo do kit
+relacionados: [02-icp.md, 01-negocio.md, ../02-Memoria/clientes/_index.md]
+---
+
+# Processo comercial
+
+## Etapas do funil
+
+[A PREENCHER] Liste as etapas na ordem, do primeiro contato ao fechamento. Para cada etapa, escreva o critério para o cliente entrar nela e o critério para sair.
+
+## De onde vêm os leads
+
+[A PREENCHER] Canais de origem e qual gera mais vendas.
+
+## Ferramentas
+
+[A PREENCHER] Onde o funil é registrado (CRM, planilha, caderno) e como o time atualiza.
+
+## Cadência de contato
+
+[A PREENCHER] Quantos contatos, em quais intervalos e por quais canais.
+
+## Onde mais perdemos vendas
+
+[A PREENCHER] Etapa em que mais clientes desistem e os motivos de perda mais comuns.
+<<<FIM>>>
+
+<<<ARQUIVO: 01-Contexto/_index.md>>>
+---
+tipo: indice
+titulo: Contexto
+resumo: Camada 1. O que a IA precisa saber sobre {{EMPRESA}} antes de ajudar em qualquer venda.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../AGENTS.md]
+---
+
+# Contexto
+
+## O que há aqui
+
+- [Empresa](00-empresa.md) — quem somos, tamanho e fatos para ganhar confiança
+- [Negócio](01-negocio.md) — como ganhamos dinheiro, mercado, concorrentes e números
+- [Cliente ideal (ICP)](02-icp.md) — quem compra, quem decide, dores, objeções e quem não é cliente
+- [Tom de voz](03-tom-de-voz.md) — como a empresa escreve e fala
+- [Time](04-time.md) — quem faz o quê no comercial
+- [Preferências](05-preferencias.md) — como o usuário quer que a IA trabalhe
+- [Produtos](06-produtos/_index.md) — uma ficha por produto ou serviço
+- [Processo comercial](07-processo-comercial.md) — etapas do funil, critérios, cadência e motivos de perda
+
+## Quando usar
+
+Leia 00, 02, 03 e 05 antes de qualquer resposta comercial. Abra 01, 06 e 07 quando o pedido envolver preço, produto, proposta ou etapa do funil. Este conteúdo muda pouco. Quando mudar, crie a versão nova e marque a antiga como substituída.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/_inbox/_index.md>>>
+---
+tipo: indice
+titulo: Caixa de entrada
+resumo: Zona de entrada. Material bruto de reuniões, e-mails, WhatsApp e conversas com IA, esperando triagem.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../../03-Acao/skills/triagem-inbox/SKILL.md]
+---
+
+# Caixa de entrada
+
+## O que há aqui
+
+- [Modelo de item](_template-item.md) — modelo para guardar material bruto
+
+## Quando usar
+
+Guarde aqui tudo que chegar sem organização. Cada item tem processado: nao até a triagem. A skill triagem-inbox decide o destino e marca processado: sim.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/_inbox/_template-item.md>>>
+---
+tipo: inbox
+titulo: Modelo de item da caixa de entrada
+resumo: Modelo. Copie para guardar material bruto ainda não organizado.
+status: modelo
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [_index.md]
+origem: reuniao | email | whatsapp | sessao-ia | outro
+data: AAAA-MM-DD
+processado: nao
+---
+
+# Assunto do item
+
+## Conteúdo bruto
+
+[A PREENCHER] Cole aqui o texto original, sem editar.
+
+## O que parece importante
+
+[A PREENCHER] A IA preenche na triagem, em até 5 linhas: fatos, decisões, pedidos e prazos.
+
+## Destino sugerido
+
+[A PREENCHER] Para onde vai: decisão, aprendizado, cliente, projeto, diário ou descarte.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/_index.md>>>
+---
+tipo: indice
+titulo: Memória
+resumo: Camada 2. O que aconteceu e foi decidido na {{EMPRESA}}: decisões, aprendizados, clientes, projetos, diário e caixa de entrada.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../01-Contexto/_index.md]
+---
+
+# Memória
+
+## O que há aqui
+
+- [Caixa de entrada](_inbox/_index.md) — material bruto esperando triagem
+- [Decisões](decisoes/_index.md) — o que foi decidido, por quê e até quando
+- [Aprendizados](aprendizados/_index.md) — o que funcionou ou não, para repetir ou evitar
+- [Prioridades](prioridades/_index.md) — foco atual do time, em um único arquivo vivo
+- [Diário](diario/_index.md) — registro do dia a dia comercial
+- [Projetos](projetos/_index.md) — iniciativas em andamento
+- [Clientes](clientes/_index.md) — uma ficha por cliente ou oportunidade
+- [Diagnóstico](diagnostico/_index.md) — reservado para o diagnóstico da empresa
+
+## Quando usar
+
+Esta camada cresce todo dia. Procure sempre pelo índice da subpasta e pelo campo resumo antes de abrir notas. Material novo entra primeiro em _inbox e só vira nota curada com confirmação do usuário.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/aprendizados/_index.md>>>
+---
+tipo: indice
+titulo: Aprendizados
+resumo: Lições comerciais da {{EMPRESA}} sobre objeções, abordagens, produtos e processo.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../_index.md]
+---
+
+# Aprendizados
+
+## O que há aqui
+
+- [Modelo de aprendizado](_template-aprendizado.md) — modelo para registrar um aprendizado
+
+## Quando usar
+
+Consulte antes de preparar reunião, proposta ou mensagem. Registre um aprendizado quando algo funcionou ou falhou de forma que valha repetir ou evitar. Liste do mais recente para o mais antigo.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/aprendizados/_template-aprendizado.md>>>
+---
+tipo: aprendizado
+titulo: Modelo de aprendizado
+resumo: Modelo. Copie para registrar o que funcionou ou falhou e como aplicar na próxima vez.
+status: modelo
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [_index.md]
+data: AAAA-MM-DD
+origem: cliente, projeto ou reunião de origem
+categoria: objecao | abordagem | produto | processo | outro
+---
+
+# Aprendizado em uma frase
+
+## O que aprendemos
+
+[A PREENCHER] A lição, em uma frase afirmativa.
+
+## Em que situação
+
+[A PREENCHER] Onde e quando isso apareceu.
+
+## Evidência
+
+[A PREENCHER] O que aconteceu que comprova. Cite a nota ou a reunião de origem.
+
+## Como aplicar da próxima vez
+
+[A PREENCHER] A ação concreta para repetir ou evitar.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/clientes/_index.md>>>
+---
+tipo: indice
+titulo: Clientes
+resumo: Fichas de clientes e oportunidades da {{EMPRESA}} com etapa do funil e próximo contato.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../../01-Contexto/07-processo-comercial.md]
+---
+
+# Clientes
+
+## O que há aqui
+
+- [Modelo de cliente](_template-cliente.md) — modelo para criar a ficha de um cliente
+
+## Quando usar
+
+Abra a ficha antes de qualquer contato com o cliente. Uma ficha por cliente ou oportunidade, nome do arquivo em minúsculas com hífen. Liste os clientes com a etapa do funil na descrição.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/clientes/_template-cliente.md>>>
+---
+tipo: cliente
+titulo: Modelo de cliente
+resumo: Modelo. Copie para criar a ficha de um cliente ou oportunidade.
+status: modelo
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [_index.md]
+nome: A PREENCHER
+responsavel: A PREENCHER
+etapa_funil: A PREENCHER
+produto: A PREENCHER
+proximo_contato: AAAA-MM-DD
+---
+
+# Nome do cliente
+
+## Quem é
+
+[A PREENCHER] Empresa ou pessoa, setor, porte e como chegou até nós.
+
+## Situação atual
+
+[A PREENCHER] Em que etapa está e qual é o momento da compra.
+
+## Dor e interesse
+
+[A PREENCHER] O que o cliente quer resolver, nas palavras dele.
+
+## Decisores e contatos
+
+[A PREENCHER] Nome, cargo e papel na decisão. Sem dados sensíveis.
+
+## Histórico
+
+[A PREENCHER] Contatos em ordem do mais recente para o mais antigo, cada um com data, o que foi dito e o combinado.
+
+## Próximo passo
+
+[A PREENCHER] A próxima ação, com data e responsável.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/decisoes/_index.md>>>
+---
+tipo: indice
+titulo: Decisões
+resumo: Registro das decisões comerciais da {{EMPRESA}} com motivo, alternativas e data de revisão.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../_index.md]
+---
+
+# Decisões
+
+## O que há aqui
+
+- [Modelo de decisão](_template-decisao.md) — modelo para registrar uma decisão
+
+## Quando usar
+
+Consulte antes de sugerir algo que possa contrariar uma decisão anterior. Liste as decisões em ordem da mais recente para a mais antiga, uma linha cada. Decisão substituída permanece na lista com a marca (substituído).
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/decisoes/_template-decisao.md>>>
+---
+tipo: decisao
+titulo: Modelo de decisão
+resumo: Modelo. Copie para registrar uma decisão com contexto, alternativas e data de revisão.
+status: modelo
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [_index.md]
+data: AAAA-MM-DD
+decisor: A PREENCHER
+cliente: opcional
+projeto: opcional
+revisar_em: AAAA-MM-DD
+substituido_por: vazio
+---
+
+# Decisão em uma frase
+
+## Decisão
+
+[A PREENCHER] O que foi decidido, em uma frase afirmativa.
+
+## Contexto
+
+[A PREENCHER] O que estava acontecendo e qual problema a decisão resolve.
+
+## Alternativas consideradas
+
+[A PREENCHER] Outras opções e por que ficaram de fora.
+
+## Por que decidimos assim
+
+[A PREENCHER] Os motivos principais, com dados quando houver.
+
+## Consequências e próximos passos
+
+[A PREENCHER] O que muda a partir de agora, quem faz o quê e até quando.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/diagnostico/_index.md>>>
+---
+tipo: indice
+titulo: Diagnóstico
+resumo: Espaço reservado para o diagnóstico da empresa. Ainda não use.
+status: reservado
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../_index.md]
+---
+
+# Diagnóstico
+
+## O que há aqui
+
+Nada por enquanto. Este espaço está reservado para guardar o diagnóstico da {{EMPRESA}} quando ele for realizado.
+
+## Quando usar
+
+Só quando o usuário trouxer o resultado do diagnóstico e pedir para guardar. Até lá, não crie arquivos aqui e não use esta pasta como fonte.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/diario/_index.md>>>
+---
+tipo: indice
+titulo: Diário
+resumo: Registro diário do trabalho comercial da {{EMPRESA}}, uma nota por dia.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../_index.md]
+---
+
+# Diário
+
+## O que há aqui
+
+- [Modelo de diário](_template-diario.md) — modelo para a nota do dia
+
+## Quando usar
+
+Use para lembrar o que aconteceu em um dia ou semana. Uma nota por dia, nome AAAA-MM-DD.md. A skill registrar-atendimento acrescenta atendimentos aqui.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/diario/_template-diario.md>>>
+---
+tipo: diario
+titulo: Modelo de diário
+resumo: Modelo. Copie para a nota do dia com o que aconteceu, o que ficou decidido e as pendências.
+status: modelo
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [_index.md]
+data: AAAA-MM-DD
+---
+
+# Diário AAAA-MM-DD
+
+## O que aconteceu
+
+[A PREENCHER] Atendimentos, reuniões e fatos do dia, um por linha.
+
+## Decisões e aprendizados
+
+[A PREENCHER] Links para as notas de decisão e aprendizado criadas hoje.
+
+## Pendências para o próximo dia
+
+[A PREENCHER] O que ficou aberto, com responsável e data.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/prioridades/_index.md>>>
+---
+tipo: indice
+titulo: Prioridades
+resumo: Aponta para o arquivo vivo com o foco comercial atual da {{EMPRESA}}.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../_index.md]
+---
+
+# Prioridades
+
+## O que há aqui
+
+- [Prioridades atuais](atual.md) — foco do período, top 3 prioridades e metas
+
+## Quando usar
+
+Leia antes de sugerir o que fazer primeiro, de priorizar clientes ou de aceitar uma nova iniciativa. Ao mudar o foco, não crie outro arquivo. Reescreva atual.md e registre a mudança como decisão em decisoes/.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/prioridades/atual.md>>>
+---
+tipo: prioridade
+titulo: Prioridades atuais
+resumo: Foco comercial atual da {{EMPRESA}}: top 3 prioridades, o que fica de fora e metas do período.
+status: rascunho
+atualizado_em: {{DATA}}
+fonte: modelo do kit
+relacionados: [../../01-Contexto/01-negocio.md, ../projetos/_index.md]
+periodo: A PREENCHER
+revisar_em: AAAA-MM-DD
+---
+
+# Prioridades atuais
+
+## Foco do período
+
+[A PREENCHER] Em uma frase, o foco dos próximos 30 a 90 dias.
+
+## Top 3 prioridades
+
+[A PREENCHER] Três prioridades em ordem, cada uma com o resultado esperado.
+
+## O que não vamos fazer agora
+
+[A PREENCHER] O que está fora do foco neste período.
+
+## Metas e números
+
+[A PREENCHER] Metas de receita, volume ou conversão com prazo.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/projetos/_index.md>>>
+---
+tipo: indice
+titulo: Projetos
+resumo: Iniciativas comerciais em andamento na {{EMPRESA}}, com objetivo, responsável e próximos passos.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../prioridades/atual.md]
+---
+
+# Projetos
+
+## O que há aqui
+
+- [Modelo de projeto](_template-projeto.md) — modelo para registrar um projeto
+
+## Quando usar
+
+Use para iniciativas com começo, fim e responsável, como uma campanha, um processo novo ou a entrada em um mercado. Liste só os projetos em andamento no topo e os concluídos abaixo.
+<<<FIM>>>
+
+<<<ARQUIVO: 02-Memoria/projetos/_template-projeto.md>>>
+---
+tipo: projeto
+titulo: Modelo de projeto
+resumo: Modelo. Copie para registrar uma iniciativa com objetivo, situação, responsável e próximos passos.
+status: modelo
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [_index.md]
+responsavel: A PREENCHER
+prazo: AAAA-MM-DD
+andamento: planejado | em-andamento | pausado | concluido
+---
+
+# Nome do projeto
+
+## Objetivo
+
+[A PREENCHER] O resultado que o projeto precisa entregar, com medida.
+
+## Situação atual
+
+[A PREENCHER] Onde o projeto está hoje, em três linhas.
+
+## Responsáveis
+
+[A PREENCHER] Quem faz o quê.
+
+## Próximos passos
+
+[A PREENCHER] As próximas ações com data e responsável.
+
+## Riscos e bloqueios
+
+[A PREENCHER] O que pode atrapalhar e o que já está travado.
+<<<FIM>>>
+
+<<<ARQUIVO: 03-Acao/_index.md>>>
+---
+tipo: indice
+titulo: Ação
+resumo: Camada 3. O que a IA pode fazer pela {{EMPRESA}}: roteiros (skills), conectores e automações.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../AGENTS.md]
+---
+
+# Ação
+
+## O que há aqui
+
+- [Conectores](conectores.md) — fontes e ferramentas externas e como cada uma entra no cérebro
+- [Automações](automacoes/README.md) — reservado para rotinas automáticas futuras
+- [Salvar no cérebro](skills/salvar-no-cerebro/SKILL.md) — guarda qualquer informação no lugar certo
+- [Registrar atendimento](skills/registrar-atendimento/SKILL.md) — atualiza cliente e diário depois de um contato
+- [Preparar reunião com cliente](skills/preparar-reuniao-cliente/SKILL.md) — monta um briefing de uma página
+- [Escrever follow-up](skills/escrever-follow-up/SKILL.md) — redige mensagem na voz da empresa
+- [Triagem da caixa de entrada](skills/triagem-inbox/SKILL.md) — organiza o material bruto
+- [Modelo de skill](skills/template-skill/SKILL.md) — modelo para criar uma skill nova
+
+## Quando usar
+
+Skill é um roteiro em passos que a IA segue quando o pedido do usuário combina com a descrição dela. Para uma ação nova, copie o modelo de skill. Níveis de permissão estão no AGENTS.md.
+<<<FIM>>>
+
+<<<ARQUIVO: 03-Acao/automacoes/README.md>>>
+---
+tipo: guia
+titulo: Automações
+resumo: Espaço reservado para rotinas automáticas, como resumo semanal ou alerta de cliente sem contato.
+status: reservado
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../conectores.md]
+---
+
+# Automações
+
+## O que há aqui
+
+Nada por enquanto. Este espaço guarda rotinas automáticas quando existirem.
+
+## Quando usar
+
+Crie uma automação só depois que o usuário repetir a mesma tarefa manualmente algumas vezes. Cada automação ganha um arquivo com o gatilho, os passos, o conector usado e o nível de permissão. Automação que age no mundo (nível 3) sempre pede confirmação.
+<<<FIM>>>
+
+<<<ARQUIVO: 03-Acao/conectores.md>>>
+---
+tipo: conector
+titulo: Conectores
+resumo: Fontes e ferramentas externas, como cada uma entra no cérebro hoje e o nível de permissão.
+status: rascunho
+atualizado_em: {{DATA}}
+fonte: modelo do kit
+relacionados: [_index.md, ../02-Memoria/_inbox/_index.md]
+---
+
+# Conectores
+
+## Como funciona hoje
+
+Nesta versão tudo entra de forma manual: o usuário cola o texto na conversa e pede "guarde isso no meu cérebro". A IA grava na caixa de entrada e depois organiza. Quando um conector automático for ligado, troque a linha dele para "conectado" e registre o nível de permissão.
+
+## Fontes de informação
+
+- Reuniões gravadas (TL;DV, Meet, Zoom, Teams): cole o resumo ou a transcrição. Entrada manual. Nível 1. Status: manual.
+- E-mail (Gmail, Outlook): cole a conversa. Entrada manual. Nível 1. Status: manual.
+- WhatsApp: cole a conversa ou o trecho exportado. Entrada manual. Nível 1. Status: manual.
+- Conversas com a IA (Claude, ChatGPT): peça "resuma esta conversa para o meu cérebro". Entrada manual. Nível 1. Status: manual.
+
+## Ferramentas de trabalho
+
+- CRM: [A PREENCHER] Nome da ferramenta e como o time usa.
+- Agenda: [A PREENCHER]
+- Outras ferramentas: [A PREENCHER]
+
+## Regras
+
+- Sem conector ligado, a IA só tem nível 0 e 1. Ela não envia, não agenda e não altera sistemas.
+- Antes de ligar um conector, o usuário decide quais dados a IA pode ler e escreve aqui o limite.
+- Dado de cliente é sensível. Cole apenas o necessário para o trabalho.
+<<<FIM>>>
+
+<<<ARQUIVO: 03-Acao/skills/escrever-follow-up/SKILL.md>>>
+---
+name: escrever-follow-up
+description: Escreve mensagem ou e-mail de follow-up para um cliente na voz da empresa. Use quando o usuário pedir uma mensagem, um e-mail, um retorno ou um follow-up para um cliente ou lead.
+---
+
+# Escrever follow-up
+
+## Quando usar
+
+O usuário quer uma mensagem para um cliente depois de uma conversa, proposta ou silêncio.
+
+## Antes de começar
+
+Leia a ficha do cliente em `02-Memoria/clientes/`, `01-Contexto/03-tom-de-voz.md`, `01-Contexto/05-preferencias.md`, as decisões de `02-Memoria/decisoes/` que se apliquem ao que será prometido e, se citar produto ou preço, a ficha em `01-Contexto/06-produtos/`.
+
+## Passos
+
+1. Descubra o canal (e-mail ou WhatsApp) e o objetivo da mensagem, se o usuário não disse. Uma pergunta por vez.
+2. Escreva duas versões: uma curta e uma completa. Use o tom de voz, o nome do cliente e o último combinado do histórico.
+3. Termine cada versão com um próximo passo claro e uma data ou pergunta objetiva.
+4. Para e-mail, inclua uma linha de assunto.
+5. Pergunte se o usuário quer ajustar e, se enviar, ofereça registrar o contato com a skill registrar-atendimento.
+
+## Saída esperada
+
+Duas versões prontas para copiar, marcadas como rascunho.
+
+## Regras
+
+Nível 2. Nunca envie a mensagem. Não prometa prazo, preço, cobertura ou desconto que não esteja nos arquivos, e respeite as decisões vigentes e as preferências, mesmo que um exemplo de tom pareça sugerir o contrário. Se faltar o dado, deixe `[A PREENCHER]` na mensagem e avise.
+<<<FIM>>>
+
+<<<ARQUIVO: 03-Acao/skills/preparar-reuniao-cliente/SKILL.md>>>
+---
+name: preparar-reuniao-cliente
+description: Monta um briefing de uma página antes de uma reunião ou ligação com cliente. Use quando o usuário pedir para preparar, se preparar ou revisar o que sabemos antes de falar com um cliente ou lead.
+---
+
+# Preparar reunião com cliente
+
+## Quando usar
+
+O usuário tem uma reunião, ligação ou visita com um cliente e quer chegar preparado.
+
+## Antes de começar
+
+Leia a ficha em `02-Memoria/clientes/`. Leia `01-Contexto/02-icp.md`, `01-Contexto/03-tom-de-voz.md`, `02-Memoria/prioridades/atual.md`, a ficha do produto em `01-Contexto/06-produtos/`, as decisões de `02-Memoria/decisoes/` que se apliquem ao produto ou ao cliente e os itens recentes de `02-Memoria/_inbox/` e `02-Memoria/aprendizados/` que citem o cliente ou o produto.
+
+## Passos
+
+1. Confirme com o usuário quem é o cliente, a data e o objetivo da reunião, se ainda não souber.
+2. Monte o briefing com estas partes: quem é o cliente, histórico em três linhas, objetivo da reunião, cinco perguntas de descoberta, objeções prováveis com resposta, produto ou oferta a apresentar e próximo passo sugerido.
+3. Cite o arquivo de onde veio cada fato. Se uma decisão vigente limita o que pode ser oferecido ou prometido (por exemplo, uma regra para cotar), destaque no briefing. Se faltar informação, diga o que falta em vez de supor.
+4. Ofereça salvar o briefing na nota de diário do dia.
+
+## Saída esperada
+
+Um briefing de até uma página, em passos curtos, pronto para ler em dois minutos.
+
+## Regras
+
+Nível 2. Mostre ao usuário antes de considerar pronto. Não invente dados do cliente.
+<<<FIM>>>
+
+<<<ARQUIVO: 03-Acao/skills/registrar-atendimento/SKILL.md>>>
+---
+name: registrar-atendimento
+description: Registra um contato com cliente na ficha dele e no diário. Use quando o usuário disser que falou, atendeu, ligou, reuniu ou trocou mensagens com um cliente ou lead, e quiser registrar.
+---
+
+# Registrar atendimento
+
+## Quando usar
+
+O usuário acabou de falar com um cliente e conta o que aconteceu.
+
+## Antes de começar
+
+Leia `02-Memoria/clientes/_index.md` para achar a ficha do cliente, `01-Contexto/07-processo-comercial.md` para usar os nomes certos das etapas e `02-Memoria/decisoes/_index.md` para saber se alguma decisão vigente se aplica ao que o cliente pediu.
+
+## Passos
+
+1. Procure a ficha do cliente em `02-Memoria/clientes/`. Se não existir, crie copiando `_template-cliente.md` com o nome do cliente em minúsculas e hífen, e adicione ao índice.
+2. Acrescente no topo da seção Histórico uma entrada com data, canal, o que foi dito, objeções e o que ficou combinado.
+3. Atualize no frontmatter `etapa_funil`, `proximo_contato` e `atualizado_em`. Reescreva o `resumo` se a situação mudou.
+4. Se apareceu uma objeção nova ou uma lição concreta, proponha criar uma nota em `aprendizados/` já com "O que aprendemos" e "Como aplicar da próxima vez" preenchidos. Se não houver lição concreta, não proponha. Se houve uma decisão, proponha uma nota em `decisoes/`. Só crie depois de o usuário confirmar.
+5. Acrescente uma linha na nota de diário do dia. Se ela não existir, crie copiando `_template-diario.md` com o nome AAAA-MM-DD.md.
+6. Pergunte, no máximo, a etapa do funil e a data do próximo contato, se o usuário não disse. Responda em até três linhas com o que foi atualizado.
+
+## Saída esperada
+
+Ficha do cliente atualizada, diário do dia atualizado e, se couber, uma proposta de aprendizado ou decisão.
+
+## Regras
+
+Nível 1. Registre só o que o usuário contou. Não preencha motivos ou intenções do cliente por suposição.
+<<<FIM>>>
+
+<<<ARQUIVO: 03-Acao/skills/salvar-no-cerebro/SKILL.md>>>
+---
+name: salvar-no-cerebro
+description: Guarda uma informação no lugar certo do Segundo Cérebro. Use quando o usuário disser guarde, anote, salve, registre ou lembre disso, ou colar um texto de reunião, e-mail, WhatsApp ou conversa com IA para guardar.
+---
+
+# Salvar no cérebro
+
+## Quando usar
+
+O usuário quer guardar algo: uma decisão, um aprendizado, uma conversa, um fato sobre cliente ou um material bruto.
+
+## Antes de começar
+
+Leia `AGENTS.md`, `PADRAO-DE-ARQUIVOS.md` e o `_index.md` da pasta de destino provável.
+
+## Passos
+
+1. Classifique o que foi pedido: decisão, aprendizado, cliente, projeto, diário ou material bruto. Se faltar o conteúdo principal (por exemplo, quem decidiu), pergunte uma vez antes de gravar.
+2. Se veio de fonte externa colada (reunião, e-mail, WhatsApp, conversa com IA) ou se a classificação não é clara, grave em `02-Memoria/_inbox/` copiando `_template-item.md`. Nome do arquivo: `AAAA-MM-DD-origem-assunto.md`.
+3. Se é claramente uma decisão, aprendizado ou projeto e o usuário pediu para guardar, copie o `_template-*` da pasta certa em `02-Memoria/` e preencha todas as seções.
+4. Preencha o que souber. O que faltar fica como `[A PREENCHER]` com a pergunta. Escreva um `resumo` real de até 200 caracteres e converta datas relativas em AAAA-MM-DD.
+5. Adicione a linha do arquivo novo no `_index.md` da pasta.
+6. Responda em até duas linhas: o que foi salvo, em qual arquivo, e uma pergunta só se faltar algo importante.
+
+## Saída esperada
+
+Um arquivo novo com frontmatter completo, índice atualizado e confirmação curta ao usuário.
+
+## Regras
+
+Nível 1. Não invente fatos. Não grave senha, dado bancário ou documento pessoal. Se o conteúdo for sensível, pergunte antes e use `_restrito/` apenas com o nome do assunto.
+<<<FIM>>>
+
+<<<ARQUIVO: 03-Acao/skills/template-skill/SKILL.md>>>
+---
+name: template-skill
+description: Modelo. Copie esta pasta para criar uma skill nova. Escreva aqui o que a skill faz e quando usar, com as frases que o usuário costuma dizer. Máximo de 1024 caracteres.
+---
+
+# Nome da skill
+
+## Quando usar
+
+[A PREENCHER] Situações e frases do usuário que ativam esta skill.
+
+## Antes de começar
+
+[A PREENCHER] Arquivos que a IA deve ler antes, com caminho.
+
+## Passos
+
+[A PREENCHER] Passos numerados, cada um com uma ação só.
+
+## Saída esperada
+
+[A PREENCHER] O que o usuário recebe e onde o resultado é gravado.
+
+## Regras
+
+[A PREENCHER] Permissão necessária (nível 0 a 3) e o que nunca fazer.
+<<<FIM>>>
+
+<<<ARQUIVO: 03-Acao/skills/triagem-inbox/SKILL.md>>>
+---
+name: triagem-inbox
+description: Organiza a caixa de entrada do Segundo Cérebro. Use quando o usuário pedir para organizar, triar, limpar ou processar o que está esperando na caixa de entrada.
+---
+
+# Triagem da caixa de entrada
+
+## Quando usar
+
+Há itens em `02-Memoria/_inbox/` com `processado: nao` e o usuário quer organizá-los.
+
+## Antes de começar
+
+Leia `02-Memoria/_inbox/_index.md` e abra cada item com `processado: nao`.
+
+## Passos
+
+1. Para cada item, preencha a seção "O que parece importante" com até 5 linhas e sugira um destino: decisão, aprendizado, cliente, projeto, diário ou descarte.
+2. Mostre ao usuário uma lista curta: item, resumo em uma linha, destino sugerido.
+3. Espere a confirmação do usuário. Ele pode aprovar tudo, ajustar item a item ou pular.
+4. Para cada destino confirmado, crie a nota copiando o `_template-*` certo, preencha, atualize o índice da pasta e ligue a nota ao item em `relacionados`.
+5. Marque o item como `processado: sim` e `status: arquivado`. Não apague.
+6. Termine dizendo quantos itens foram organizados e quantos ficaram.
+
+## Saída esperada
+
+Notas criadas nos destinos confirmados, itens da caixa marcados como processados e um resumo de duas linhas.
+
+## Regras
+
+Nível 1. Nada vira nota curada sem confirmação. Descarte significa arquivar, nunca apagar.
+<<<FIM>>>
+
+<<<ARQUIVO: _restrito/README.md>>>
+---
+tipo: guia
+titulo: Área restrita
+resumo: Pasta para assuntos sensíveis. A IA só abre se o usuário pedir.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../AGENTS.md]
+---
+
+# Área restrita
+
+## O que há aqui
+
+Esta pasta é para assuntos sensíveis da {{EMPRESA}}, como negociações confidenciais ou informações estratégicas que não devem aparecer em respostas comuns.
+
+## Quando usar
+
+A IA não abre esta pasta por conta própria. Só abre quando o usuário pedir de forma explícita naquela conversa. Nunca guarde aqui senhas, dados bancários nem documentos pessoais. Se precisar lembrar que algo sensível existe, escreva só o nome do assunto e onde o dado real está guardado.
+<<<FIM>>>
+
+======== FIM DO ANEXO ========
