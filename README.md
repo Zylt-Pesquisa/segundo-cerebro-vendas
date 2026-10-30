@@ -2,7 +2,7 @@
 
 Um kit para criar, no seu computador, o Segundo Cérebro da sua empresa: uma pasta organizada que o Claude ou o ChatGPT lê antes de te ajudar a vender. A pasta é sua e da sua empresa. Este repositório só distribui o modelo vazio. Nenhum dado seu vem para cá.
 
-Versão atual: v1.1
+Versão atual: v1.2
 
 Você não precisa instalar Python, Git nem usar terminal. Escolha abaixo a ferramenta que você usa e siga os passos.
 
@@ -37,7 +37,7 @@ Pergunte o nome da empresa (vira {{EMPRESA}}). A data de hoje (vira {{DATA}}) vo
 
 A pasta de destino é a que a pessoa selecionou. Se nenhuma pasta estiver selecionada, peça que ela crie uma pasta vazia dentro da pasta do Google Drive (Meu Drive) ou do OneDrive, sugerindo o nome "Segundo Cerebro", e a adicione à conversa. Se o caminho da pasta escolhida não indicar Google Drive, Meu Drive, My Drive ou OneDrive, avise em uma frase que, fora dessas pastas, o cérebro fica sem backup, e pergunte se ela quer seguir assim ou trocar de pasta. Não peça nenhuma instalação técnica: Python, Git e terminal não são necessários.
 
-1. Baixe o kit (versão v1.1) deste endereço, para uma pasta de trabalho temporária FORA da pasta da pessoa, e descompacte: https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas/archive/refs/tags/v1.1.zip
+1. Baixe o kit (versão v1.2) deste endereço, para uma pasta de trabalho temporária FORA da pasta da pessoa, e descompacte: https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas/archive/refs/tags/v1.2.zip
 2. O kit descompactado tem uma pasta única com as pastas template e ferramentas, mais arquivos de apoio (README e PROMPT-COMPLETO) que você ignora. Copie o conteúdo da pasta template (não a pasta template em si) para a pasta de destino, mantendo os mesmos caminhos. São 43 arquivos em 21 pastas além da raiz.
 3. Dentro dos arquivos copiados, troque {{EMPRESA}} pelo nome da empresa e {{DATA}} pela data de hoje. Mais nada muda.
 4. Se não conseguir baixar (sem internet, endereço bloqueado), peça que a pessoa abra o endereço no navegador, baixe o arquivo ZIP e o coloque na pasta de destino, e tente de novo com o arquivo local. O ZIP colocado pela pessoa não conta como arquivo existente na pasta. Se ainda assim não for possível, diga que ela deve usar o arquivo PROMPT-COMPLETO.md do mesmo kit e pare.
@@ -66,7 +66,7 @@ Abra o arquivo ENTREVISTA.md do kit e siga-o do começo ao fim. Ele traz as regr
 
 ## Criar com o ChatGPT
 
-1. Baixe o kit neste endereço (ele baixa um arquivo ZIP): https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas/archive/refs/tags/v1.1.zip
+1. Baixe o kit neste endereço (ele baixa um arquivo ZIP): https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas/archive/refs/tags/v1.2.zip
 2. Abra uma conversa nova no ChatGPT, de preferência uma que tenha análise de dados ou execução de código ligada, e anexe o ZIP.
 3. Copie o prompt abaixo (botão de copiar no canto direito do quadro) e cole na conversa.
 4. Responda às perguntas. A conversa leva de 40 a 60 minutos.

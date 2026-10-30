@@ -34,7 +34,7 @@ F[M + "_inbox/_template-item.md"] = fm(
     "Modelo. Copie para guardar material bruto ainda não organizado.",
     status="modelo", fonte="estrutura inicial", rel=["_index.md"],
     extra={"origem": "reuniao | email | whatsapp | sessao-ia | outro",
-           "data": "AAAA-MM-DD", "processado": "nao"}) + """# Assunto do item
+           "data": "AAAA-MM-DD", "cliente": "nome-da-ficha | vazio", "processado": "nao"}) + """# Assunto do item
 
 ## Conteúdo bruto
 
@@ -61,7 +61,7 @@ F[M + "decisoes/_template-decisao.md"] = fm(
     "decisao", "Modelo de decisão",
     "Modelo. Copie para registrar uma decisão com contexto, alternativas e data de revisão.",
     status="modelo", fonte="estrutura inicial", rel=["_index.md"],
-    extra={"data": "AAAA-MM-DD", "decisor": PH, "cliente": "opcional",
+    extra={"data": "AAAA-MM-DD", "decisor": PH, "cliente": "nome-da-ficha | vazio",
            "projeto": "opcional", "revisar_em": "AAAA-MM-DD",
            "substituido_por": "vazio"}) + """# Decisão em uma frase
 
@@ -99,6 +99,7 @@ F[M + "aprendizados/_template-aprendizado.md"] = fm(
     "Modelo. Copie para registrar o que funcionou ou falhou e como aplicar na próxima vez.",
     status="modelo", fonte="estrutura inicial", rel=["_index.md"],
     extra={"data": "AAAA-MM-DD", "origem": "cliente, projeto ou reunião de origem",
+           "cliente": "nome-da-ficha | vazio",
            "categoria": "objecao | abordagem | produto | processo | outro"}) + """# Aprendizado em uma frase
 
 ## O que aprendemos
@@ -161,7 +162,7 @@ F[M + "diario/_template-diario.md"] = fm(
     "diario", "Modelo de diário",
     "Modelo. Copie para a nota do dia com o que aconteceu, o que ficou decidido e as pendências.",
     status="modelo", fonte="estrutura inicial", rel=["_index.md"],
-    extra={"data": "AAAA-MM-DD"}) + """# Diário AAAA-MM-DD
+    extra={"data": "AAAA-MM-DD", "clientes": "nomes das fichas citadas, separados por vírgula | vazio"}) + """# Diário AAAA-MM-DD
 
 ## O que aconteceu
 
@@ -217,17 +218,18 @@ F[M + "clientes/_index.md"] = indice(
     "Clientes",
     "Fichas de clientes e oportunidades da {{EMPRESA}} com etapa do funil e próximo contato.",
     [("Modelo de cliente", "_template-cliente.md", "modelo para criar a ficha de um cliente")],
-    "Abra a ficha antes de qualquer contato com o cliente. Uma ficha por cliente ou oportunidade, nome do arquivo em minúsculas com hífen. Liste os clientes com a etapa do funil na descrição. As seções Situação, Problemas, Implicações e Necessidades explícitas seguem o método SPIN descrito em 01-Contexto/08-metodo-spin.md.",
+    "Abra a ficha antes de qualquer contato com o cliente. Uma ficha por empresa cliente (ou por pessoa, quando o cliente é pessoa física), com as oportunidades dentro dela. Nome do arquivo em minúsculas com hífen. Liste cada cliente com a etapa do funil e os apelidos na descrição, para a IA reconhecer o cliente por outros nomes. As seções Situação, Problemas, Implicações e Necessidades explícitas seguem o método SPIN descrito em 01-Contexto/08-metodo-spin.md.",
     rel=["../../01-Contexto/07-processo-comercial.md", "../../01-Contexto/08-metodo-spin.md"])
 
 F[M + "clientes/_template-cliente.md"] = fm(
     "cliente", "Modelo de cliente",
-    "Modelo. Copie para criar a ficha de um cliente ou oportunidade, organizada pelo método SPIN.",
+    "Modelo. Copie para criar a ficha de um cliente (empresa ou pessoa), com suas oportunidades, organizada pelo método SPIN.",
     status="modelo", fonte="estrutura inicial",
     rel=["_index.md", "../../01-Contexto/08-metodo-spin.md"],
-    extra={"nome": PH, "responsavel": PH, "etapa_funil": PH,
-           "produto": PH, "proximo_contato": "AAAA-MM-DD",
-           "ultimo_resultado": "avanco / continuacao / pedido / sem-venda"}) + """# Nome do cliente
+    extra={"nome": PH, "apelidos": "outros nomes pelos quais o cliente é chamado, separados por vírgula | vazio",
+           "id_crm": "código do cliente no CRM | vazio", "responsavel": PH,
+           "etapa_funil": PH, "produto": PH, "proximo_contato": "AAAA-MM-DD",
+           "ultimo_resultado": "avanco | continuacao | pedido | sem-venda"}) + """# Nome do cliente
 
 ## Quem é
 
@@ -253,9 +255,13 @@ F[M + "clientes/_template-cliente.md"] = fm(
 
 [A PREENCHER] Nome, cargo e papel na decisão. Sem dados sensíveis.
 
+## Oportunidades
+
+[A PREENCHER] Uma linha por oportunidade aberta ou encerrada com este cliente: produto, etapa do funil, valor se houver, situação (aberta, ganha ou perdida) e data. Os campos etapa_funil e produto do topo valem para a oportunidade principal.
+
 ## Histórico
 
-[A PREENCHER] Contatos em ordem do mais recente para o mais antigo, cada um com data, canal, o que foi dito, objeções, o combinado e o resultado (avanço, continuação, pedido ou sem venda).
+[A PREENCHER] Contatos em ordem do mais recente para o mais antigo, cada um com data, canal, oportunidade (produto), o que foi dito, objeções, o combinado e o resultado (avanço, continuação, pedido ou sem venda).
 
 ## Próximo passo
 

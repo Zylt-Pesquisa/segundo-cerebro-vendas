@@ -15,10 +15,10 @@ Leia `02-Memoria/_inbox/_index.md` e abra cada item com `processado: nao`.
 
 ## Passos
 
-1. Para cada item, preencha a seção "O que parece importante" com até 5 linhas e sugira um destino: decisão, aprendizado, cliente, projeto, diário ou descarte.
+1. Para cada item, preencha a seção "O que parece importante" com até 5 linhas e sugira um destino: decisão, aprendizado, cliente, projeto, diário ou descarte. Se o item fala de um cliente e o campo `cliente` está vazio, identifique a ficha pela regra 8 de "Como escrever" do `AGENTS.md` e mostre qual ficha você acha que é.
 2. Mostre ao usuário uma lista curta: item, resumo em uma linha, destino sugerido.
 3. Espere a confirmação do usuário. Ele pode aprovar tudo, ajustar item a item ou pular.
-4. Para cada destino confirmado, crie a nota copiando o `_template-*` certo, preencha, atualize o índice da pasta e ligue a nota ao item em `relacionados`.
+4. Para cada destino confirmado, crie a nota copiando o `_template-*` certo, preencha (inclusive o campo `cliente`), atualize o índice da pasta e ligue a nota ao item em `relacionados`.
 5. Marque o item como `processado: sim` e `status: arquivado`. Não apague.
 6. Termine dizendo quantos itens foram organizados e quantos ficaram.
 

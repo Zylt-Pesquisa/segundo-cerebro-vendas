@@ -8,6 +8,7 @@ fonte: estrutura inicial
 relacionados: [_index.md]
 data: AAAA-MM-DD
 origem: cliente, projeto ou reunião de origem
+cliente: nome-da-ficha | vazio
 categoria: objecao | abordagem | produto | processo | outro
 ---
 

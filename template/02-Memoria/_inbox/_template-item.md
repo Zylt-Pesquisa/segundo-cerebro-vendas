@@ -8,6 +8,7 @@ fonte: estrutura inicial
 relacionados: [_index.md]
 origem: reuniao | email | whatsapp | sessao-ia | outro
 data: AAAA-MM-DD
+cliente: nome-da-ficha | vazio
 processado: nao
 ---
 

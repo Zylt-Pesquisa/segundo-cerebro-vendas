@@ -31,7 +31,7 @@ A IA lê muito texto e erra quando os arquivos são longos, vagos ou diferentes 
 - `fonte` — de onde veio a informação (entrevista inicial, reunião de AAAA-MM-DD, e-mail, conversa com a IA, documento).
 - `relacionados` — lista de caminhos relativos de arquivos ligados a este.
 
-Campos extras por tipo ficam abaixo dos comuns. Cliente: nome, responsavel, etapa_funil, produto, proximo_contato, ultimo_resultado. Decisão: data, decisor, cliente, projeto, revisar_em, substituido_por. Aprendizado: data, origem, categoria. Projeto: responsavel, prazo, andamento. Diário: data. Inbox: origem, data, processado.
+Campos extras por tipo ficam abaixo dos comuns. Cliente: nome, apelidos, id_crm, responsavel, etapa_funil, produto, proximo_contato, ultimo_resultado. Decisão: data, decisor, cliente, projeto, revisar_em, substituido_por. Aprendizado: data, origem, cliente, categoria. Projeto: responsavel, prazo, andamento. Diário: data, clientes. Inbox: origem, data, cliente, processado. O campo `cliente` sempre leva o nome do arquivo da ficha do cliente, sem `.md` (por exemplo, casa-clara-esquadrias), ou a palavra vazio quando a nota não é sobre um cliente.
 
 ## Regras de escrita
 
@@ -47,7 +47,7 @@ Campos extras por tipo ficam abaixo dos comuns. Cliente: nome, responsavel, etap
 ## Nomes de arquivos
 
 - Notas datadas: `AAAA-MM-DD-assunto-curto.md` (decisões, aprendizados, diário, inbox).
-- Clientes e produtos: nome em minúsculas, sem acento, com hífen (`casa-clara-esquadrias.md`). Pessoas sem sobrenome são escritas como foram ditas.
+- Clientes e produtos: nome em minúsculas, sem acento, com hífen (`casa-clara-esquadrias.md`). A ficha de cliente leva o nome da empresa, não o do contato. Pessoas sem sobrenome são escritas como foram ditas.
 - Modelos começam com `_template-` (a pasta do modelo de skill se chama `template-skill`, porque o nome da skill não aceita sublinhado). Nunca edite um modelo. Copie e preencha a cópia.
 - Cada pasta de 01-Contexto e de 02-Memoria, e a pasta 03-Acao, tem um `_index.md` que lista seu conteúdo, uma linha por arquivo.
 

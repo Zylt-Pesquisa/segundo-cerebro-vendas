@@ -119,7 +119,7 @@ Leia `AGENTS.md`, `PADRAO-DE-ARQUIVOS.md` e o `_index.md` da pasta de destino pr
 1. Classifique o que foi pedido: decisão, aprendizado, cliente, projeto, diário ou material bruto. Se faltar o conteúdo principal (por exemplo, quem decidiu), pergunte uma vez antes de gravar.
 2. Se veio de fonte externa colada (reunião, e-mail, WhatsApp, conversa com IA) ou se a classificação não é clara, grave em `02-Memoria/_inbox/` copiando `_template-item.md`. Nome do arquivo: `AAAA-MM-DD-origem-assunto.md`.
 3. Se é claramente uma decisão, aprendizado ou projeto e o usuário pediu para guardar, copie o `_template-*` da pasta certa em `02-Memoria/` e preencha todas as seções.
-4. Preencha o que souber. O que faltar fica como `[A PREENCHER]` com a pergunta. Escreva um `resumo` real de até 200 caracteres e converta datas relativas em AAAA-MM-DD.
+4. Se a informação é sobre um cliente, identifique a ficha pela regra 8 de "Como escrever" do `AGENTS.md` e preencha o campo `cliente` com o nome do arquivo da ficha. Preencha o que souber. O que faltar fica como `[A PREENCHER]` com a pergunta. Escreva um `resumo` real de até 200 caracteres e converta datas relativas em AAAA-MM-DD.
 5. Adicione a linha do arquivo novo no `_index.md` da pasta.
 6. Responda em até duas linhas: o que foi salvo, em qual arquivo, e uma pergunta só se faltar algo importante.
 
@@ -148,16 +148,17 @@ Leia `01-Contexto/08-metodo-spin.md` para aplicar as marcas e as definições do
 
 ## Passos
 
-1. Procure a ficha do cliente em `02-Memoria/clientes/`. Se não existir, crie copiando `_template-cliente.md` com o nome do cliente em minúsculas e hífen, e adicione ao índice. Se a ficha for do modelo antigo, sem as seções Problemas, Implicações e Necessidades explícitas, acrescente essas seções antes de Decisores e contatos, sem apagar nada.
-2. Se o usuário colou uma transcrição ou um texto longo, guarde o texto bruto em `02-Memoria/_inbox/` como manda a skill salvar-no-cerebro e ligue o item à ficha em `relacionados`.
-3. Separe o que foi dito e grave em cada seção da ficha, com a data do contato. Fatos novos sobre o cliente vão em Situação. Dificuldades vão em Problemas, com [fato] se o cliente disse e [hipótese] se foi o vendedor que deduziu. Consequências vão em Implicações, com o número e quem o disse; número sem confirmação do cliente leva [estimativa]. Desejos declarados vão em Necessidades explícitas, entre aspas, com as palavras do cliente.
-4. Se o cliente confirmou uma hipótese antiga, troque a marca para [fato] e anote a data. Não apague a linha.
-5. Classifique o resultado do contato como avanço, continuação, pedido ou sem venda, pelas definições do `08-metodo-spin.md`. Se não ficar claro, pergunte qual compromisso concreto o cliente assumiu.
-6. Acrescente no topo da seção Histórico uma entrada com data, canal, o que foi dito, objeções, o que ficou combinado e o resultado.
-7. Atualize no frontmatter `etapa_funil`, `proximo_contato`, `ultimo_resultado` e `atualizado_em`. Reescreva o `resumo` se a situação mudou. Em Próximo passo, escreva o avanço a buscar no próximo contato.
-8. Se apareceu uma objeção nova ou uma lição concreta, proponha criar uma nota em `aprendizados/` já com "O que aprendemos" e "Como aplicar da próxima vez" preenchidos. Se uma pergunta funcionou bem, proponha acrescentá-la ao Banco de perguntas do `08-metodo-spin.md`. Se houve uma decisão, proponha uma nota em `decisoes/`. Só crie depois de o usuário confirmar.
-9. Acrescente uma linha na nota de diário do dia. Se ela não existir, crie copiando `_template-diario.md` com o nome AAAA-MM-DD.md.
-10. Pergunte, no máximo, a etapa do funil, a data do próximo contato e o resultado, se o usuário não disse. Responda em até quatro linhas com o que foi atualizado e um alerta SPIN quando couber, como "ainda não há necessidade explícita registrada" ou "segunda continuação seguida".
+1. Identifique o cliente pela regra 8 de "Como escrever" do `AGENTS.md`: procure no índice e nos campos `nome`, `apelidos` e `id_crm`, e pergunte se achar um nome parecido. Se o cliente for novo, crie a ficha copiando `_template-cliente.md` com o nome da empresa em minúsculas e hífen, e adicione ao índice com a etapa e os apelidos. Se a ficha for do modelo antigo, acrescente as seções e os campos que faltarem (Problemas, Implicações, Necessidades explícitas, Oportunidades, `apelidos`, `id_crm`), sem apagar nada.
+2. Descubra de qual oportunidade o contato trata. Se for uma venda nova para o mesmo cliente, acrescente uma linha em Oportunidades em vez de criar outra ficha.
+3. Se o usuário colou uma transcrição ou um texto longo, guarde o texto bruto em `02-Memoria/_inbox/` como manda a skill salvar-no-cerebro, com o campo `cliente` preenchido, e ligue o item à ficha em `relacionados`.
+4. Separe o que foi dito e grave em cada seção da ficha, com a data do contato. Fatos novos sobre o cliente vão em Situação. Dificuldades vão em Problemas, com [fato] se o cliente disse e [hipótese] se foi o vendedor que deduziu. Consequências vão em Implicações, com o número e quem o disse; número sem confirmação do cliente leva [estimativa]. Desejos declarados vão em Necessidades explícitas, entre aspas, com as palavras do cliente.
+5. Se o cliente confirmou uma hipótese antiga, troque a marca para [fato] e anote a data. Não apague a linha.
+6. Classifique o resultado do contato como avanço, continuação, pedido ou sem venda, pelas definições do `08-metodo-spin.md`. Se não ficar claro, pergunte qual compromisso concreto o cliente assumiu.
+7. Acrescente no topo da seção Histórico uma entrada com data, canal, oportunidade, o que foi dito, objeções, o que ficou combinado e o resultado.
+8. Atualize a linha da oportunidade em Oportunidades e, no frontmatter, `etapa_funil`, `proximo_contato`, `ultimo_resultado` e `atualizado_em`. Reescreva o `resumo` se a situação mudou. Em Próximo passo, escreva o avanço a buscar no próximo contato.
+9. Se apareceu uma objeção nova ou uma lição concreta, proponha criar uma nota em `aprendizados/`, com o campo `cliente` preenchido, já com "O que aprendemos" e "Como aplicar da próxima vez" preenchidos. Se uma pergunta funcionou bem, proponha acrescentá-la ao Banco de perguntas do `08-metodo-spin.md`. Se houve uma decisão, proponha uma nota em `decisoes/`. Só crie depois de o usuário confirmar.
+10. Acrescente uma linha na nota de diário do dia e inclua o cliente no campo `clientes`. Se a nota não existir, crie copiando `_template-diario.md` com o nome AAAA-MM-DD.md.
+11. Pergunte, no máximo, a etapa do funil, a data do próximo contato e o resultado, se o usuário não disse. Responda em até quatro linhas com o que foi atualizado e um alerta SPIN quando couber, como "ainda não há necessidade explícita registrada" ou "segunda continuação seguida".
 
 ## Saída esperada
 
@@ -165,7 +166,7 @@ Ficha do cliente atualizada nas seções SPIN, Histórico com o resultado do con
 
 ## Regras
 
-Nível 1. Registre só o que o usuário contou. Não preencha motivos ou intenções do cliente por suposição. Nunca marque como [fato] o que o cliente não disse, e nunca transforme queixa vaga em necessidade explícita.
+Nível 1. Registre só o que o usuário contou. Não preencha motivos ou intenções do cliente por suposição. Nunca marque como [fato] o que o cliente não disse, e nunca transforme queixa vaga em necessidade explícita. Nunca grave na ficha de um cliente sem ter certeza de que é ele.
 """)
 
 F[S + "preparar-reuniao-cliente/SKILL.md"] = skill(
@@ -180,7 +181,7 @@ O usuário tem uma reunião, ligação ou visita com um cliente e quer chegar pr
 
 ## Antes de começar
 
-Leia `01-Contexto/08-metodo-spin.md` e a ficha em `02-Memoria/clientes/`. Leia `01-Contexto/02-icp.md`, `01-Contexto/03-tom-de-voz.md`, `02-Memoria/prioridades/atual.md`, a ficha do produto em `01-Contexto/06-produtos/`, as decisões de `02-Memoria/decisoes/` que se apliquem ao produto ou ao cliente e os itens recentes de `02-Memoria/_inbox/` e `02-Memoria/aprendizados/` que citem o cliente ou o produto. Se `03-Acao/conectores.md` tiver um CRM conectado, consulte o histórico do cliente nele, só para leitura.
+Leia `01-Contexto/08-metodo-spin.md` e a ficha em `02-Memoria/clientes/`, identificada pela regra 8 de "Como escrever" do `AGENTS.md`. Se houver mais de uma oportunidade aberta, pergunte de qual a reunião trata. Leia `01-Contexto/02-icp.md`, `01-Contexto/03-tom-de-voz.md`, `02-Memoria/prioridades/atual.md`, a ficha do produto em `01-Contexto/06-produtos/`, as decisões de `02-Memoria/decisoes/` que se apliquem ao produto ou ao cliente e as notas de `02-Memoria/_inbox/`, `02-Memoria/aprendizados/` e `02-Memoria/decisoes/` cujo campo `cliente` seja esta ficha, além das que citem o produto. Se `03-Acao/conectores.md` tiver um CRM conectado, consulte o histórico do cliente nele, só para leitura.
 
 ## Passos
 
@@ -251,10 +252,10 @@ Leia `02-Memoria/_inbox/_index.md` e abra cada item com `processado: nao`.
 
 ## Passos
 
-1. Para cada item, preencha a seção "O que parece importante" com até 5 linhas e sugira um destino: decisão, aprendizado, cliente, projeto, diário ou descarte.
+1. Para cada item, preencha a seção "O que parece importante" com até 5 linhas e sugira um destino: decisão, aprendizado, cliente, projeto, diário ou descarte. Se o item fala de um cliente e o campo `cliente` está vazio, identifique a ficha pela regra 8 de "Como escrever" do `AGENTS.md` e mostre qual ficha você acha que é.
 2. Mostre ao usuário uma lista curta: item, resumo em uma linha, destino sugerido.
 3. Espere a confirmação do usuário. Ele pode aprovar tudo, ajustar item a item ou pular.
-4. Para cada destino confirmado, crie a nota copiando o `_template-*` certo, preencha, atualize o índice da pasta e ligue a nota ao item em `relacionados`.
+4. Para cada destino confirmado, crie a nota copiando o `_template-*` certo, preencha (inclusive o campo `cliente`), atualize o índice da pasta e ligue a nota ao item em `relacionados`.
 5. Marque o item como `processado: sim` e `status: arquivado`. Não apague.
 6. Termine dizendo quantos itens foram organizados e quantos ficaram.
 

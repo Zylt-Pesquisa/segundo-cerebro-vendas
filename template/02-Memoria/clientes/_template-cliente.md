@@ -1,17 +1,19 @@
 ---
 tipo: cliente
 titulo: Modelo de cliente
-resumo: Modelo. Copie para criar a ficha de um cliente ou oportunidade, organizada pelo método SPIN.
+resumo: Modelo. Copie para criar a ficha de um cliente (empresa ou pessoa), com suas oportunidades, organizada pelo método SPIN.
 status: modelo
 atualizado_em: {{DATA}}
 fonte: estrutura inicial
 relacionados: [_index.md, ../../01-Contexto/08-metodo-spin.md]
 nome: A PREENCHER
+apelidos: outros nomes pelos quais o cliente é chamado, separados por vírgula | vazio
+id_crm: código do cliente no CRM | vazio
 responsavel: A PREENCHER
 etapa_funil: A PREENCHER
 produto: A PREENCHER
 proximo_contato: AAAA-MM-DD
-ultimo_resultado: avanco / continuacao / pedido / sem-venda
+ultimo_resultado: avanco | continuacao | pedido | sem-venda
 ---
 
 # Nome do cliente
@@ -40,9 +42,13 @@ ultimo_resultado: avanco / continuacao / pedido / sem-venda
 
 [A PREENCHER] Nome, cargo e papel na decisão. Sem dados sensíveis.
 
+## Oportunidades
+
+[A PREENCHER] Uma linha por oportunidade aberta ou encerrada com este cliente: produto, etapa do funil, valor se houver, situação (aberta, ganha ou perdida) e data. Os campos etapa_funil e produto do topo valem para a oportunidade principal.
+
 ## Histórico
 
-[A PREENCHER] Contatos em ordem do mais recente para o mais antigo, cada um com data, canal, o que foi dito, objeções, o combinado e o resultado (avanço, continuação, pedido ou sem venda).
+[A PREENCHER] Contatos em ordem do mais recente para o mais antigo, cada um com data, canal, oportunidade (produto), o que foi dito, objeções, o combinado e o resultado (avanço, continuação, pedido ou sem venda).
 
 ## Próximo passo
 

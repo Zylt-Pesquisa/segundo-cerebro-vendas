@@ -8,7 +8,7 @@ fonte: estrutura inicial
 relacionados: [_index.md]
 data: AAAA-MM-DD
 decisor: A PREENCHER
-cliente: opcional
+cliente: nome-da-ficha | vazio
 projeto: opcional
 revisar_em: AAAA-MM-DD
 substituido_por: vazio

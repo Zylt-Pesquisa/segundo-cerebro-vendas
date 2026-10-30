@@ -7,6 +7,7 @@ atualizado_em: {{DATA}}
 fonte: estrutura inicial
 relacionados: [_index.md]
 data: AAAA-MM-DD
+clientes: nomes das fichas citadas, separados por vírgula | vazio
 ---
 
 # Diário AAAA-MM-DD

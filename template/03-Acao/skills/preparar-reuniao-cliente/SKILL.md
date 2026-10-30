@@ -11,7 +11,7 @@ O usuário tem uma reunião, ligação ou visita com um cliente e quer chegar pr
 
 ## Antes de começar
 
-Leia `01-Contexto/08-metodo-spin.md` e a ficha em `02-Memoria/clientes/`. Leia `01-Contexto/02-icp.md`, `01-Contexto/03-tom-de-voz.md`, `02-Memoria/prioridades/atual.md`, a ficha do produto em `01-Contexto/06-produtos/`, as decisões de `02-Memoria/decisoes/` que se apliquem ao produto ou ao cliente e os itens recentes de `02-Memoria/_inbox/` e `02-Memoria/aprendizados/` que citem o cliente ou o produto. Se `03-Acao/conectores.md` tiver um CRM conectado, consulte o histórico do cliente nele, só para leitura.
+Leia `01-Contexto/08-metodo-spin.md` e a ficha em `02-Memoria/clientes/`, identificada pela regra 8 de "Como escrever" do `AGENTS.md`. Se houver mais de uma oportunidade aberta, pergunte de qual a reunião trata. Leia `01-Contexto/02-icp.md`, `01-Contexto/03-tom-de-voz.md`, `02-Memoria/prioridades/atual.md`, a ficha do produto em `01-Contexto/06-produtos/`, as decisões de `02-Memoria/decisoes/` que se apliquem ao produto ou ao cliente e as notas de `02-Memoria/_inbox/`, `02-Memoria/aprendizados/` e `02-Memoria/decisoes/` cujo campo `cliente` seja esta ficha, além das que citem o produto. Se `03-Acao/conectores.md` tiver um CRM conectado, consulte o histórico do cliente nele, só para leitura.
 
 ## Passos
 
