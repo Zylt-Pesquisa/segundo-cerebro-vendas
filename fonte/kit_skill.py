@@ -5,7 +5,7 @@ NOME = "usar-segundo-cerebro"
 
 SKILL = """---
 name: usar-segundo-cerebro
-description: Ativa e ensina a usar o Segundo Cérebro comercial do usuário, uma pasta de arquivos Markdown com o contexto da empresa, a memória de clientes e decisões e os roteiros de ação. Use quando o usuário falar em Segundo Cérebro ou meu cérebro, pedir para guardar, anotar ou registrar algo da empresa, contar um atendimento ou reunião com cliente, pedir para preparar uma reunião, escrever follow-up ou mensagem para cliente, organizar a caixa de entrada, continuar a entrevista, consultar prioridades, clientes, decisões, produtos ou objeções da empresa, ou perguntar como usar o cérebro. Use também quando a pasta de trabalho tiver um AGENTS.md que cite o Segundo Cérebro. Não use para pedidos sem relação com vendas ou com a empresa.
+description: Ativa e ensina a usar o Segundo Cérebro comercial do usuário, uma pasta de arquivos Markdown com o contexto da empresa, a memória de clientes e decisões e os roteiros de ação. Use quando o usuário falar em Segundo Cérebro ou meu cérebro, pedir para guardar, anotar ou registrar algo da empresa, contar um atendimento ou reunião com cliente, pedir para preparar uma reunião, escrever follow-up ou mensagem para cliente, revisar a carteira ou o funil, organizar a caixa de entrada, continuar a entrevista, consultar prioridades, clientes, decisões, produtos ou objeções da empresa, ou perguntar como usar o cérebro. Use também quando a pasta de trabalho tiver um AGENTS.md que cite o Segundo Cérebro. Não use para pedidos sem relação com vendas ou com a empresa.
 ---
 
 # Usar o Segundo Cérebro

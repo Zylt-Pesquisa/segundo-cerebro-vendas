@@ -19,6 +19,7 @@ relacionados: [../AGENTS.md]
 - [Preparar reunião com cliente](skills/preparar-reuniao-cliente/SKILL.md) — monta um briefing SPIN de uma página com o avanço a buscar
 - [Escrever follow-up](skills/escrever-follow-up/SKILL.md) — redige mensagem na voz da empresa
 - [Triagem da caixa de entrada](skills/triagem-inbox/SKILL.md) — organiza o material bruto
+- [Revisar carteira](skills/revisar-carteira/SKILL.md) — mostra atrasados, contatos da semana, negócios parados e o funil por etapa
 - [Modelo de skill](skills/template-skill/SKILL.md) — modelo para criar uma skill nova
 
 ## Quando usar

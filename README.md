@@ -2,7 +2,7 @@
 
 Um kit para criar, no seu computador, o Segundo Cérebro da sua empresa: uma pasta organizada que o Claude ou o ChatGPT lê antes de te ajudar a vender. A pasta é sua e da sua empresa. Este repositório só distribui o modelo vazio. Nenhum dado seu vem para cá.
 
-Versão atual: v1.2
+Versão atual: v1.3
 
 Você não precisa instalar Python, Git nem usar terminal. Escolha abaixo a ferramenta que você usa e siga os passos.
 
@@ -37,8 +37,8 @@ Pergunte o nome da empresa (vira {{EMPRESA}}). A data de hoje (vira {{DATA}}) vo
 
 A pasta de destino é a que a pessoa selecionou. Se nenhuma pasta estiver selecionada, peça que ela crie uma pasta vazia dentro da pasta do Google Drive (Meu Drive) ou do OneDrive, sugerindo o nome "Segundo Cerebro", e a adicione à conversa. Se o caminho da pasta escolhida não indicar Google Drive, Meu Drive, My Drive ou OneDrive, avise em uma frase que, fora dessas pastas, o cérebro fica sem backup, e pergunte se ela quer seguir assim ou trocar de pasta. Não peça nenhuma instalação técnica: Python, Git e terminal não são necessários.
 
-1. Baixe o kit (versão v1.2) deste endereço, para uma pasta de trabalho temporária FORA da pasta da pessoa, e descompacte: https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas/archive/refs/tags/v1.2.zip
-2. O kit descompactado tem uma pasta única com as pastas template e ferramentas, mais arquivos de apoio (README e PROMPT-COMPLETO) que você ignora. Copie o conteúdo da pasta template (não a pasta template em si) para a pasta de destino, mantendo os mesmos caminhos. São 43 arquivos em 21 pastas além da raiz.
+1. Baixe o kit (versão v1.3) deste endereço, para uma pasta de trabalho temporária FORA da pasta da pessoa, e descompacte: https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas/archive/refs/tags/v1.3.zip
+2. O kit descompactado tem uma pasta única com as pastas template e ferramentas, mais arquivos de apoio (README e PROMPT-COMPLETO) que você ignora. Copie o conteúdo da pasta template (não a pasta template em si) para a pasta de destino, mantendo os mesmos caminhos. São 44 arquivos em 22 pastas além da raiz.
 3. Dentro dos arquivos copiados, troque {{EMPRESA}} pelo nome da empresa e {{DATA}} pela data de hoje. Mais nada muda.
 4. Se não conseguir baixar (sem internet, endereço bloqueado), peça que a pessoa abra o endereço no navegador, baixe o arquivo ZIP e o coloque na pasta de destino, e tente de novo com o arquivo local. O ZIP colocado pela pessoa não conta como arquivo existente na pasta. Se ainda assim não for possível, diga que ela deve usar o arquivo PROMPT-COMPLETO.md do mesmo kit e pare.
 5. Não recrie arquivos do kit: copie os originais.
@@ -48,14 +48,14 @@ A pasta de destino é a que a pessoa selecionou. Se nenhuma pasta estiver seleci
 
 Confira cada item e corrija o que falhar:
 
-- Existem 43 arquivos (os do kit, mais os de produtos criados na entrevista) e cada um está no caminho certo.
+- Existem 44 arquivos (os do kit, mais os de produtos criados na entrevista) e cada um está no caminho certo.
 - Nenhum arquivo ficou com {{EMPRESA}} ou {{DATA}} sem troca.
 - Todo arquivo .md começa com o bloco entre linhas --- (frontmatter) e tem status, fonte e atualizado_em preenchidos.
 - Cada resumo tem no máximo 200 caracteres e descreve o conteúdo real do arquivo.
 - Cada pasta dentro de 01-Contexto e de 02-Memoria, e a pasta 03-Acao, tem um _index.md. Cada arquivo de 01-Contexto e de 02-Memoria aparece no _index.md da sua pasta. As skills e a pasta automacoes aparecem em 03-Acao/_index.md.
 - Todo link entre arquivos, inclusive os do campo relacionados, aponta para um arquivo que existe.
 - Os arquivos SKILL.md têm name igual ao nome da pasta onde estão.
-- Se houver Python disponível e a pasta ferramentas do kit baixado tiver o arquivo validar.py, rode: python3 validar.py PASTA --esperado 43 (o número sobe quando há produtos novos).
+- Se houver Python disponível e a pasta ferramentas do kit baixado tiver o arquivo validar.py, rode: python3 validar.py PASTA --esperado 44 (o número sobe quando há produtos novos).
 
 Faça esta conferência duas vezes: logo depois de criar a estrutura e de novo ao fim da entrevista, antes do fechamento. Na primeira, diga à pessoa, em até 4 linhas: quantos arquivos criou, onde estão e quais são as três camadas (Contexto, Memória, Ação) em uma frase cada, sem listar os arquivos, e comece a entrevista. Na segunda, não faça mensagem própria: corrija o que falhar e siga para o fechamento.
 
@@ -66,7 +66,7 @@ Abra o arquivo ENTREVISTA.md do kit e siga-o do começo ao fim. Ele traz as regr
 
 ## Criar com o ChatGPT
 
-1. Baixe o kit neste endereço (ele baixa um arquivo ZIP): https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas/archive/refs/tags/v1.2.zip
+1. Baixe o kit neste endereço (ele baixa um arquivo ZIP): https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas/archive/refs/tags/v1.3.zip
 2. Abra uma conversa nova no ChatGPT, de preferência uma que tenha análise de dados ou execução de código ligada, e anexe o ZIP.
 3. Copie o prompt abaixo (botão de copiar no canto direito do quadro) e cole na conversa.
 4. Responda às perguntas. A conversa leva de 40 a 60 minutos.
@@ -97,7 +97,7 @@ Pergunte o nome da empresa (vira {{EMPRESA}}). A data de hoje (vira {{DATA}}) vo
 
 Escolha o caminho, sem pedir detalhes técnicos à pessoa:
 
-- Caminho B (você tem ferramenta de código): descompacte o ZIP anexo. Ele tem uma pasta única com as pastas template e ferramentas, mais arquivos de apoio (README e PROMPT-COMPLETO) que você ignora. Copie o conteúdo da pasta template (não a pasta template em si) para uma pasta de trabalho chamada Segundo-Cerebro- seguido do nome da empresa sem acentos, sem espaços e com hífen, mantendo os mesmos caminhos. São 43 arquivos em 21 pastas além da raiz. Troque {{EMPRESA}} e {{DATA}} dentro dos arquivos. Na entrevista, grave as respostas direto nesses arquivos e, assim que ela terminar, compacte a pasta em um ZIP com o mesmo nome e entregue o link para download. Se a pessoa parar no meio, entregue na hora o ZIP com o que existe. Se o link falhar, o ambiente reiniciar ou o arquivo sumir, refaça o ZIP e entregue de novo; se continuar falhando, passe para o Caminho C.
+- Caminho B (você tem ferramenta de código): descompacte o ZIP anexo. Ele tem uma pasta única com as pastas template e ferramentas, mais arquivos de apoio (README e PROMPT-COMPLETO) que você ignora. Copie o conteúdo da pasta template (não a pasta template em si) para uma pasta de trabalho chamada Segundo-Cerebro- seguido do nome da empresa sem acentos, sem espaços e com hífen, mantendo os mesmos caminhos. São 44 arquivos em 22 pastas além da raiz. Troque {{EMPRESA}} e {{DATA}} dentro dos arquivos. Na entrevista, grave as respostas direto nesses arquivos e, assim que ela terminar, compacte a pasta em um ZIP com o mesmo nome e entregue o link para download. Se a pessoa parar no meio, entregue na hora o ZIP com o que existe. Se o link falhar, o ambiente reiniciar ou o arquivo sumir, refaça o ZIP e entregue de novo; se continuar falhando, passe para o Caminho C.
 - Caminho C (você não consegue abrir o ZIP nem executar código): diga em duas linhas o que a pessoa deve fazer: descompactar o ZIP no computador e anexar nesta conversa os arquivos AGENTS.md e ENTREVISTA.md, os arquivos da pasta 01-Contexto (incluindo o modelo da subpasta 06-produtos), 02-Memoria/prioridades/atual.md e 03-Acao/conectores.md. Quando receber, faça a entrevista e entregue só os arquivos que você preencheu, em lotes de no máximo 8 mil caracteres, numerados ("Lote 2 de 4"), cada arquivo com o caminho completo como título e o conteúdo em um bloco de código. Peça que a pessoa salve cada um por cima do arquivo de mesmo nome na pasta do kit. Ensine em poucas linhas: no Windows, Bloco de Notas, Arquivo, Salvar como, Tipo "Todos os arquivos", nome com extensão .md e codificação UTF-8; no Mac, TextEdit, Formato, Converter para texto simples. Os arquivos que você não alterou continuam como vieram no kit e ainda têm {{EMPRESA}} e {{DATA}}, o que não atrapalha: o AGENTS.md ensina a IA a lidar com isso.
 
 Diga em uma frase qual caminho vai usar e siga.
@@ -106,14 +106,14 @@ Diga em uma frase qual caminho vai usar e siga.
 
 Confira cada item e corrija o que falhar:
 
-- Existem 43 arquivos (os do kit, mais os de produtos criados na entrevista) e cada um está no caminho certo.
+- Existem 44 arquivos (os do kit, mais os de produtos criados na entrevista) e cada um está no caminho certo.
 - Nenhum arquivo ficou com {{EMPRESA}} ou {{DATA}} sem troca.
 - Todo arquivo .md começa com o bloco entre linhas --- (frontmatter) e tem status, fonte e atualizado_em preenchidos.
 - Cada resumo tem no máximo 200 caracteres e descreve o conteúdo real do arquivo.
 - Cada pasta dentro de 01-Contexto e de 02-Memoria, e a pasta 03-Acao, tem um _index.md. Cada arquivo de 01-Contexto e de 02-Memoria aparece no _index.md da sua pasta. As skills e a pasta automacoes aparecem em 03-Acao/_index.md.
 - Todo link entre arquivos, inclusive os do campo relacionados, aponta para um arquivo que existe.
 - Os arquivos SKILL.md têm name igual ao nome da pasta onde estão.
-- Se houver Python disponível e a pasta ferramentas do kit baixado tiver o arquivo validar.py, rode: python3 validar.py PASTA --esperado 43 (o número sobe quando há produtos novos).
+- Se houver Python disponível e a pasta ferramentas do kit baixado tiver o arquivo validar.py, rode: python3 validar.py PASTA --esperado 44 (o número sobe quando há produtos novos).
 
 Faça esta conferência duas vezes: logo depois de criar a estrutura e de novo ao fim da entrevista, antes do fechamento. Na primeira, diga à pessoa, em até 4 linhas: quantos arquivos criou, onde estão e quais são as três camadas (Contexto, Memória, Ação) em uma frase cada, sem listar os arquivos, e comece a entrevista. Na segunda, não faça mensagem própria: corrija o que falhar e siga para o fechamento.
 
@@ -132,7 +132,7 @@ Três camadas: Contexto (quem somos, negócio, processo comercial, cliente ideal
 
 ## O que tem neste repositório
 
-- template: os 43 arquivos do Segundo Cérebro, com marcadores {{EMPRESA}} e {{DATA}} que a IA troca.
+- template: os 44 arquivos do Segundo Cérebro, com marcadores {{EMPRESA}} e {{DATA}} que a IA troca.
 - PROMPT-COMPLETO.md: o prompt de criação que não precisa baixar nada.
 - skills: a skill usar-segundo-cerebro para Claude (ZIP pronto e guia de instalação). Opcional.
 - ferramentas: script que confere se uma pasta segue o padrão.

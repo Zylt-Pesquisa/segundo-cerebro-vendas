@@ -31,6 +31,7 @@ Se você usa o Claude, existe também uma skill opcional, chamada usar-segundo-c
 - "Prepare minha reunião com o cliente X" — recebe um resumo de uma página com as perguntas SPIN (situação, problema, implicação e necessidade) e o avanço a buscar.
 - "Escreva um follow-up para o cliente X" — recebe uma mensagem na voz da sua empresa.
 - "Organize minha caixa de entrada" — a IA sugere onde guardar o que está esperando.
+- "Revise minha carteira" — mostra quem está atrasado, quem contatar na semana, o que está parado e o funil por etapa. No Cowork, dá para agendar essa frase para toda segunda de manhã.
 - "Continuar a entrevista" — completa o que ficou faltando sobre a sua empresa.
 - "O que sabemos sobre X?" — a IA procura e responde dizendo de qual arquivo tirou.
 

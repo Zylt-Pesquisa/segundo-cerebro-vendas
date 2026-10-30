@@ -37,11 +37,11 @@ Depois escolha como vai entregar os arquivos, na ordem abaixo, sem pedir detalhe
 - Caminho B — Você não acessa pasta, mas consegue gerar arquivos para download (por exemplo, ChatGPT com análise de dados). Crie todos os arquivos, compacte em um único arquivo chamado Segundo-Cerebro- seguido do nome da empresa sem acentos, sem espaços e com hífen, e entregue o link. Peça que ela descompacte em uma pasta do computador. Se o link não funcionar ou expirar, passe para o Caminho C.
 - Caminho C — Você só consegue escrever na conversa. Entregue os arquivos em lotes de no máximo cerca de 8 mil caracteres, numerados ("Lote 3 de 7"). Cada arquivo aparece com o caminho completo como título e o conteúdo em um bloco de código. Ao fim de cada lote, peça: "Salve esses arquivos e diga próximo". Se a pessoa pedir "lote N" ou "refazer", reenvie só esse lote. Ensine a salvar em poucas linhas. No Windows: criar a pasta e as subpastas, abrir o Bloco de Notas, colar, usar Arquivo, Salvar como, escolher "Todos os arquivos" em Tipo, digitar o nome com a extensão .md e a codificação UTF-8. No Mac: criar as pastas, abrir o TextEdit, usar Formato, Converter para texto simples, colar e salvar com o nome terminado em .md.
 
-Diga em uma frase qual caminho vai usar e siga. No Caminho C, avise antes, com franqueza: são 43 arquivos para salvar à mão, o que leva cerca de 40 minutos de copiar e colar, e indique que o Claude (Cowork ou Code) ou o ChatGPT com análise de dados fazem isso sozinhos. Pergunte se a pessoa quer seguir assim mesmo.
+Diga em uma frase qual caminho vai usar e siga. No Caminho C, avise antes, com franqueza: são 44 arquivos para salvar à mão, o que leva cerca de 40 minutos de copiar e colar, e indique que o Claude (Cowork ou Code) ou o ChatGPT com análise de dados fazem isso sozinhos. Pergunte se a pessoa quer seguir assim mesmo.
 
 ## Passo 2 — Criar a estrutura
 
-Crie os 43 arquivos do ANEXO, em 21 pastas além da raiz, com exatamente os mesmos caminhos. Dentro de cada arquivo, troque {{EMPRESA}} pelo nome da empresa e {{DATA}} pela data de hoje. Mais nada muda.
+Crie os 44 arquivos do ANEXO, em 22 pastas além da raiz, com exatamente os mesmos caminhos. Dentro de cada arquivo, troque {{EMPRESA}} pelo nome da empresa e {{DATA}} pela data de hoje. Mais nada muda.
 
 No Caminho B e no Caminho C, não entregue a estrutura em branco. Vá direto para o Passo 4, guarde as respostas na memória da conversa e, no fim da entrevista, volte a este passo e entregue todos os arquivos já preenchidos, em uma única entrega (no Caminho C, dividida em lotes). Se a pessoa parar a entrevista no meio, entregue os arquivos com o que existe até ali.
 
@@ -49,14 +49,14 @@ No Caminho B e no Caminho C, não entregue a estrutura em branco. Vá direto par
 
 Confira cada item e corrija o que falhar:
 
-- Existem 43 arquivos (os do kit, mais os de produtos criados na entrevista) e cada um está no caminho certo.
+- Existem 44 arquivos (os do kit, mais os de produtos criados na entrevista) e cada um está no caminho certo.
 - Nenhum arquivo ficou com {{EMPRESA}} ou {{DATA}} sem troca.
 - Todo arquivo .md começa com o bloco entre linhas --- (frontmatter) e tem status, fonte e atualizado_em preenchidos.
 - Cada resumo tem no máximo 200 caracteres e descreve o conteúdo real do arquivo.
 - Cada pasta dentro de 01-Contexto e de 02-Memoria, e a pasta 03-Acao, tem um _index.md. Cada arquivo de 01-Contexto e de 02-Memoria aparece no _index.md da sua pasta. As skills e a pasta automacoes aparecem em 03-Acao/_index.md.
 - Todo link entre arquivos, inclusive os do campo relacionados, aponta para um arquivo que existe.
 - Os arquivos SKILL.md têm name igual ao nome da pasta onde estão.
-- Se houver Python disponível e a pasta ferramentas do kit baixado tiver o arquivo validar.py, rode: python3 validar.py PASTA --esperado 43 (o número sobe quando há produtos novos).
+- Se houver Python disponível e a pasta ferramentas do kit baixado tiver o arquivo validar.py, rode: python3 validar.py PASTA --esperado 44 (o número sobe quando há produtos novos).
 
 Faça esta conferência duas vezes: logo depois de criar a estrutura e de novo ao fim da entrevista, antes do fechamento. Na primeira, diga à pessoa, em até 4 linhas: quantos arquivos criou, onde estão e quais são as três camadas (Contexto, Memória, Ação) em uma frase cada, sem listar os arquivos, e comece a entrevista. Na segunda, não faça mensagem própria: corrija o que falhar e siga para o fechamento.
 
@@ -68,7 +68,7 @@ Abra o arquivo ENTREVISTA.md do kit e siga-o do começo ao fim. Ele traz as regr
 
 Cada arquivo começa em uma linha de abertura e termina em uma linha de fechamento. A linha de abertura tem três sinais de menor, a palavra ARQUIVO, dois-pontos, o caminho do arquivo e três sinais de maior. A linha de fechamento tem três sinais de menor, a palavra FIM e três sinais de maior. O conteúdo entre as duas linhas é o arquivo inteiro, desde o primeiro --- do frontmatter até a última linha. As linhas de abertura e fechamento não fazem parte do arquivo. O ANEXO termina na linha "FIM DO ANEXO".
 
-======== ANEXO — OS 43 ARQUIVOS ========
+======== ANEXO — OS 44 ARQUIVOS ========
 
 <<<ARQUIVO: COMECE-AQUI.md>>>
 ---
@@ -104,6 +104,7 @@ Se você usa o Claude, existe também uma skill opcional, chamada usar-segundo-c
 - "Prepare minha reunião com o cliente X" — recebe um resumo de uma página com as perguntas SPIN (situação, problema, implicação e necessidade) e o avanço a buscar.
 - "Escreva um follow-up para o cliente X" — recebe uma mensagem na voz da sua empresa.
 - "Organize minha caixa de entrada" — a IA sugere onde guardar o que está esperando.
+- "Revise minha carteira" — mostra quem está atrasado, quem contatar na semana, o que está parado e o funil por etapa. No Cowork, dá para agendar essa frase para toda segunda de manhã.
 - "Continuar a entrevista" — completa o que ficou faltando sobre a sua empresa.
 - "O que sabemos sobre X?" — a IA procura e responde dizendo de qual arquivo tirou.
 
@@ -187,6 +188,7 @@ Quando o pedido bater com uma linha abaixo, abra o SKILL.md indicado e siga os p
 - "prepare minha reunião", "monte as perguntas SPIN" — `03-Acao/skills/preparar-reuniao-cliente/SKILL.md`
 - "escreva um follow-up", "mensagem para o cliente" — `03-Acao/skills/escrever-follow-up/SKILL.md`
 - "organize a caixa de entrada", "triagem" — `03-Acao/skills/triagem-inbox/SKILL.md`
+- "revise minha carteira", "quem preciso contatar", "como está o funil" — `03-Acao/skills/revisar-carteira/SKILL.md`
 - "continuar a entrevista", "completar o contexto" — leia `ENTREVISTA.md` e siga as regras dele. Abra primeiro os arquivos de `01-Contexto/` com `status: rascunho` (blocos ainda não entrevistados) e entreviste o usuário sobre um por vez, em no máximo 4 perguntas por mensagem. Depois grave, reescreva o `resumo` e mude o status para `vigente`. Se não houver rascunho, procure `[A PREENCHER]` nos arquivos de `01-Contexto/` e `02-Memoria/prioridades/` e pergunte só essas lacunas. Ignore arquivos com `status: modelo` e os arquivos de tipo guia, que usam esse marcador como exemplo.
 - "o que sabemos sobre X" — se X for um cliente, identifique a ficha pela regra 8 de "Como escrever" e reúna as notas cujo campo `cliente` ou `clientes` cite essa ficha. Procure também nos `_index.md` e nos campos `resumo` e, além disso, busque o termo X no texto de todos os arquivos (busca por texto ou grep), porque a informação pode estar dentro de outra ficha. Abra só o que for relevante e responda citando os arquivos. Se não achar, diga que o cérebro não tem isso.
 
@@ -332,7 +334,7 @@ Logo depois de criar a estrutura, e sempre que o usuário disser "continuar a en
 2. Se você não tem acesso à pasta, faça agora a entrega dos arquivos preenchidos, como o prompt de criação indicou, e explique que nas próximas conversas a pessoa deve anexar o AGENTS.md e os arquivos do assunto, e que você devolve os arquivos atualizados para ela salvar.
 3. Diga em poucas linhas o que ficou pendente, ou seja, quais arquivos ainda têm [A PREENCHER].
 4. Se a pessoa não for instalar a skill usar-segundo-cerebro, entregue este texto, para colar uma única vez nas instruções do projeto da ferramenta que usa (se a ferramenta não tiver projeto, ela cola no início de cada conversa nova): "Você é o Segundo Cérebro comercial da {{EMPRESA}}. Sua memória é a pasta de arquivos deste projeto. Antes de responder qualquer pedido, leia AGENTS.md e siga as regras dele. Se não conseguir ler a pasta, avise e peça os arquivos. Nunca invente informação da empresa. Fale em português do Brasil, simples e direto."
-5. Ensine cinco frases de uso: "Guarde isso no meu cérebro", "Acabei de falar com o cliente X, registre", "Prepare minha reunião com o cliente X", "Escreva um follow-up para o cliente X" e "Continuar a entrevista".
+5. Ensine seis frases de uso: "Guarde isso no meu cérebro", "Acabei de falar com o cliente X, registre", "Prepare minha reunião com o cliente X", "Escreva um follow-up para o cliente X", "Revise minha carteira" e "Continuar a entrevista".
 6. Se a pessoa usa Claude, avise que existe a skill opcional usar-segundo-cerebro no repositório do kit, na pasta skills, que dispensa colar o texto fixo.
 7. Termine com uma frase: o cérebro cresce conforme ela usa, e o arquivo COMECE-AQUI.md da pasta explica o dia a dia.
 <<<FIM>>>
@@ -1236,6 +1238,7 @@ relacionados: [../AGENTS.md]
 - [Preparar reunião com cliente](skills/preparar-reuniao-cliente/SKILL.md) — monta um briefing SPIN de uma página com o avanço a buscar
 - [Escrever follow-up](skills/escrever-follow-up/SKILL.md) — redige mensagem na voz da empresa
 - [Triagem da caixa de entrada](skills/triagem-inbox/SKILL.md) — organiza o material bruto
+- [Revisar carteira](skills/revisar-carteira/SKILL.md) — mostra atrasados, contatos da semana, negócios parados e o funil por etapa
 - [Modelo de skill](skills/template-skill/SKILL.md) — modelo para criar uma skill nova
 
 ## Quando usar
@@ -1410,6 +1413,44 @@ Ficha do cliente atualizada nas seções SPIN, Histórico com o resultado do con
 ## Regras
 
 Nível 1. Registre só o que o usuário contou. Não preencha motivos ou intenções do cliente por suposição. Nunca marque como [fato] o que o cliente não disse, e nunca transforme queixa vaga em necessidade explícita. Nunca grave na ficha de um cliente sem ter certeza de que é ele.
+<<<FIM>>>
+
+<<<ARQUIVO: 03-Acao/skills/revisar-carteira/SKILL.md>>>
+---
+name: revisar-carteira
+description: Revisa a carteira de clientes lendo as fichas do Segundo Cérebro e mostra o que precisa de atenção: contatos atrasados e da semana, oportunidades sem próximo passo, negócios parados em continuação, propostas sem necessidade explícita e o funil por etapa. Use quando o usuário perguntar quem precisa contatar, o que está atrasado, como está a carteira ou o funil, pedir a revisão da semana, ou quando uma tarefa agendada pedir a revisão da carteira.
+---
+
+# Revisar carteira
+
+## Quando usar
+
+O usuário quer saber o que fazer primeiro com os clientes: quem contatar, o que está atrasado, o que está parado e como está o funil. Serve também para uma tarefa agendada, por exemplo toda segunda de manhã.
+
+## Antes de começar
+
+Leia `02-Memoria/clientes/_index.md`, `01-Contexto/07-processo-comercial.md` (etapas e cadência de contato), `01-Contexto/08-metodo-spin.md` e `02-Memoria/prioridades/atual.md`. Depois abra cada ficha de cliente, menos o modelo. Em cada uma, leia o frontmatter e as seções Oportunidades, Necessidades explícitas e as três entradas mais recentes do Histórico.
+
+## Passos
+
+1. Use a data de hoje. Se o usuário pediu a carteira de um vendedor, considere só as fichas com aquele `responsavel`.
+2. Considere só oportunidades abertas. Cliente com todas as oportunidades ganhas ou perdidas fica de fora, a menos que tenha `proximo_contato` marcado.
+3. Atrasados: `proximo_contato` antes de hoje, do mais atrasado para o menos, com os dias de atraso.
+4. Esta semana: `proximo_contato` de hoje até daqui a 7 dias, em ordem de data.
+5. Sem próximo passo: oportunidade aberta sem data em `proximo_contato` (vazio, AAAA-MM-DD ou A PREENCHER).
+6. Parados: `ultimo_resultado` igual a continuação, com destaque para quem teve duas ou mais continuações seguidas no Histórico. Se a cadência de contato estiver preenchida no `07-processo-comercial.md`, inclua quem está sem contato há mais tempo que ela.
+7. Sem necessidade explícita: oportunidades em etapa de proposta ou depois (pelos nomes das etapas do `07-processo-comercial.md`) sem nada registrado em Necessidades explícitas. Pelo SPIN, é proposta com risco alto.
+8. Funil: quantas oportunidades abertas existem em cada etapa e, se houver valor registrado, a soma por etapa.
+9. Para cada cliente dos passos 3 a 7, sugira a próxima ação em uma linha, levando em conta as prioridades atuais. Exemplos: preparar a reunião, escrever follow-up, pedir um compromisso concreto, explorar uma implicação.
+10. Termine oferecendo preparar a reunião ou escrever o follow-up do primeiro cliente da lista, e salvar a revisão na nota de diário do dia.
+
+## Saída esperada
+
+Uma lista curta, em blocos, nesta ordem: Atrasados, Esta semana, Sem próximo passo, Parados, Sem necessidade explícita e Funil por etapa. Cada cliente em uma linha, com nome, etapa, data e ação sugerida, citando a ficha. Bloco sem itens não aparece. Com mais de 30 clientes, mostre até 10 por bloco e diga quantos ficaram de fora. Fichas com data inválida ou campos que impedem a revisão aparecem no fim, em Fichas para corrigir.
+
+## Regras
+
+Nível 0: só leitura. Não altere fichas. Salvar no diário é nível 1 e só acontece se o usuário pedir. Não invente datas nem etapas: o que não está na ficha vai para Sem próximo passo ou Fichas para corrigir. Quando rodar por tarefa agendada, sem ninguém para responder, não faça perguntas: use a carteira inteira, ou o vendedor indicado na tarefa, e entregue a lista.
 <<<FIM>>>
 
 <<<ARQUIVO: 03-Acao/skills/salvar-no-cerebro/SKILL.md>>>

@@ -32,6 +32,7 @@ Se você usa o Claude, existe também uma skill opcional, chamada usar-segundo-c
 - "Prepare minha reunião com o cliente X" — recebe um resumo de uma página com as perguntas SPIN (situação, problema, implicação e necessidade) e o avanço a buscar.
 - "Escreva um follow-up para o cliente X" — recebe uma mensagem na voz da sua empresa.
 - "Organize minha caixa de entrada" — a IA sugere onde guardar o que está esperando.
+- "Revise minha carteira" — mostra quem está atrasado, quem contatar na semana, o que está parado e o funil por etapa. No Cowork, dá para agendar essa frase para toda segunda de manhã.
 - "Continuar a entrevista" — completa o que ficou faltando sobre a sua empresa.
 - "O que sabemos sobre X?" — a IA procura e responde dizendo de qual arquivo tirou.
 
@@ -108,6 +109,7 @@ Quando o pedido bater com uma linha abaixo, abra o SKILL.md indicado e siga os p
 - "prepare minha reunião", "monte as perguntas SPIN" — `03-Acao/skills/preparar-reuniao-cliente/SKILL.md`
 - "escreva um follow-up", "mensagem para o cliente" — `03-Acao/skills/escrever-follow-up/SKILL.md`
 - "organize a caixa de entrada", "triagem" — `03-Acao/skills/triagem-inbox/SKILL.md`
+- "revise minha carteira", "quem preciso contatar", "como está o funil" — `03-Acao/skills/revisar-carteira/SKILL.md`
 - "continuar a entrevista", "completar o contexto" — leia `ENTREVISTA.md` e siga as regras dele. Abra primeiro os arquivos de `01-Contexto/` com `status: rascunho` (blocos ainda não entrevistados) e entreviste o usuário sobre um por vez, em no máximo 4 perguntas por mensagem. Depois grave, reescreva o `resumo` e mude o status para `vigente`. Se não houver rascunho, procure `[A PREENCHER]` nos arquivos de `01-Contexto/` e `02-Memoria/prioridades/` e pergunte só essas lacunas. Ignore arquivos com `status: modelo` e os arquivos de tipo guia, que usam esse marcador como exemplo.
 - "o que sabemos sobre X" — se X for um cliente, identifique a ficha pela regra 8 de "Como escrever" e reúna as notas cujo campo `cliente` ou `clientes` cite essa ficha. Procure também nos `_index.md` e nos campos `resumo` e, além disso, busque o termo X no texto de todos os arquivos (busca por texto ou grep), porque a informação pode estar dentro de outra ficha. Abra só o que for relevante e responda citando os arquivos. Se não achar, diga que o cérebro não tem isso.
 
@@ -231,7 +233,7 @@ Logo depois de criar a estrutura, e sempre que o usuário disser "continuar a en
 2. Se você não tem acesso à pasta, faça agora a entrega dos arquivos preenchidos, como o prompt de criação indicou, e explique que nas próximas conversas a pessoa deve anexar o AGENTS.md e os arquivos do assunto, e que você devolve os arquivos atualizados para ela salvar.
 3. Diga em poucas linhas o que ficou pendente, ou seja, quais arquivos ainda têm [A PREENCHER].
 4. Se a pessoa não for instalar a skill usar-segundo-cerebro, entregue este texto, para colar uma única vez nas instruções do projeto da ferramenta que usa (se a ferramenta não tiver projeto, ela cola no início de cada conversa nova): "Você é o Segundo Cérebro comercial da {{EMPRESA}}. Sua memória é a pasta de arquivos deste projeto. Antes de responder qualquer pedido, leia AGENTS.md e siga as regras dele. Se não conseguir ler a pasta, avise e peça os arquivos. Nunca invente informação da empresa. Fale em português do Brasil, simples e direto."
-5. Ensine cinco frases de uso: "Guarde isso no meu cérebro", "Acabei de falar com o cliente X, registre", "Prepare minha reunião com o cliente X", "Escreva um follow-up para o cliente X" e "Continuar a entrevista".
+5. Ensine seis frases de uso: "Guarde isso no meu cérebro", "Acabei de falar com o cliente X, registre", "Prepare minha reunião com o cliente X", "Escreva um follow-up para o cliente X", "Revise minha carteira" e "Continuar a entrevista".
 6. Se a pessoa usa Claude, avise que existe a skill opcional usar-segundo-cerebro no repositório do kit, na pasta skills, que dispensa colar o texto fixo.
 7. Termine com uma frase: o cérebro cresce conforme ela usa, e o arquivo COMECE-AQUI.md da pasta explica o dia a dia.
 """
