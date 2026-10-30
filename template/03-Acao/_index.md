@@ -17,9 +17,10 @@ relacionados: [../AGENTS.md]
 - [Salvar no cérebro](skills/salvar-no-cerebro/SKILL.md) — guarda qualquer informação no lugar certo
 - [Registrar atendimento](skills/registrar-atendimento/SKILL.md) — atualiza cliente e diário depois de um contato, separando o que foi dito pelo SPIN
 - [Preparar reunião com cliente](skills/preparar-reuniao-cliente/SKILL.md) — monta um briefing SPIN de uma página com o avanço a buscar
-- [Escrever follow-up](skills/escrever-follow-up/SKILL.md) — redige mensagem na voz da empresa
+- [Escrever follow-up](skills/escrever-follow-up/SKILL.md) — redige mensagem na voz da empresa, retomando o que o cliente disse e pedindo um avanço
 - [Triagem da caixa de entrada](skills/triagem-inbox/SKILL.md) — organiza o material bruto
-- [Revisar carteira](skills/revisar-carteira/SKILL.md) — mostra atrasados, contatos da semana, negócios parados e o funil por etapa
+- [Revisar carteira](skills/revisar-carteira/SKILL.md) — mostra atrasados, contatos da semana, negócios parados ou em risco e o funil por etapa
+- [Atualizar o cérebro](skills/atualizar-cerebro/SKILL.md) — traz a versão mais recente do kit sem mexer nos seus dados
 - [Modelo de skill](skills/template-skill/SKILL.md) — modelo para criar uma skill nova
 
 ## Quando usar

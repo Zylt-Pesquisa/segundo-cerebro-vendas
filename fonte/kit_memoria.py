@@ -15,7 +15,8 @@ F[M + "_index.md"] = indice(
         ("Prioridades", "prioridades/_index.md", "foco atual do time, em um único arquivo vivo"),
         ("Diário", "diario/_index.md", "registro do dia a dia comercial"),
         ("Projetos", "projetos/_index.md", "iniciativas em andamento"),
-        ("Clientes", "clientes/_index.md", "uma ficha por cliente ou oportunidade"),
+        ("Clientes", "clientes/_index.md", "uma ficha por cliente, com as oportunidades dentro dela"),
+        ("Sucesso", "sucesso/_index.md", "planos de sucesso dos clientes depois da venda"),
         ("Diagnóstico", "diagnostico/_index.md", "reservado para o diagnóstico da empresa"),
     ],
     "Esta camada cresce todo dia. Procure sempre pelo índice da subpasta e pelo campo resumo antes de abrir notas. Material novo entra primeiro em _inbox e só vira nota curada com confirmação do usuário.",
@@ -266,6 +267,83 @@ F[M + "clientes/_template-cliente.md"] = fm(
 ## Próximo passo
 
 [A PREENCHER] O avanço pretendido no próximo contato, com data e responsável.
+"""
+
+F[M + "sucesso/_index.md"] = """---
+tipo: indice
+titulo: Sucesso
+resumo: Planos de sucesso dos clientes da {{EMPRESA}} depois da venda: metas, marcos, saúde e próximos contatos.
+status: vigente
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [../../01-Contexto/12-sucesso-do-cliente.md, ../clientes/_index.md]
+---
+
+# Sucesso
+
+## O que há aqui
+
+- [Modelo de plano de sucesso](_template-plano-sucesso.md) — modelo para criar o plano de sucesso de um cliente
+
+## Quando usar
+
+Abra o plano antes de qualquer contato de pós-venda. Um plano por cliente, com o mesmo nome de arquivo da ficha em clientes. Na descrição de cada linha, escreva a saúde atual (verde, amarelo ou vermelho).
+"""
+
+F[M + "sucesso/_template-plano-sucesso.md"] = """---
+tipo: cliente
+titulo: Modelo de plano de sucesso
+resumo: Modelo. Copie para criar o plano de sucesso de um cliente depois da venda.
+status: modelo
+atualizado_em: {{DATA}}
+fonte: estrutura inicial
+relacionados: [_index.md, ../../01-Contexto/12-sucesso-do-cliente.md]
+nome: A PREENCHER
+cliente: nome-da-ficha
+responsavel: A PREENCHER
+inicio: AAAA-MM-DD
+saude: verde | amarelo | vermelho
+proxima_revisao: AAAA-MM-DD
+proximo_contato: AAAA-MM-DD
+---
+
+# Plano de sucesso — nome do cliente
+
+## O que o cliente comprou para resolver
+
+[A PREENCHER] As necessidades explícitas da venda, entre aspas, com as palavras do cliente e a data. Ligue à ficha do cliente.
+
+## Metas combinadas
+
+[A PREENCHER] Uma por linha: meta — como medir — linha de base — prazo.
+
+## Promessas da venda
+
+[A PREENCHER] O que o vendedor prometeu (prazos, entregas, condições). Promessa não cumprida é risco.
+
+## Patrocinador e contatos
+
+[A PREENCHER] Quem defende o projeto no cliente, quem usa e quem decide a renovação. Sem dados sensíveis.
+
+## Marcos
+
+[A PREENCHER] Marco — data prevista — data real — situação.
+
+## Saúde
+
+[A PREENCHER] Avaliação mais recente com data, sinais observados e motivo da cor.
+
+## Valor entregue
+
+[A PREENCHER] Resultados medidos, com número, data e fonte. Alimenta a revisão de valor e o banco de provas.
+
+## Histórico de presença
+
+[A PREENCHER] Contatos em ordem do mais recente para o mais antigo: data, canal, o que foi feito e o valor entregue no contato.
+
+## Oportunidades
+
+[A PREENCHER] Expansões, indicações e depoimentos possíveis, com o momento certo de pedir.
 """
 
 # ---------------------------------------------------------------- DIAGNOSTICO (reservado)

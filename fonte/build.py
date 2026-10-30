@@ -120,6 +120,14 @@ Você não precisa instalar Python, Git nem usar terminal. Escolha abaixo a ferr
 """ + fill(T.prompt_gpt()).rstrip("\n") + """
 """ + FENCE + """
 
+## Atualizar um cérebro que já existe
+
+O kit melhora com o tempo. Para trazer as novidades para um cérebro já criado, sem mexer nos seus clientes, decisões e anotações, abra o Cowork com a pasta do cérebro conectada e escreva "Atualize meu cérebro". Se o cérebro for antigo e a IA não reconhecer o pedido, copie e cole o texto abaixo.
+
+""" + FENCE + """text
+Atualize o meu Segundo Cérebro com a versão mais recente do kit. A pasta do cérebro é a que está conectada nesta conversa. Baixe o kit em """ + ZIP_URL + """ para uma pasta temporária fora da pasta do cérebro, abra o arquivo template/03-Acao/skills/atualizar-cerebro/SKILL.md de dentro do ZIP e siga os passos dele do começo ao fim. Não mexa em clientes, decisões, anotações nem nos arquivos de contexto que já existem.
+""" + FENCE + """
+
 ## Não funcionou ou está sem internet
 
 Use o arquivo [PROMPT-COMPLETO.md](PROMPT-COMPLETO.md) deste repositório. Ele traz todos os arquivos dentro dele e não precisa baixar nada. Abra o arquivo, copie tudo e cole no Claude ou no ChatGPT.

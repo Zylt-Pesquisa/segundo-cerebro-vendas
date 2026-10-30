@@ -18,7 +18,8 @@ relacionados: [../01-Contexto/_index.md]
 - [Prioridades](prioridades/_index.md) — foco atual do time, em um único arquivo vivo
 - [Diário](diario/_index.md) — registro do dia a dia comercial
 - [Projetos](projetos/_index.md) — iniciativas em andamento
-- [Clientes](clientes/_index.md) — uma ficha por cliente ou oportunidade
+- [Clientes](clientes/_index.md) — uma ficha por cliente, com as oportunidades dentro dela
+- [Sucesso](sucesso/_index.md) — planos de sucesso dos clientes depois da venda
 - [Diagnóstico](diagnostico/_index.md) — reservado para o diagnóstico da empresa
 
 ## Quando usar

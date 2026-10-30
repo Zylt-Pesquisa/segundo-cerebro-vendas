@@ -33,6 +33,7 @@ Se você usa o Claude, existe também uma skill opcional, chamada usar-segundo-c
 - "Organize minha caixa de entrada" — a IA sugere onde guardar o que está esperando.
 - "Revise minha carteira" — mostra quem está atrasado, quem contatar na semana, o que está parado e o funil por etapa. No Cowork, dá para agendar essa frase para toda segunda de manhã.
 - "Continuar a entrevista" — completa o que ficou faltando sobre a sua empresa.
+- "Atualize meu cérebro" — traz as melhorias mais recentes do kit sem mexer nos seus clientes, decisões e anotações.
 - "O que sabemos sobre X?" — a IA procura e responde dizendo de qual arquivo tirou.
 
 ## Texto fixo para colar nas instruções do projeto
@@ -53,7 +54,7 @@ Instale o Google Drive para computador (ou use o OneDrive) e mantenha esta pasta
 
 ## Mapa rápido
 
-- 01-Contexto — quem somos, negócio, processo comercial, cliente ideal, produtos, voz, time, preferências.
-- 02-Memoria — decisões, aprendizados, clientes, projetos, diário, prioridades e a caixa de entrada.
+- 01-Contexto — quem somos, negócio, processo comercial, cliente ideal, produtos, voz, time, preferências, método SPIN, prospecção, objeções, provas e sucesso do cliente.
+- 02-Memoria — decisões, aprendizados, clientes, planos de sucesso, projetos, diário, prioridades e a caixa de entrada.
 - 03-Acao — o que a IA pode fazer: roteiros (skills), conectores e automações.
 - _restrito — assuntos sensíveis. A IA só abre se você pedir.

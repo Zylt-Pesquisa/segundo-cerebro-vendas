@@ -19,9 +19,10 @@ F[A + "_index.md"] = indice(
         ("Salvar no cérebro", "skills/salvar-no-cerebro/SKILL.md", "guarda qualquer informação no lugar certo"),
         ("Registrar atendimento", "skills/registrar-atendimento/SKILL.md", "atualiza cliente e diário depois de um contato, separando o que foi dito pelo SPIN"),
         ("Preparar reunião com cliente", "skills/preparar-reuniao-cliente/SKILL.md", "monta um briefing SPIN de uma página com o avanço a buscar"),
-        ("Escrever follow-up", "skills/escrever-follow-up/SKILL.md", "redige mensagem na voz da empresa"),
+        ("Escrever follow-up", "skills/escrever-follow-up/SKILL.md", "redige mensagem na voz da empresa, retomando o que o cliente disse e pedindo um avanço"),
         ("Triagem da caixa de entrada", "skills/triagem-inbox/SKILL.md", "organiza o material bruto"),
-        ("Revisar carteira", "skills/revisar-carteira/SKILL.md", "mostra atrasados, contatos da semana, negócios parados e o funil por etapa"),
+        ("Revisar carteira", "skills/revisar-carteira/SKILL.md", "mostra atrasados, contatos da semana, negócios parados ou em risco e o funil por etapa"),
+        ("Atualizar o cérebro", "skills/atualizar-cerebro/SKILL.md", "traz a versão mais recente do kit sem mexer nos seus dados"),
         ("Modelo de skill", "skills/template-skill/SKILL.md", "modelo para criar uma skill nova"),
     ],
     "Skill é um roteiro em passos que a IA segue quando o pedido do usuário combina com a descrição dela. Para uma ação nova, copie o modelo de skill. Níveis de permissão estão no AGENTS.md.",
@@ -156,7 +157,7 @@ Leia `01-Contexto/08-metodo-spin.md` para aplicar as marcas e as definições do
 5. Se o cliente confirmou uma hipótese antiga, troque a marca para [fato] e anote a data. Não apague a linha.
 6. Classifique o resultado do contato como avanço, continuação, pedido ou sem venda, pelas definições do `08-metodo-spin.md`. Se não ficar claro, pergunte qual compromisso concreto o cliente assumiu.
 7. Acrescente no topo da seção Histórico uma entrada com data, canal, oportunidade, o que foi dito, objeções, o que ficou combinado e o resultado.
-8. Atualize a linha da oportunidade em Oportunidades e, no frontmatter, `etapa_funil`, `proximo_contato`, `ultimo_resultado` e `atualizado_em`. Reescreva o `resumo` se a situação mudou. Em Próximo passo, escreva o avanço a buscar no próximo contato.
+8. Atualize a linha da oportunidade em Oportunidades e, no frontmatter, `etapa_funil`, `proximo_contato`, `ultimo_resultado` e `atualizado_em`. Reescreva o `resumo` se a situação mudou. Em Próximo passo, escreva o avanço a buscar no próximo contato. Se o Histórico passar de 10 entradas, aplique a regra 10 de "Como escrever" do `AGENTS.md`.
 9. Se apareceu uma objeção nova ou uma lição concreta, proponha criar uma nota em `aprendizados/`, com o campo `cliente` preenchido, já com "O que aprendemos" e "Como aplicar da próxima vez" preenchidos. Se uma pergunta funcionou bem, proponha acrescentá-la ao Banco de perguntas do `08-metodo-spin.md`. Se houve uma decisão, proponha uma nota em `decisoes/`. Só crie depois de o usuário confirmar.
 10. Acrescente uma linha na nota de diário do dia e inclua o cliente no campo `clientes`. Se a nota não existir, crie copiando `_template-diario.md` com o nome AAAA-MM-DD.md.
 11. Pergunte, no máximo, a etapa do funil, a data do próximo contato e o resultado, se o usuário não disse. Responda em até quatro linhas com o que foi atualizado e um alerta SPIN quando couber, como "ainda não há necessidade explícita registrada" ou "segunda continuação seguida".
@@ -208,7 +209,7 @@ Nível 2. Mostre ao usuário antes de considerar pronto. Não invente dados do c
 
 F[S + "escrever-follow-up/SKILL.md"] = skill(
     "escrever-follow-up",
-    "Escreve mensagem ou e-mail de follow-up para um cliente na voz da empresa. Use quando o usuário pedir uma mensagem, um e-mail, um retorno ou um follow-up para um cliente ou lead.",
+    "Escreve mensagem ou e-mail de follow-up para um cliente na voz da empresa, retomando as necessidades explícitas com as palavras do cliente e pedindo um avanço concreto. Use quando o usuário pedir uma mensagem, um e-mail, um retorno ou um follow-up para um cliente ou lead.",
     """
 # Escrever follow-up
 
@@ -218,23 +219,24 @@ O usuário quer uma mensagem para um cliente depois de uma conversa, proposta ou
 
 ## Antes de começar
 
-Leia a ficha do cliente em `02-Memoria/clientes/`, `01-Contexto/03-tom-de-voz.md`, `01-Contexto/05-preferencias.md`, as decisões de `02-Memoria/decisoes/` que se apliquem ao que será prometido e, se citar produto ou preço, a ficha em `01-Contexto/06-produtos/`.
+Identifique a ficha do cliente pela regra 8 de "Como escrever" do `AGENTS.md`. Leia a ficha em `02-Memoria/clientes/`, `01-Contexto/08-metodo-spin.md`, `01-Contexto/03-tom-de-voz.md`, `01-Contexto/05-preferencias.md`, as decisões de `02-Memoria/decisoes/` que se apliquem ao que será prometido e, se citar produto ou preço, a ficha em `01-Contexto/06-produtos/`. Se for citar case ou número, use só o que está em `01-Contexto/11-provas-e-autoridade.md`.
 
 ## Passos
 
 1. Descubra o canal (e-mail ou WhatsApp) e o objetivo da mensagem, se o usuário não disse. Uma pergunta por vez.
-2. Escreva duas versões: uma curta e uma completa. Use o tom de voz, o nome do cliente e o último combinado do histórico.
-3. Termine cada versão com um próximo passo claro e uma data ou pergunta objetiva.
-4. Para e-mail, inclua uma linha de assunto.
-5. Pergunte se o usuário quer ajustar e, se enviar, ofereça registrar o contato com a skill registrar-atendimento.
+2. Retome o que o cliente disse: as necessidades explícitas, entre aspas e com as palavras dele, e o combinado do último contato. Se não houver necessidade explícita registrada, não apresente o produto: escreva uma mensagem que reabra a conversa com uma pergunta de Problema ou de Implicação.
+3. Fale de benefício, não de característica: cada coisa que o produto faz aparece ligada a uma necessidade que o cliente declarou.
+4. Peça um avanço concreto, com data ou pergunta objetiva. Se o `ultimo_resultado` da ficha for continuação, peça um compromisso específico, como uma reunião com o decisor ou o envio de um dado, e não um "fico à disposição".
+5. Escreva duas versões: uma curta e uma completa, no tom de voz da empresa e com o nome do cliente. Para e-mail, inclua uma linha de assunto.
+6. Pergunte se o usuário quer ajustar e, se enviar, ofereça registrar o contato com a skill registrar-atendimento.
 
 ## Saída esperada
 
-Duas versões prontas para copiar, marcadas como rascunho.
+Duas versões prontas para copiar, marcadas como rascunho, cada uma terminando no avanço pedido.
 
 ## Regras
 
-Nível 2. Nunca envie a mensagem. Não prometa prazo, preço, cobertura ou desconto que não esteja nos arquivos, e respeite as decisões vigentes e as preferências, mesmo que um exemplo de tom pareça sugerir o contrário. Se faltar o dado, deixe `[A PREENCHER]` na mensagem e avise.
+Nível 2. Nunca envie a mensagem. Não prometa prazo, preço, cobertura ou desconto que não esteja nos arquivos, e respeite as decisões vigentes e as preferências, mesmo que um exemplo de tom pareça sugerir o contrário. Não ponha na boca do cliente o que ele não disse. Se faltar o dado, deixe `[A PREENCHER]` na mensagem e avise.
 """)
 
 F[S + "triagem-inbox/SKILL.md"] = skill(
@@ -271,38 +273,79 @@ Nível 1. Nada vira nota curada sem confirmação. Descarte significa arquivar, 
 
 F[S + "revisar-carteira/SKILL.md"] = skill(
     "revisar-carteira",
-    "Revisa a carteira de clientes lendo as fichas do Segundo Cérebro e mostra o que precisa de atenção: contatos atrasados e da semana, oportunidades sem próximo passo, negócios parados em continuação, propostas sem necessidade explícita e o funil por etapa. Use quando o usuário perguntar quem precisa contatar, o que está atrasado, como está a carteira ou o funil, pedir a revisão da semana, ou quando uma tarefa agendada pedir a revisão da carteira.",
+    "Revisa a carteira e o pipeline lendo as fichas do Segundo Cérebro e mostra o que precisa de atenção: contatos atrasados e da semana, oportunidades sem próximo passo, negócios parados em continuação, propostas sem necessidade explícita ou sem decisor, etapas fora do critério, decisões para revisar e o funil por etapa, com o avanço a pedir em cada caso. Use quando o usuário perguntar quem precisa contatar, o que está atrasado ou travado, como está a carteira, o funil ou o pipeline, pedir a revisão da semana ou preparar a reunião de pipeline, ou quando uma tarefa agendada pedir a revisão da carteira.",
     """
 # Revisar carteira
 
 ## Quando usar
 
-O usuário quer saber o que fazer primeiro com os clientes: quem contatar, o que está atrasado, o que está parado e como está o funil. Serve também para uma tarefa agendada, por exemplo toda segunda de manhã.
+O vendedor ou o gestor quer saber o que fazer primeiro com os clientes: quem contatar, o que está atrasado, o que está travado e como está o funil. Serve para a revisão da semana, para a reunião de pipeline e para uma tarefa agendada, por exemplo toda segunda de manhã.
 
 ## Antes de começar
 
-Leia `02-Memoria/clientes/_index.md`, `01-Contexto/07-processo-comercial.md` (etapas e cadência de contato), `01-Contexto/08-metodo-spin.md` e `02-Memoria/prioridades/atual.md`. Depois abra cada ficha de cliente, menos o modelo. Em cada uma, leia o frontmatter e as seções Oportunidades, Necessidades explícitas e as três entradas mais recentes do Histórico.
+Leia `02-Memoria/clientes/_index.md`, `01-Contexto/07-processo-comercial.md` (etapas, critérios de passagem e cadência), `01-Contexto/08-metodo-spin.md`, `02-Memoria/prioridades/atual.md` e `02-Memoria/decisoes/_index.md`. Depois abra cada ficha de cliente, menos o modelo e as fichas com `status: substituido` ou `arquivado`. Em cada uma, leia o frontmatter e as seções Decisores e contatos, Necessidades explícitas, Oportunidades e as três entradas mais recentes do Histórico. Clientes já em pós-venda com plano em `02-Memoria/sucesso/` ficam para a skill radar-de-contas, se ela existir.
 
 ## Passos
 
-1. Use a data de hoje. Se o usuário pediu a carteira de um vendedor, considere só as fichas com aquele `responsavel`.
+1. Use a data de hoje. Se o usuário pediu a carteira de um vendedor, uma etapa ou só as maiores oportunidades, aplique o filtro (`responsavel`, `etapa_funil` ou valor).
 2. Considere só oportunidades abertas. Cliente com todas as oportunidades ganhas ou perdidas fica de fora, a menos que tenha `proximo_contato` marcado.
 3. Atrasados: `proximo_contato` antes de hoje, do mais atrasado para o menos, com os dias de atraso.
 4. Esta semana: `proximo_contato` de hoje até daqui a 7 dias, em ordem de data.
 5. Sem próximo passo: oportunidade aberta sem data em `proximo_contato` (vazio, AAAA-MM-DD ou A PREENCHER).
-6. Parados: `ultimo_resultado` igual a continuação, com destaque para quem teve duas ou mais continuações seguidas no Histórico. Se a cadência de contato estiver preenchida no `07-processo-comercial.md`, inclua quem está sem contato há mais tempo que ela.
-7. Sem necessidade explícita: oportunidades em etapa de proposta ou depois (pelos nomes das etapas do `07-processo-comercial.md`) sem nada registrado em Necessidades explícitas. Pelo SPIN, é proposta com risco alto.
-8. Funil: quantas oportunidades abertas existem em cada etapa e, se houver valor registrado, a soma por etapa.
-9. Para cada cliente dos passos 3 a 7, sugira a próxima ação em uma linha, levando em conta as prioridades atuais. Exemplos: preparar a reunião, escrever follow-up, pedir um compromisso concreto, explorar uma implicação.
-10. Termine oferecendo preparar a reunião ou escrever o follow-up do primeiro cliente da lista, e salvar a revisão na nota de diário do dia.
+6. Parados: `ultimo_resultado` igual a continuação, com destaque para duas ou mais continuações seguidas no Histórico. Se a cadência estiver preenchida no `07-processo-comercial.md`, inclua quem está sem contato há mais tempo que ela.
+7. Em risco pelo SPIN: oportunidades em etapa de proposta ou depois sem nenhuma necessidade explícita registrada, ou sem nenhum decisor em Decisores e contatos.
+8. Etapa a revisar: oportunidades cuja etapa não bate com os critérios de passagem do `07-processo-comercial.md`, quando eles estiverem preenchidos.
+9. Decisões para revisar: decisões vigentes com `revisar_em` antes de hoje ou nos próximos 7 dias.
+10. Funil: quantas oportunidades abertas existem em cada etapa e, se houver valor registrado, a soma por etapa.
+11. Para cada cliente dos passos 3 a 8, sugira em uma linha o avanço concreto a pedir no próximo contato e, quando o problema for continuação ou falta de necessidade explícita, uma pergunta de Implicação ou de Necessidade de solução para destravar. Ordene os casos em risco pelas prioridades atuais.
+12. Termine oferecendo preparar a reunião ou escrever o follow-up do primeiro cliente da lista, salvar a revisão na nota de diário do dia e atualizar o `proximo_contato` das fichas que o usuário confirmar.
 
 ## Saída esperada
 
-Uma lista curta, em blocos, nesta ordem: Atrasados, Esta semana, Sem próximo passo, Parados, Sem necessidade explícita e Funil por etapa. Cada cliente em uma linha, com nome, etapa, data e ação sugerida, citando a ficha. Bloco sem itens não aparece. Com mais de 30 clientes, mostre até 10 por bloco e diga quantos ficaram de fora. Fichas com data inválida ou campos que impedem a revisão aparecem no fim, em Fichas para corrigir.
+Uma lista curta, em blocos, nesta ordem: Atrasados, Esta semana, Sem próximo passo, Parados, Em risco pelo SPIN, Etapa a revisar, Decisões para revisar e Funil por etapa. Cada cliente em uma linha, com nome, etapa, data, avanço a pedir e, quando couber, a pergunta para destravar, citando a ficha. Bloco sem itens não aparece. Com mais de 30 clientes, mostre até 10 por bloco e diga quantos ficaram de fora. Fichas com data inválida ou campos que impedem a revisão aparecem no fim, em Fichas para corrigir. Feche com um resumo de três linhas: quantas oportunidades estão saudáveis, quantas em risco e quantas pedem revisão de etapa.
 
 ## Regras
 
-Nível 0: só leitura. Não altere fichas. Salvar no diário é nível 1 e só acontece se o usuário pedir. Não invente datas nem etapas: o que não está na ficha vai para Sem próximo passo ou Fichas para corrigir. Quando rodar por tarefa agendada, sem ninguém para responder, não faça perguntas: use a carteira inteira, ou o vendedor indicado na tarefa, e entregue a lista.
+Nível 0 para a análise. Salvar no diário e atualizar `proximo_contato` são nível 1 e só acontecem com a confirmação do usuário. Não mude etapa do funil sem confirmação. Não altere o CRM. Não invente datas nem etapas: o que não está na ficha vai para Sem próximo passo ou Fichas para corrigir. Quando rodar por tarefa agendada, sem ninguém para responder, não faça perguntas nem grave nada: use a carteira inteira, ou o vendedor indicado na tarefa, e entregue a lista.
+""")
+
+F[S + "atualizar-cerebro/SKILL.md"] = skill(
+    "atualizar-cerebro",
+    "Atualiza um Segundo Cérebro já criado com a versão mais recente do kit, trocando só os arquivos que são do kit (instruções, guias, modelos e skills) e acrescentando os arquivos novos, sem mexer em clientes, decisões, contexto preenchido e anotações. Use quando o usuário pedir para atualizar o cérebro, atualizar o kit, trazer as melhorias novas ou quando uma skill citar um arquivo que não existe na pasta.",
+    """
+# Atualizar o cérebro
+
+## Quando usar
+
+O cérebro foi criado com uma versão antiga do kit e o usuário quer as regras, os modelos e as skills mais recentes.
+
+## Antes de começar
+
+Leia `AGENTS.md`, `01-Contexto/00-empresa.md` (nome da empresa) e o `_index.md` da raiz. Confirme que a pasta conectada é o Segundo Cérebro: um `AGENTS.md` ao lado de `01-Contexto`, `02-Memoria` e `03-Acao`.
+
+## Passos
+
+1. Baixe o kit do endereço https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas/archive/refs/heads/main.zip para uma pasta temporária FORA da pasta do cérebro e descompacte. O que vale é a pasta template de dentro do ZIP. Se não conseguir baixar, peça que o usuário abra o endereço no navegador, baixe o ZIP e o coloque na pasta do cérebro, e use esse arquivo.
+2. Compare a pasta template com o cérebro e separe três listas.
+   - Trocar (arquivos do kit): `AGENTS.md`, `CLAUDE.md`, `COMECE-AQUI.md`, `PADRAO-DE-ARQUIVOS.md`, `ENTREVISTA.md`, `_restrito/README.md`, `03-Acao/automacoes/README.md`, todo arquivo que começa com `_template-` e todo `SKILL.md` de `03-Acao/skills/` que também existe no kit.
+   - Acrescentar: arquivos do kit que não existem no cérebro, como um arquivo novo de `01-Contexto/`, uma pasta nova de `02-Memoria/` ou uma skill nova.
+   - Não tocar: todo o resto, inclusive os arquivos de `01-Contexto/` que já existem, fichas, decisões, aprendizados, diário, caixa de entrada, prioridades, `03-Acao/conectores.md` e skills criadas pelo usuário.
+3. Para os arquivos da lista Trocar, ignore os que já são iguais ao do kit depois de trocar os marcadores. Mostre ao usuário, em poucas linhas, quantos arquivos serão trocados e quantos acrescentados, com os nomes dos principais, e peça confirmação.
+4. Com o sim, guarde uma cópia de cada arquivo que será trocado em `_backup-kit/AAAA-MM-DD/`, no mesmo caminho e com `.bak` no fim do nome. Depois copie os arquivos do kit para o cérebro.
+5. Em todo arquivo copiado, troque o marcador de empresa pelo nome da empresa e o marcador de data pela data de hoje, como na criação do cérebro.
+6. Atualize os índices sem apagar nada: acrescente a linha de cada arquivo ou pasta nova no `_index.md` da pasta e, quando o índice do kit tiver um texto novo em "Quando usar", acrescente esse texto.
+7. Não migre fichas antigas de uma vez. As skills completam os campos e as seções que faltarem quando cada ficha for usada.
+8. Apague a pasta temporária e o ZIP do kit, se ele estiver na pasta do cérebro. Se não conseguir apagar, diga quais arquivos o usuário deve apagar.
+9. Acrescente na nota de diário do dia a linha "Kit do Segundo Cérebro atualizado", com o número de arquivos trocados e acrescentados.
+10. Responda em até cinco linhas: o que mudou, onde ficou a cópia dos arquivos antigos e que o usuário pode apagar a pasta `_backup-kit` quando quiser. Se alguma skill citada pelo usuário mudou de nome ou deixou de existir, diga qual.
+
+## Saída esperada
+
+Os arquivos do kit atualizados, os arquivos novos acrescentados, os índices completos, uma cópia dos arquivos antigos em `_backup-kit/` e um resumo curto para o usuário.
+
+## Regras
+
+Esta skill troca arquivos, por isso só age depois da confirmação do passo 3. Nunca sobrescreva nem apague fichas, decisões, aprendizados, diário, caixa de entrada, prioridades, conectores ou arquivos de `01-Contexto/` que já existem. Nunca abra `_restrito/` além do `README.md`. Se a pasta não for um Segundo Cérebro, pare e avise.
 """)
 
 R = OrderedDict()

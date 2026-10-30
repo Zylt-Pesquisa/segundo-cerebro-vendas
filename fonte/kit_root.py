@@ -34,6 +34,7 @@ Se você usa o Claude, existe também uma skill opcional, chamada usar-segundo-c
 - "Organize minha caixa de entrada" — a IA sugere onde guardar o que está esperando.
 - "Revise minha carteira" — mostra quem está atrasado, quem contatar na semana, o que está parado e o funil por etapa. No Cowork, dá para agendar essa frase para toda segunda de manhã.
 - "Continuar a entrevista" — completa o que ficou faltando sobre a sua empresa.
+- "Atualize meu cérebro" — traz as melhorias mais recentes do kit sem mexer nos seus clientes, decisões e anotações.
 - "O que sabemos sobre X?" — a IA procura e responde dizendo de qual arquivo tirou.
 
 ## Texto fixo para colar nas instruções do projeto
@@ -54,8 +55,8 @@ Instale o Google Drive para computador (ou use o OneDrive) e mantenha esta pasta
 
 ## Mapa rápido
 
-- 01-Contexto — quem somos, negócio, processo comercial, cliente ideal, produtos, voz, time, preferências.
-- 02-Memoria — decisões, aprendizados, clientes, projetos, diário, prioridades e a caixa de entrada.
+- 01-Contexto — quem somos, negócio, processo comercial, cliente ideal, produtos, voz, time, preferências, método SPIN, prospecção, objeções, provas e sucesso do cliente.
+- 02-Memoria — decisões, aprendizados, clientes, planos de sucesso, projetos, diário, prioridades e a caixa de entrada.
 - 03-Acao — o que a IA pode fazer: roteiros (skills), conectores e automações.
 - _restrito — assuntos sensíveis. A IA só abre se você pedir.
 """
@@ -74,7 +75,7 @@ Você é o Segundo Cérebro comercial da {{EMPRESA}}. Ajuda pessoas do time come
 
 1. Leia este arquivo primeiro.
 2. Leia `_index.md` da raiz e depois o `_index.md` da pasta relevante. Os índices dizem o que existe e onde está.
-3. Para respostas comerciais (responder dúvida, preparar reunião, escrever mensagem, sugerir próximo passo), leia antes `01-Contexto/00-empresa.md`, `01-Contexto/02-icp.md`, `01-Contexto/03-tom-de-voz.md` e `01-Contexto/05-preferencias.md`. Para preparar reunião, registrar atendimento ou montar proposta, leia também `01-Contexto/08-metodo-spin.md`, que diz como a empresa aplica o SPIN Selling. Para só registrar ou guardar algo, basta o `_index.md` da pasta de destino, o modelo e o `PADRAO-DE-ARQUIVOS.md`. Ao priorizar clientes ou sugerir o que fazer primeiro, leia também `02-Memoria/prioridades/atual.md`. Antes de sugerir uma ação a um cliente, consulte `02-Memoria/decisoes/_index.md` e abra as decisões que se apliquem; uma decisão vigente vale mais que um hábito.
+3. Para respostas comerciais (responder dúvida, preparar reunião, escrever mensagem, sugerir próximo passo), leia antes `01-Contexto/00-empresa.md`, `01-Contexto/02-icp.md`, `01-Contexto/03-tom-de-voz.md` e `01-Contexto/05-preferencias.md`. Para preparar reunião, registrar atendimento ou montar proposta, leia também `01-Contexto/08-metodo-spin.md`, que diz como a empresa aplica o SPIN Selling. Para prospecção, objeções, provas e pós-venda, abra também `09-prospeccao.md`, `10-objecoes.md`, `11-provas-e-autoridade.md` ou `12-sucesso-do-cliente.md`, quando o pedido for sobre isso. Só cite como prova o que está no `11-provas-e-autoridade.md`. Para só registrar ou guardar algo, basta o `_index.md` da pasta de destino, o modelo e o `PADRAO-DE-ARQUIVOS.md`. Ao priorizar clientes ou sugerir o que fazer primeiro, leia também `02-Memoria/prioridades/atual.md`. Antes de sugerir uma ação a um cliente, consulte `02-Memoria/decisoes/_index.md` e abra as decisões que se apliquem; uma decisão vigente vale mais que um hábito.
 4. Abra outros arquivos só se o índice ou o campo `resumo` indicar que servem ao pedido. Não leia a pasta inteira.
 5. Se dois arquivos divergirem, vale o de `atualizado_em` mais recente. Arquivo com `status: substituido` nunca vale. Avise o usuário da divergência.
 6. `[A PREENCHER]` é lacuna. Não invente. Diga que falta e ofereça completar.
@@ -92,6 +93,7 @@ Você é o Segundo Cérebro comercial da {{EMPRESA}}. Ajuda pessoas do time come
 7. Ao usar um fato do cérebro numa resposta, diga de qual arquivo veio.
 8. Identifique o cliente antes de gravar qualquer coisa sobre ele. Procure o nome em `02-Memoria/clientes/_index.md` e nos campos `nome`, `apelidos` e `id_crm` das fichas, aceitando grafias parecidas. Se achar uma ficha parecida, pergunte se é o mesmo cliente; se for, acrescente o nome novo em `apelidos`. Só crie ficha nova quando o usuário confirmar que é outro cliente. A ficha é da empresa (ou da pessoa, se o cliente for pessoa física), nunca do contato, e cada nova venda para o mesmo cliente vira uma linha em Oportunidades. Nunca grave informação de um cliente na ficha de outro; na dúvida, pergunte.
 9. Toda nota sobre um cliente leva no campo `cliente` o nome do arquivo da ficha, sem `.md` (no diário, o campo `clientes` lista todos os citados no dia).
+10. A seção Histórico de uma ficha de cliente, e a seção Histórico de presença de um plano de sucesso, guardam só os 10 contatos mais recentes. Ao passar disso, mova os mais antigos, sem mudar o texto, para `02-Memoria/clientes/historico/<nome-da-ficha>.md` (crie se não existir, com o frontmatter comum, `tipo: cliente`, título "Histórico de" seguido do nome do cliente, o campo `cliente` e uma seção Histórico) e deixe no fim da seção da ficha a linha "Contatos anteriores em historico/<nome-da-ficha>.md".
 
 ## Níveis de permissão
 
@@ -109,7 +111,8 @@ Quando o pedido bater com uma linha abaixo, abra o SKILL.md indicado e siga os p
 - "prepare minha reunião", "monte as perguntas SPIN" — `03-Acao/skills/preparar-reuniao-cliente/SKILL.md`
 - "escreva um follow-up", "mensagem para o cliente" — `03-Acao/skills/escrever-follow-up/SKILL.md`
 - "organize a caixa de entrada", "triagem" — `03-Acao/skills/triagem-inbox/SKILL.md`
-- "revise minha carteira", "quem preciso contatar", "como está o funil" — `03-Acao/skills/revisar-carteira/SKILL.md`
+- "revise minha carteira", "quem preciso contatar", "como está o funil", "revise o pipeline" — `03-Acao/skills/revisar-carteira/SKILL.md`
+- "atualize meu cérebro", "atualizar o kit" — `03-Acao/skills/atualizar-cerebro/SKILL.md`
 - "continuar a entrevista", "completar o contexto" — leia `ENTREVISTA.md` e siga as regras dele. Abra primeiro os arquivos de `01-Contexto/` com `status: rascunho` (blocos ainda não entrevistados) e entreviste o usuário sobre um por vez, em no máximo 4 perguntas por mensagem. Depois grave, reescreva o `resumo` e mude o status para `vigente`. Se não houver rascunho, procure `[A PREENCHER]` nos arquivos de `01-Contexto/` e `02-Memoria/prioridades/` e pergunte só essas lacunas. Ignore arquivos com `status: modelo` e os arquivos de tipo guia, que usam esse marcador como exemplo.
 - "o que sabemos sobre X" — se X for um cliente, identifique a ficha pela regra 8 de "Como escrever" e reúna as notas cujo campo `cliente` ou `clientes` cite essa ficha. Procure também nos `_index.md` e nos campos `resumo` e, além disso, busque o termo X no texto de todos os arquivos (busca por texto ou grep), porque a informação pode estar dentro de outra ficha. Abra só o que for relevante e responda citando os arquivos. Se não achar, diga que o cérebro não tem isso.
 
@@ -159,7 +162,7 @@ A IA lê muito texto e erra quando os arquivos são longos, vagos ou diferentes 
 - `fonte` — de onde veio a informação (entrevista inicial, reunião de AAAA-MM-DD, e-mail, conversa com a IA, documento).
 - `relacionados` — lista de caminhos relativos de arquivos ligados a este.
 
-Campos extras por tipo ficam abaixo dos comuns. Cliente: nome, apelidos, id_crm, responsavel, etapa_funil, produto, proximo_contato, ultimo_resultado. Decisão: data, decisor, cliente, projeto, revisar_em, substituido_por. Aprendizado: data, origem, cliente, categoria. Projeto: responsavel, prazo, andamento. Diário: data, clientes. Inbox: origem, data, cliente, processado. O campo `cliente` sempre leva o nome do arquivo da ficha do cliente, sem `.md` (por exemplo, casa-clara-esquadrias), ou a palavra vazio quando a nota não é sobre um cliente.
+Campos extras por tipo ficam abaixo dos comuns. Cliente: nome, apelidos, id_crm, responsavel, etapa_funil, produto, proximo_contato, ultimo_resultado. Decisão: data, decisor, cliente, projeto, revisar_em, substituido_por. Aprendizado: data, origem, cliente, categoria. Projeto: responsavel, prazo, andamento. Diário: data, clientes. Inbox: origem, data, cliente, processado. Plano de sucesso (tipo cliente, em 02-Memoria/sucesso): nome, cliente, responsavel, inicio, saude, proxima_revisao, proximo_contato. Histórico antigo de cliente (tipo cliente, em 02-Memoria/clientes/historico): cliente. O campo `cliente` sempre leva o nome do arquivo da ficha do cliente, sem `.md` (por exemplo, casa-clara-esquadrias), ou a palavra vazio quando a nota não é sobre um cliente.
 
 ## Regras de escrita
 
@@ -231,7 +234,7 @@ Logo depois de criar a estrutura, e sempre que o usuário disser "continuar a en
 
 1. Confirme que todos os _index.md refletem os arquivos que existem, inclusive os produtos novos, e que cada resumo tem no máximo 200 caracteres.
 2. Se você não tem acesso à pasta, faça agora a entrega dos arquivos preenchidos, como o prompt de criação indicou, e explique que nas próximas conversas a pessoa deve anexar o AGENTS.md e os arquivos do assunto, e que você devolve os arquivos atualizados para ela salvar.
-3. Diga em poucas linhas o que ficou pendente, ou seja, quais arquivos ainda têm [A PREENCHER].
+3. Diga em poucas linhas o que ficou pendente, ou seja, quais arquivos ainda têm [A PREENCHER]. Os arquivos 09 a 12 de 01-Contexto (prospecção, objeções, provas e sucesso do cliente) ficam em rascunho de propósito: são preenchidos pelas skills dos plugins da imersão ou depois, com "Continuar a entrevista".
 4. Se a pessoa não for instalar a skill usar-segundo-cerebro, entregue este texto, para colar uma única vez nas instruções do projeto da ferramenta que usa (se a ferramenta não tiver projeto, ela cola no início de cada conversa nova): "Você é o Segundo Cérebro comercial da {{EMPRESA}}. Sua memória é a pasta de arquivos deste projeto. Antes de responder qualquer pedido, leia AGENTS.md e siga as regras dele. Se não conseguir ler a pasta, avise e peça os arquivos. Nunca invente informação da empresa. Fale em português do Brasil, simples e direto."
 5. Ensine seis frases de uso: "Guarde isso no meu cérebro", "Acabei de falar com o cliente X, registre", "Prepare minha reunião com o cliente X", "Escreva um follow-up para o cliente X", "Revise minha carteira" e "Continuar a entrevista".
 6. Se a pessoa usa Claude, avise que existe a skill opcional usar-segundo-cerebro no repositório do kit (https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas), na pasta skills, que dispensa colar o texto fixo.
@@ -247,7 +250,7 @@ F["_index.md"] = indice(
         ("CLAUDE", "CLAUDE.md", "ponteiro que faz o Claude carregar o AGENTS"),
         ("Padrão de arquivos", "PADRAO-DE-ARQUIVOS.md", "formato dos arquivos .md"),
         ("Entrevista guiada", "ENTREVISTA.md", "roteiro para preencher o Contexto e fechar a criação do cérebro"),
-        ("01-Contexto", "01-Contexto/_index.md", "camada 1 — quem somos, negócio, processo, cliente ideal, produtos, voz, time, preferências, método SPIN"),
+        ("01-Contexto", "01-Contexto/_index.md", "camada 1 — quem somos, negócio, processo, cliente ideal, produtos, voz, time, preferências, método SPIN, prospecção, objeções, provas e sucesso do cliente"),
         ("02-Memoria", "02-Memoria/_index.md", "camada 2 — decisões, aprendizados, clientes, projetos, diário, prioridades, caixa de entrada, diagnóstico"),
         ("03-Acao", "03-Acao/_index.md", "camada 3 — skills, conectores e automações"),
         ("_restrito", "_restrito/README.md", "assuntos sensíveis; a IA só abre se o usuário pedir"),
@@ -271,8 +274,12 @@ F[CTX + "_index.md"] = indice(
         ("Produtos", "06-produtos/_index.md", "uma ficha por produto ou serviço"),
         ("Processo comercial", "07-processo-comercial.md", "etapas do funil, critérios, cadência e motivos de perda"),
         ("Método SPIN", "08-metodo-spin.md", "como aplicamos o SPIN Selling: problemas que resolvemos, implicações, dados e perguntas"),
+        ("Prospecção", "09-prospeccao.md", "metas de atividade, cadência, canais, gatilhos e roteiros de prospecção"),
+        ("Objeções", "10-objecoes.md", "biblioteca de objeções com a resposta que funciona e o pedido de compromisso"),
+        ("Provas e autoridade", "11-provas-e-autoridade.md", "cases, números, depoimentos e credenciais que podemos citar"),
+        ("Sucesso do cliente", "12-sucesso-do-cliente.md", "o que é sucesso para o cliente, sinais de saúde e risco, cadência de presença"),
     ],
-    "Leia 00, 02, 03 e 05 antes de qualquer resposta comercial. Abra 01, 06 e 07 quando o pedido envolver preço, produto, proposta ou etapa do funil. Abra 08 para preparar reunião, registrar atendimento ou montar proposta. Este conteúdo muda pouco. Quando mudar, crie a versão nova e marque a antiga como substituída.",
+    "Leia 00, 02, 03 e 05 antes de qualquer resposta comercial. Abra 01, 06 e 07 quando o pedido envolver preço, produto, proposta ou etapa do funil. Abra 08 para preparar reunião, registrar atendimento ou montar proposta. Abra 09 para planejar prospecção ou escrever abordagem de primeiro contato. Abra 10 para responder objeções, preparar proposta ou treinar. Abra 11 antes de citar case, número ou depoimento. Abra 12 para qualquer contato de pós-venda. Os arquivos 09 a 12 são preenchidos pelas skills dos plugins da imersão ou pela entrevista. Este conteúdo muda pouco. Quando mudar, crie a versão nova e marque a antiga como substituída.",
     rel=["../AGENTS.md"])
 
 F[CTX + "00-empresa.md"] = fm(
@@ -498,6 +505,178 @@ F[CTX + "08-metodo-spin.md"] = fm(
 ## Regras do time
 
 [A PREENCHER] Combinados do time sobre o método, como enviar proposta só depois de duas necessidades explícitas. Regra com data e decisor também vira nota em 02-Memoria/decisoes/.
+"""
+
+F[CTX + "09-prospeccao.md"] = """---
+tipo: contexto
+titulo: Prospecção
+resumo: Metas de atividade, cadência multicanal, horários de prospecção, gatilhos e roteiros aprovados da {{EMPRESA}}.
+status: rascunho
+atualizado_em: {{DATA}}
+fonte: modelo do kit
+relacionados: [07-processo-comercial.md, 02-icp.md, 08-metodo-spin.md, ../02-Memoria/prioridades/atual.md]
+---
+
+# Prospecção
+
+## Metas de atividade
+
+[A PREENCHER] Meta de vendas do período, ticket médio, taxas de conversão entre etapas e a conta que chega ao número de contatos por dia. Cada número com fonte; conta nossa leva [estimativa] e a premissa.
+
+## Horários de prospecção
+
+[A PREENCHER] Dias e horários bloqueados para prospectar, protegidos de reunião interna e tarefa administrativa.
+
+## Canais e cadência
+
+[A PREENCHER] A sequência de toques, um por linha, no formato dia — canal — objetivo. Exemplo: dia 1 — ligação + recado de voz — agendar conversa.
+
+## Gatilhos de prospecção
+
+[A PREENCHER] Eventos que indicam que um lead pode comprar agora (contratação, expansão, troca de gestor, mudança de lei) e onde encontrá-los.
+
+## Fontes de listas
+
+[A PREENCHER] De onde vêm os leads (CRM, base antiga, indicação, eventos, LinkedIn) e como são priorizados.
+
+## Roteiros aprovados
+
+[A PREENCHER] Aberturas de ligação, mensagens e respostas a reações reflexas que já funcionaram, com a data e quem usou.
+
+## Regras do time
+
+[A PREENCHER] Combinados, como número mínimo de toques antes de desistir de um lead ou prazo para retomar quem disse "agora não".
+"""
+
+F[CTX + "10-objecoes.md"] = """---
+tipo: contexto
+titulo: Objeções
+resumo: Biblioteca de objeções da {{EMPRESA}}: como o cliente diz, o que está por trás, a resposta que funciona e o pedido de compromisso.
+status: rascunho
+atualizado_em: {{DATA}}
+fonte: modelo do kit
+relacionados: [02-icp.md, 06-produtos/_index.md, 08-metodo-spin.md, ../02-Memoria/aprendizados/_index.md]
+---
+
+# Objeções
+
+## Como usar esta biblioteca
+
+Cada objeção segue o formato: como o cliente diz — o que está por trás — pergunta para esclarecer — resposta — pedido de compromisso — fonte — [validada] ou [sugerida]. Resposta [validada] tem evidência em aprendizado ou histórico de cliente. Resposta [sugerida] ainda precisa ser testada.
+
+## Reações na prospecção
+
+[A PREENCHER] Respostas reflexas e evasivas no primeiro contato, como "não tenho interesse", "manda por e-mail" e "estou sem tempo".
+
+## Objeções para marcar reunião
+
+[A PREENCHER] O que o lead diz para não aceitar a reunião, como "já temos fornecedor" ou "me liga no mês que vem".
+
+## Objeções de preço e orçamento
+
+[A PREENCHER] Ex.: "está caro", "não temos orçamento agora".
+
+## Objeções de momento
+
+[A PREENCHER] Ex.: "vou pensar", "agora não é prioridade", "volta no próximo trimestre".
+
+## Objeções de concorrente e status quo
+
+[A PREENCHER] Ex.: "o concorrente é mais barato", "do jeito que está funciona".
+
+## Objeções de decisor e risco
+
+[A PREENCHER] Ex.: "preciso falar com o sócio", "e se não der certo?".
+
+## Objeções que não contornamos
+
+[A PREENCHER] Situações em que a objeção mostra que o lead não é cliente, e o vendedor deve encerrar com educação.
+"""
+
+F[CTX + "11-provas-e-autoridade.md"] = """---
+tipo: contexto
+titulo: Provas e autoridade
+resumo: Cases, números, depoimentos autorizados, credenciais e materiais de valor que a {{EMPRESA}} pode citar em vendas.
+status: rascunho
+atualizado_em: {{DATA}}
+fonte: modelo do kit
+relacionados: [00-empresa.md, 06-produtos/_index.md, 08-metodo-spin.md, ../02-Memoria/clientes/_index.md]
+---
+
+# Provas e autoridade
+
+## Como usar este arquivo
+
+Só o que está aqui pode ser citado como prova em mensagens e propostas. Cada item tem fonte, data e a marca [pode citar o nome] ou [só anônimo]. Item sem autorização do cliente é sempre [só anônimo].
+
+## Cases
+
+[A PREENCHER] Um por linha: cliente (ou descrição anônima), setor e porte, problema, o que foi feito, resultado com número, data, fonte, autorização.
+
+## Números da empresa
+
+[A PREENCHER] Clientes atendidos, anos de mercado, resultados médios. Cada número com fonte e data.
+
+## Depoimentos
+
+[A PREENCHER] Frase do cliente entre aspas, nome e cargo (se autorizado), data e onde foi dita.
+
+## Credenciais e autoridade
+
+[A PREENCHER] Certificações, prêmios, parcerias, publicações, formação e experiência do time.
+
+## Clientes de referência
+
+[A PREENCHER] Clientes que aceitam receber ligação de um prospect, com o contexto em que podem ser acionados. Sem telefone ou dado pessoal.
+
+## Materiais de valor
+
+[A PREENCHER] O que podemos oferecer antes de pedir algo (diagnóstico gratuito, estudo, checklist, conteúdo), com quando usar.
+
+## Comunidades e afinidades
+
+[A PREENCHER] Associações, eventos, regiões e causas que unem a empresa a seus clientes.
+"""
+
+F[CTX + "12-sucesso-do-cliente.md"] = """---
+tipo: contexto
+titulo: Sucesso do cliente
+resumo: O que é sucesso para o cliente da {{EMPRESA}}, sinais de saúde e risco, cadência de presença e critérios de expansão.
+status: rascunho
+atualizado_em: {{DATA}}
+fonte: modelo do kit
+relacionados: [06-produtos/_index.md, 07-processo-comercial.md, ../02-Memoria/sucesso/_index.md]
+---
+
+# Sucesso do cliente
+
+## O que é sucesso por produto
+
+[A PREENCHER] Para cada produto, o resultado que o cliente precisa ver e em quanto tempo, no formato produto — resultado — prazo — como medir.
+
+## Marcos da jornada
+
+[A PREENCHER] Etapas depois da venda (boas-vindas, implantação, primeiro resultado, revisão de valor, renovação) com o prazo de cada uma.
+
+## Sinais de saúde
+
+[A PREENCHER] O que indica que o cliente está bem: uso, resultados, engajamento, relação com o patrocinador.
+
+## Sinais de risco
+
+[A PREENCHER] O que indica risco de cancelamento: queda de uso, troca do patrocinador, atraso de pagamento, reclamação, silêncio.
+
+## Cadência de presença
+
+[A PREENCHER] Contatos proativos por tipo de conta, no formato tipo de conta — frequência — canal — objetivo. Presença traz valor, não só "passando para saber".
+
+## Critérios de expansão
+
+[A PREENCHER] Quando faz sentido oferecer mais (novo produto, mais usuários, outra unidade) e quando pedir indicação ou depoimento.
+
+## Responsáveis
+
+[A PREENCHER] Quem cuida do cliente depois da venda e como o vendedor participa.
 """
 
 F[CTX + "06-produtos/_index.md"] = indice(
