@@ -1,0 +1,6 @@
+# Pasta de saídas criada pelo Claude (Cowork)
+Claude outputs/
+
+# Saída do gerador do kit (fonte/build.py)
+fonte/out/
+__pycache__/
