@@ -23,7 +23,7 @@ A pasta é sua e da sua empresa. Fica no seu computador, de preferência dentro 
 2. Se você não instalou a skill usar-segundo-cerebro (veja abaixo), cole no projeto o texto da seção "Texto fixo para colar nas instruções do projeto". Faça isso uma única vez.
 3. Converse normalmente. Use as frases da seção seguinte.
 
-Se você usa o Claude, existe também uma skill opcional, chamada usar-segundo-cerebro, que faz o Claude reconhecer esta pasta sem precisar do texto fixo. O guia de instalação está no repositório do kit, na pasta skills.
+Se você usa o Claude, existe também uma skill opcional, chamada usar-segundo-cerebro, que faz o Claude reconhecer esta pasta sem precisar do texto fixo. O guia de instalação está no repositório do kit (https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas), na pasta skills.
 
 ## Frases que funcionam
 
@@ -234,7 +234,7 @@ Logo depois de criar a estrutura, e sempre que o usuário disser "continuar a en
 3. Diga em poucas linhas o que ficou pendente, ou seja, quais arquivos ainda têm [A PREENCHER].
 4. Se a pessoa não for instalar a skill usar-segundo-cerebro, entregue este texto, para colar uma única vez nas instruções do projeto da ferramenta que usa (se a ferramenta não tiver projeto, ela cola no início de cada conversa nova): "Você é o Segundo Cérebro comercial da {{EMPRESA}}. Sua memória é a pasta de arquivos deste projeto. Antes de responder qualquer pedido, leia AGENTS.md e siga as regras dele. Se não conseguir ler a pasta, avise e peça os arquivos. Nunca invente informação da empresa. Fale em português do Brasil, simples e direto."
 5. Ensine seis frases de uso: "Guarde isso no meu cérebro", "Acabei de falar com o cliente X, registre", "Prepare minha reunião com o cliente X", "Escreva um follow-up para o cliente X", "Revise minha carteira" e "Continuar a entrevista".
-6. Se a pessoa usa Claude, avise que existe a skill opcional usar-segundo-cerebro no repositório do kit, na pasta skills, que dispensa colar o texto fixo.
+6. Se a pessoa usa Claude, avise que existe a skill opcional usar-segundo-cerebro no repositório do kit (https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas), na pasta skills, que dispensa colar o texto fixo.
 7. Termine com uma frase: o cérebro cresce conforme ela usa, e o arquivo COMECE-AQUI.md da pasta explica o dia a dia.
 """
 

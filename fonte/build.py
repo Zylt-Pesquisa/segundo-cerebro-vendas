@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Gera o repositório do kit: template/, três prompts, ferramentas/ e fonte/.
-Uso: REPO_URL=https://github.com/ORG/REPO TAG=v1.0 python3 build.py
+Uso: python3 build.py (REPO_URL opcional)
 """
 import os, sys, shutil, zipfile
 from collections import OrderedDict
@@ -11,9 +11,8 @@ import kit_root, kit_memoria, kit_acao
 import prompt_texto as T
 import kit_skill
 
-REPO_URL = os.environ.get("REPO_URL", "https://github.com/ORG/segundo-cerebro").rstrip("/")
-TAG = os.environ.get("TAG", "v1.0")
-ZIP_URL = os.environ.get("ZIP_URL", REPO_URL + "/archive/refs/tags/" + TAG + ".zip")
+REPO_URL = os.environ.get("REPO_URL", "https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas").rstrip("/")
+ZIP_URL = os.environ.get("ZIP_URL", REPO_URL + "/archive/refs/heads/main.zip")
 OUT = os.path.join(HERE, "out")
 REPO = os.path.join(OUT, "repo")
 
@@ -45,7 +44,7 @@ pastas_n = len(todas)
 
 def fill(txt):
     return (txt.replace("@@N@@", str(n)).replace("@@PASTAS@@", str(pastas_n))
-            .replace("@@ZIP@@", ZIP_URL).replace("@@TAG@@", TAG))
+            .replace("@@ZIP@@", ZIP_URL).replace("@@REPO@@", REPO_URL))
 
 
 def write(path, txt):
@@ -89,12 +88,12 @@ Os arquivos do template e os três prompts são gerados por estes scripts. Para 
 - kit_common.py: funções de frontmatter e índices.
 - kit_skill.py: a skill do Claude usar-segundo-cerebro e o guia de instalação dela.
 - prompt_texto.py: texto dos prompts. Os prompts para Claude e para ChatGPT saem dentro do README. O PROMPT-COMPLETO sai como arquivo próprio.
-- build.py: gera o repositório em out/repo. Variáveis: REPO_URL (endereço do repositório) e TAG (versão).
+- build.py: gera o repositório em out/repo. Variável opcional: REPO_URL (endereço do repositório; o padrão é o do projeto).
 - validar.py: confere uma pasta contra o padrão. Uso: python3 validar.py PASTA --esperado """ + str(n) + """
 
-Gerar e validar: REPO_URL=https://github.com/ORG/REPO TAG=v1.0 python3 build.py e depois python3 validar.py out/referencia --esperado """ + str(n) + """
+Gerar e validar: python3 build.py e depois python3 validar.py out/referencia --esperado """ + str(n) + """
 
-Para publicar uma versão: copie o conteúdo de out/repo para o repositório, faça o commit e crie a tag (por exemplo v1.1). Os prompts apontam para a tag, não para o branch principal, para que ninguém altere o kit de quem já usa. Ao mudar a versão, gere de novo com a TAG nova.
+Para publicar: copie o conteúdo de out/repo para o repositório, faça o commit e o push no branch main. Os prompts baixam sempre o branch main, então quem instalar depois do push já recebe o kit atualizado. Quem já criou o cérebro não é afetado, porque a pasta dele é uma cópia.
 """)
 
 FENCE = "````"
@@ -103,7 +102,7 @@ write(os.path.join(REPO, "README.md"), """# Segundo Cérebro comercial
 
 Um kit para criar, no seu computador, o Segundo Cérebro da sua empresa: uma pasta organizada que o Claude ou o ChatGPT lê antes de te ajudar a vender. A pasta é sua e da sua empresa. Este repositório só distribui o modelo vazio. Nenhum dado seu vem para cá.
 
-Versão atual: """ + TAG + """
+Repositório: """ + REPO_URL + """
 
 Você não precisa instalar Python, Git nem usar terminal. Escolha abaixo a ferramenta que você usa e siga os passos.
 
@@ -123,7 +122,7 @@ Você não precisa instalar Python, Git nem usar terminal. Escolha abaixo a ferr
 
 ## Não funcionou ou está sem internet
 
-Use o arquivo PROMPT-COMPLETO.md deste repositório. Ele traz todos os arquivos dentro dele e não precisa baixar nada. Abra o arquivo, copie tudo e cole no Claude ou no ChatGPT.
+Use o arquivo [PROMPT-COMPLETO.md](PROMPT-COMPLETO.md) deste repositório. Ele traz todos os arquivos dentro dele e não precisa baixar nada. Abra o arquivo, copie tudo e cole no Claude ou no ChatGPT.
 
 ## O que você ganha
 
@@ -133,7 +132,7 @@ Três camadas: Contexto (quem somos, negócio, processo comercial, cliente ideal
 
 - template: os """ + str(n) + """ arquivos do Segundo Cérebro, com marcadores {{EMPRESA}} e {{DATA}} que a IA troca.
 - PROMPT-COMPLETO.md: o prompt de criação que não precisa baixar nada.
-- skills: a skill usar-segundo-cerebro para Claude (ZIP pronto e guia de instalação). Opcional.
+- skills: a skill usar-segundo-cerebro para Claude (ZIP pronto e guia de instalação, em [skills/LEIA-ME.md](skills/LEIA-ME.md)). Opcional.
 - ferramentas: script que confere se uma pasta segue o padrão.
 - fonte: os scripts que geram tudo isso, para quem mantém o kit.
 """)
@@ -144,7 +143,7 @@ for p in paths:
           FILES[p].rstrip("\n").replace("{{EMPRESA}}", "Empresa Exemplo").replace("{{DATA}}", "2026-10-26") + "\n")
 
 # ---- zip no formato do GitHub (pasta única na raiz), para teste e publicação manual
-raiz = "segundo-cerebro-" + TAG.lstrip("v")
+raiz = REPO_URL.rsplit("/", 1)[-1] + "-main"
 zpath = os.path.join(OUT, raiz + ".zip")
 with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
     for d, _, fs in os.walk(REPO):

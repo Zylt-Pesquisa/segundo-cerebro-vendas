@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Textos dos três prompts.
 PROMPT-CLAUDE e PROMPT-GPT vão dentro do README; PROMPT-COMPLETO é arquivo próprio.
-Variáveis: @@N@@ arquivos, @@PASTAS@@ pastas, @@ZIP@@ link do zip, @@TAG@@ versão."""
+Variáveis: @@N@@ arquivos, @@PASTAS@@ pastas, @@ZIP@@ link do zip, @@REPO@@ endereço do repositório."""
 
 AVISO_IA = "======== A PARTIR DAQUI É A INSTRUÇÃO PARA A IA ========\n"
 
@@ -64,7 +64,7 @@ CLAUDE_P2 = """
 
 A pasta de destino é a que a pessoa selecionou. Se nenhuma pasta estiver selecionada, peça que ela crie uma pasta vazia dentro da pasta do Google Drive (Meu Drive) ou do OneDrive, sugerindo o nome "Segundo Cerebro", e a adicione à conversa. Se o caminho da pasta escolhida não indicar Google Drive, Meu Drive, My Drive ou OneDrive, avise em uma frase que, fora dessas pastas, o cérebro fica sem backup, e pergunte se ela quer seguir assim ou trocar de pasta. Não peça nenhuma instalação técnica: Python, Git e terminal não são necessários.
 
-1. Baixe o kit (versão @@TAG@@) deste endereço, para uma pasta de trabalho temporária FORA da pasta da pessoa, e descompacte: @@ZIP@@
+1. Baixe o kit deste endereço, para uma pasta de trabalho temporária FORA da pasta da pessoa, e descompacte: @@ZIP@@
 2. O kit descompactado tem uma pasta única com as pastas template e ferramentas, mais arquivos de apoio (README e PROMPT-COMPLETO) que você ignora. Copie o conteúdo da pasta template (não a pasta template em si) para a pasta de destino, mantendo os mesmos caminhos. São @@N@@ arquivos em @@PASTAS@@ pastas além da raiz.
 3. Dentro dos arquivos copiados, troque {{EMPRESA}} pelo nome da empresa e {{DATA}} pela data de hoje. Mais nada muda.
 4. Se não conseguir baixar (sem internet, endereço bloqueado), peça que a pessoa abra o endereço no navegador, baixe o arquivo ZIP e o coloque na pasta de destino, e tente de novo com o arquivo local. O ZIP colocado pela pessoa não conta como arquivo existente na pasta. Se ainda assim não for possível, diga que ela deve usar o arquivo PROMPT-COMPLETO.md do mesmo kit e pare.

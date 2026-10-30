@@ -22,7 +22,7 @@ A pasta é sua e da sua empresa. Fica no seu computador, de preferência dentro 
 2. Se você não instalou a skill usar-segundo-cerebro (veja abaixo), cole no projeto o texto da seção "Texto fixo para colar nas instruções do projeto". Faça isso uma única vez.
 3. Converse normalmente. Use as frases da seção seguinte.
 
-Se você usa o Claude, existe também uma skill opcional, chamada usar-segundo-cerebro, que faz o Claude reconhecer esta pasta sem precisar do texto fixo. O guia de instalação está no repositório do kit, na pasta skills.
+Se você usa o Claude, existe também uma skill opcional, chamada usar-segundo-cerebro, que faz o Claude reconhecer esta pasta sem precisar do texto fixo. O guia de instalação está no repositório do kit (https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas), na pasta skills.
 
 ## Frases que funcionam
 
