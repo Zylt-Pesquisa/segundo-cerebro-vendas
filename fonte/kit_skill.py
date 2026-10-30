@@ -25,7 +25,7 @@ Se o pedido claramente não tem a ver com vendas nem com a empresa do usuário (
 
 1. Procure primeiro na pasta de trabalho atual e depois nas pastas conectadas um arquivo AGENTS.md que mencione o Segundo Cérebro e que tenha ao lado as pastas 01-Contexto, 02-Memoria e 03-Acao.
 2. Se achar mais de uma, pergunte qual empresa o usuário quer usar.
-3. Se não achar nenhuma, diga em uma ou duas frases que não encontrou a pasta do Segundo Cérebro e peça que o usuário selecione ou conecte a pasta e repita o pedido. Se o pedido era para guardar algo, devolva o texto que seria guardado para que ele não se perca. Se o usuário ainda não criou o cérebro, diga que a criação é feita com o arquivo PROMPT-CLAUDE.md do kit do Segundo Cérebro, que está no repositório indicado no material da imersão. Não crie a estrutura de memória por conta própria e não responda como se conhecesse a empresa.
+3. Se não achar nenhuma, diga em uma ou duas frases que não encontrou a pasta do Segundo Cérebro e peça que o usuário selecione ou conecte a pasta e repita o pedido. Se o pedido era para guardar algo, devolva o texto que seria guardado para que ele não se perca. Se o usuário ainda não criou o cérebro, diga que a criação é feita com o prompt para Claude que está no README do repositório do kit do Segundo Cérebro, indicado no material da imersão. Não crie a estrutura de memória por conta própria e não responda como se conhecesse a empresa.
 
 ## Passo 2 — Ler e seguir o AGENTS.md
 

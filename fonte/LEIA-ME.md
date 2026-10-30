@@ -5,7 +5,7 @@ Os arquivos do template e os três prompts são gerados por estes scripts. Para 
 - kit_root.py, kit_memoria.py, kit_acao.py: conteúdo exato de cada arquivo do Segundo Cérebro.
 - kit_common.py: funções de frontmatter e índices.
 - kit_skill.py: a skill do Claude usar-segundo-cerebro e o guia de instalação dela.
-- prompt_texto.py: texto dos prompts (PROMPT-CLAUDE, PROMPT-GPT e PROMPT-COMPLETO).
+- prompt_texto.py: texto dos prompts. Os prompts para Claude e para ChatGPT saem dentro do README. O PROMPT-COMPLETO sai como arquivo próprio.
 - build.py: gera o repositório em out/repo. Variáveis: REPO_URL (endereço do repositório) e TAG (versão).
 - validar.py: confere uma pasta contra o padrão. Uso: python3 validar.py PASTA --esperado 43
 
