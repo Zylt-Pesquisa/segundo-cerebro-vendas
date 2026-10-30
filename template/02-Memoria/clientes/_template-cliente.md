@@ -1,16 +1,17 @@
 ---
 tipo: cliente
 titulo: Modelo de cliente
-resumo: Modelo. Copie para criar a ficha de um cliente ou oportunidade.
+resumo: Modelo. Copie para criar a ficha de um cliente ou oportunidade, organizada pelo método SPIN.
 status: modelo
 atualizado_em: {{DATA}}
 fonte: estrutura inicial
-relacionados: [_index.md]
+relacionados: [_index.md, ../../01-Contexto/08-metodo-spin.md]
 nome: A PREENCHER
 responsavel: A PREENCHER
 etapa_funil: A PREENCHER
 produto: A PREENCHER
 proximo_contato: AAAA-MM-DD
+ultimo_resultado: avanco / continuacao / pedido / sem-venda
 ---
 
 # Nome do cliente
@@ -19,13 +20,21 @@ proximo_contato: AAAA-MM-DD
 
 [A PREENCHER] Empresa ou pessoa, setor, porte e como chegou até nós.
 
-## Situação atual
+## Situação
 
-[A PREENCHER] Em que etapa está e qual é o momento da compra.
+[A PREENCHER] Fatos já confirmados sobre o cliente: estrutura, processo atual, ferramentas, volumes e momento da compra. Tudo que está aqui não se pergunta de novo.
 
-## Dor e interesse
+## Problemas
 
-[A PREENCHER] O que o cliente quer resolver, nas palavras dele.
+[A PREENCHER] Um por linha, com a marca [fato] (o cliente disse) ou [hipótese] (suposição nossa), a data e quem falou.
+
+## Implicações
+
+[A PREENCHER] Consequências de cada problema, ligadas a ele. Número só com fonte (quem disse e quando). Conta nossa leva [estimativa] e a premissa.
+
+## Necessidades explícitas
+
+[A PREENCHER] O que o cliente disse que quer resolver ou conseguir, entre aspas e com as palavras dele, com a data. Queixa vaga fica em Problemas.
 
 ## Decisores e contatos
 
@@ -33,8 +42,8 @@ proximo_contato: AAAA-MM-DD
 
 ## Histórico
 
-[A PREENCHER] Contatos em ordem do mais recente para o mais antigo, cada um com data, o que foi dito e o combinado.
+[A PREENCHER] Contatos em ordem do mais recente para o mais antigo, cada um com data, canal, o que foi dito, objeções, o combinado e o resultado (avanço, continuação, pedido ou sem venda).
 
 ## Próximo passo
 
-[A PREENCHER] A próxima ação, com data e responsável.
+[A PREENCHER] O avanço pretendido no próximo contato, com data e responsável.

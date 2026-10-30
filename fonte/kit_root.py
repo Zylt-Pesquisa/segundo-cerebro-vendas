@@ -15,11 +15,11 @@ F["COMECE-AQUI.md"] = fm(
 
 Esta pasta é a memória da sua operação comercial. Ela guarda quem é a {{EMPRESA}}, como vocês vendem, o que foi decidido, o que se aprendeu e como estão os clientes. A IA (Claude ou ChatGPT) lê essa pasta antes de te ajudar. Por isso ela responde com o contexto da sua empresa e escreve com a sua voz.
 
-A pasta é sua e da sua empresa. Fica no seu computador. Você decide se compartilha e com quem.
+A pasta é sua e da sua empresa. Fica no seu computador, de preferência dentro da pasta do Google Drive (ou do OneDrive), para ter backup automático. Você decide se compartilha e com quem.
 
 ## Como usar em 3 passos
 
-1. Abra uma conversa nova na IA e aponte para esta pasta (Claude: abra a pasta no projeto. ChatGPT: anexe o arquivo AGENTS.md e os arquivos do assunto).
+1. Abra uma conversa nova na IA e aponte para esta pasta (Claude: abra o Cowork no Claude Desktop e adicione esta pasta à conversa. ChatGPT: anexe o arquivo AGENTS.md e os arquivos do assunto). Sem a pasta, a IA responde sem a sua memória.
 2. Se você não instalou a skill usar-segundo-cerebro (veja abaixo), cole no projeto o texto da seção "Texto fixo para colar nas instruções do projeto". Faça isso uma única vez.
 3. Converse normalmente. Use as frases da seção seguinte.
 
@@ -29,7 +29,7 @@ Se você usa o Claude, existe também uma skill opcional, chamada usar-segundo-c
 
 - "Guarde isso no meu cérebro" — cola um texto, reunião ou conversa e a IA salva no lugar certo.
 - "Acabei de falar com o cliente X. Registre" — atualiza a ficha do cliente e o diário.
-- "Prepare minha reunião com o cliente X" — recebe um resumo de uma página.
+- "Prepare minha reunião com o cliente X" — recebe um resumo de uma página com as perguntas SPIN (situação, problema, implicação e necessidade) e o avanço a buscar.
 - "Escreva um follow-up para o cliente X" — recebe uma mensagem na voz da sua empresa.
 - "Organize minha caixa de entrada" — a IA sugere onde guardar o que está esperando.
 - "Continuar a entrevista" — completa o que ficou faltando sobre a sua empresa.
@@ -40,6 +40,10 @@ Se você usa o Claude, existe também uma skill opcional, chamada usar-segundo-c
 Use este texto se você não instalou a skill usar-segundo-cerebro, ou se usa o ChatGPT.
 
 Você é o Segundo Cérebro comercial da {{EMPRESA}}. Sua memória é a pasta de arquivos deste projeto. Antes de responder qualquer pedido, leia AGENTS.md e siga as regras dele. Se não conseguir ler a pasta, avise e peça os arquivos. Nunca invente informação da empresa. Fale em português do Brasil, simples e direto.
+
+## Backup
+
+Instale o Google Drive para computador (ou use o OneDrive) e mantenha esta pasta dentro da pasta sincronizada, por exemplo em Meu Drive. Assim tudo que a IA grava vai para a nuvem sozinho, com histórico de versões. Não use o conector do Google Drive do Claude para isso: a IA precisa ver a pasta no seu computador.
 
 ## Cuidados
 
@@ -69,7 +73,7 @@ Você é o Segundo Cérebro comercial da {{EMPRESA}}. Ajuda pessoas do time come
 
 1. Leia este arquivo primeiro.
 2. Leia `_index.md` da raiz e depois o `_index.md` da pasta relevante. Os índices dizem o que existe e onde está.
-3. Para respostas comerciais (responder dúvida, preparar reunião, escrever mensagem, sugerir próximo passo), leia antes `01-Contexto/00-empresa.md`, `01-Contexto/02-icp.md`, `01-Contexto/03-tom-de-voz.md` e `01-Contexto/05-preferencias.md`. Para só registrar ou guardar algo, basta o `_index.md` da pasta de destino, o modelo e o `PADRAO-DE-ARQUIVOS.md`. Ao priorizar clientes ou sugerir o que fazer primeiro, leia também `02-Memoria/prioridades/atual.md`. Antes de sugerir uma ação a um cliente, consulte `02-Memoria/decisoes/_index.md` e abra as decisões que se apliquem; uma decisão vigente vale mais que um hábito.
+3. Para respostas comerciais (responder dúvida, preparar reunião, escrever mensagem, sugerir próximo passo), leia antes `01-Contexto/00-empresa.md`, `01-Contexto/02-icp.md`, `01-Contexto/03-tom-de-voz.md` e `01-Contexto/05-preferencias.md`. Para preparar reunião, registrar atendimento ou montar proposta, leia também `01-Contexto/08-metodo-spin.md`, que diz como a empresa aplica o SPIN Selling. Para só registrar ou guardar algo, basta o `_index.md` da pasta de destino, o modelo e o `PADRAO-DE-ARQUIVOS.md`. Ao priorizar clientes ou sugerir o que fazer primeiro, leia também `02-Memoria/prioridades/atual.md`. Antes de sugerir uma ação a um cliente, consulte `02-Memoria/decisoes/_index.md` e abra as decisões que se apliquem; uma decisão vigente vale mais que um hábito.
 4. Abra outros arquivos só se o índice ou o campo `resumo` indicar que servem ao pedido. Não leia a pasta inteira.
 5. Se dois arquivos divergirem, vale o de `atualizado_em` mais recente. Arquivo com `status: substituido` nunca vale. Avise o usuário da divergência.
 6. `[A PREENCHER]` é lacuna. Não invente. Diga que falta e ofereça completar.
@@ -99,7 +103,7 @@ Quando o pedido bater com uma linha abaixo, abra o SKILL.md indicado e siga os p
 
 - "guarde", "anote", "salve isso" — `03-Acao/skills/salvar-no-cerebro/SKILL.md`
 - "falei com o cliente", "atendi", "registre a reunião" — `03-Acao/skills/registrar-atendimento/SKILL.md`
-- "prepare minha reunião" — `03-Acao/skills/preparar-reuniao-cliente/SKILL.md`
+- "prepare minha reunião", "monte as perguntas SPIN" — `03-Acao/skills/preparar-reuniao-cliente/SKILL.md`
 - "escreva um follow-up", "mensagem para o cliente" — `03-Acao/skills/escrever-follow-up/SKILL.md`
 - "organize a caixa de entrada", "triagem" — `03-Acao/skills/triagem-inbox/SKILL.md`
 - "continuar a entrevista", "completar o contexto" — leia `ENTREVISTA.md` e siga as regras dele. Abra primeiro os arquivos de `01-Contexto/` com `status: rascunho` (blocos ainda não entrevistados) e entreviste o usuário sobre um por vez, em no máximo 4 perguntas por mensagem. Depois grave, reescreva o `resumo` e mude o status para `vigente`. Se não houver rascunho, procure `[A PREENCHER]` nos arquivos de `01-Contexto/` e `02-Memoria/prioridades/` e pergunte só essas lacunas. Ignore arquivos com `status: modelo` e os arquivos de tipo guia, que usam esse marcador como exemplo.
@@ -151,7 +155,7 @@ A IA lê muito texto e erra quando os arquivos são longos, vagos ou diferentes 
 - `fonte` — de onde veio a informação (entrevista inicial, reunião de AAAA-MM-DD, e-mail, conversa com a IA, documento).
 - `relacionados` — lista de caminhos relativos de arquivos ligados a este.
 
-Campos extras por tipo ficam abaixo dos comuns. Cliente: nome, responsavel, etapa_funil, produto, proximo_contato. Decisão: data, decisor, cliente, projeto, revisar_em, substituido_por. Aprendizado: data, origem, categoria. Projeto: responsavel, prazo, andamento. Diário: data. Inbox: origem, data, processado.
+Campos extras por tipo ficam abaixo dos comuns. Cliente: nome, responsavel, etapa_funil, produto, proximo_contato, ultimo_resultado. Decisão: data, decisor, cliente, projeto, revisar_em, substituido_por. Aprendizado: data, origem, categoria. Projeto: responsavel, prazo, andamento. Diário: data. Inbox: origem, data, processado.
 
 ## Regras de escrita
 
@@ -213,10 +217,11 @@ Logo depois de criar a estrutura, e sempre que o usuário disser "continuar a en
 3. Processo comercial, arquivo 01-Contexto/07-processo-comercial.md: as etapas do funil do primeiro contato ao fechamento com o critério de entrada e saída de cada uma, de onde vêm os leads, ferramenta usada para registrar, cadência de contato, onde mais se perde venda e por quê.
 4. Cliente ideal, arquivo 01-Contexto/02-icp.md: quem é o cliente ideal, quem decide a compra, as principais dores, o que faz o cliente procurar agora, objeções mais comuns e como o time responde, quem não é cliente.
 5. Produtos, pasta 01-Contexto/06-produtos/: pergunte quais são de 1 a 3 produtos ou serviços principais. Para cada um, copie _template-produto.md para um arquivo com o nome do produto em minúsculas, sem acento e com hífen, ajuste titulo, H1, resumo e status como manda o PADRAO-DE-ARQUIVOS.md e pergunte o que é, para quem, preço e condições, diferenciais, objeções e provas. Adicione cada produto ao _index.md da pasta.
-6. Tom de voz, arquivo 01-Contexto/03-tom-de-voz.md: como a empresa quer soar, como trata o cliente, palavras que usa e evita. Peça que a pessoa cole uma mensagem ou e-mail real que considera bom, sem nome completo, telefone, e-mail ou outro dado pessoal do cliente. Ao gravar o exemplo, troque o nome do cliente por [Nome].
-7. Time, arquivo 01-Contexto/04-time.md: quem é quem no comercial e o que cada um faz, quem aprova desconto e proposta, rotina da semana, áreas de apoio.
-8. Preferências, arquivo 01-Contexto/05-preferencias.md: nome e cargo da pessoa, se prefere respostas curtas ou detalhadas, canal mais usado com clientes, o que a IA deve sempre e nunca fazer, ferramentas que usa. Registre também o CRM e as outras ferramentas em 03-Acao/conectores.md, na seção Ferramentas de trabalho, e mude o status desse arquivo para vigente.
-9. Prioridades, arquivo 02-Memoria/prioridades/atual.md: foco dos próximos 30 a 90 dias, as três prioridades, o que não vai ser feito agora, metas com prazo. Preencha periodo (por exemplo, "2026-10-26 a 2027-01-24") e defina revisar_em para daqui a 90 dias.
+6. Método SPIN, arquivo 01-Contexto/08-metodo-spin.md: se a pessoa não conhece o SPIN Selling, explique em duas frases. Pergunte, para cada produto, quais problemas do cliente ele resolve; que consequências esses problemas costumam causar ao cliente (tempo, dinheiro, retrabalho, risco); quais números confiáveis o time usa para mostrar o tamanho do problema e de onde vêm; quais perguntas funcionam nas reuniões; e se o time tem regras, como quando enviar proposta. Não altere a seção "Como a IA aplica o SPIN". Se a pessoa contar uma regra com decisor, ofereça registrá-la também em 02-Memoria/decisoes/.
+7. Tom de voz, arquivo 01-Contexto/03-tom-de-voz.md: como a empresa quer soar, como trata o cliente, palavras que usa e evita. Peça que a pessoa cole uma mensagem ou e-mail real que considera bom, sem nome completo, telefone, e-mail ou outro dado pessoal do cliente. Ao gravar o exemplo, troque o nome do cliente por [Nome].
+8. Time, arquivo 01-Contexto/04-time.md: quem é quem no comercial e o que cada um faz, quem aprova desconto e proposta, rotina da semana, áreas de apoio.
+9. Preferências, arquivo 01-Contexto/05-preferencias.md: nome e cargo da pessoa, se prefere respostas curtas ou detalhadas, canal mais usado com clientes, o que a IA deve sempre e nunca fazer, ferramentas que usa. Registre também o CRM e as outras ferramentas em 03-Acao/conectores.md, na seção Ferramentas de trabalho, e mude o status desse arquivo para vigente.
+10. Prioridades, arquivo 02-Memoria/prioridades/atual.md: foco dos próximos 30 a 90 dias, as três prioridades, o que não vai ser feito agora, metas com prazo. Preencha periodo (por exemplo, "2026-10-26 a 2027-01-24") e defina revisar_em para daqui a 90 dias.
 
 ## Fechamento
 
@@ -238,7 +243,7 @@ F["_index.md"] = indice(
         ("CLAUDE", "CLAUDE.md", "ponteiro que faz o Claude carregar o AGENTS"),
         ("Padrão de arquivos", "PADRAO-DE-ARQUIVOS.md", "formato dos arquivos .md"),
         ("Entrevista guiada", "ENTREVISTA.md", "roteiro para preencher o Contexto e fechar a criação do cérebro"),
-        ("01-Contexto", "01-Contexto/_index.md", "camada 1 — quem somos, negócio, processo, cliente ideal, produtos, voz, time, preferências"),
+        ("01-Contexto", "01-Contexto/_index.md", "camada 1 — quem somos, negócio, processo, cliente ideal, produtos, voz, time, preferências, método SPIN"),
         ("02-Memoria", "02-Memoria/_index.md", "camada 2 — decisões, aprendizados, clientes, projetos, diário, prioridades, caixa de entrada, diagnóstico"),
         ("03-Acao", "03-Acao/_index.md", "camada 3 — skills, conectores e automações"),
         ("_restrito", "_restrito/README.md", "assuntos sensíveis; a IA só abre se o usuário pedir"),
@@ -261,8 +266,9 @@ F[CTX + "_index.md"] = indice(
         ("Preferências", "05-preferencias.md", "como o usuário quer que a IA trabalhe"),
         ("Produtos", "06-produtos/_index.md", "uma ficha por produto ou serviço"),
         ("Processo comercial", "07-processo-comercial.md", "etapas do funil, critérios, cadência e motivos de perda"),
+        ("Método SPIN", "08-metodo-spin.md", "como aplicamos o SPIN Selling: problemas que resolvemos, implicações, dados e perguntas"),
     ],
-    "Leia 00, 02, 03 e 05 antes de qualquer resposta comercial. Abra 01, 06 e 07 quando o pedido envolver preço, produto, proposta ou etapa do funil. Este conteúdo muda pouco. Quando mudar, crie a versão nova e marque a antiga como substituída.",
+    "Leia 00, 02, 03 e 05 antes de qualquer resposta comercial. Abra 01, 06 e 07 quando o pedido envolver preço, produto, proposta ou etapa do funil. Abra 08 para preparar reunião, registrar atendimento ou montar proposta. Este conteúdo muda pouco. Quando mudar, crie a versão nova e marque a antiga como substituída.",
     rel=["../AGENTS.md"])
 
 F[CTX + "00-empresa.md"] = fm(
@@ -452,6 +458,42 @@ F[CTX + "07-processo-comercial.md"] = fm(
 ## Onde mais perdemos vendas
 
 [A PREENCHER] Etapa em que mais clientes desistem e os motivos de perda mais comuns.
+"""
+
+F[CTX + "08-metodo-spin.md"] = fm(
+    "contexto", "Método SPIN",
+    "Como a {{EMPRESA}} aplica o SPIN Selling: regras para a IA, problemas que resolvemos, cadeias de implicação, dados de referência e perguntas.",
+    rel=["02-icp.md", "06-produtos/_index.md", "07-processo-comercial.md", "../02-Memoria/clientes/_index.md"]) + """# Método SPIN
+
+## Como a IA aplica o SPIN
+
+- Situação (S): perguntas sobre fatos do cliente, como estrutura, processo, ferramentas e volumes. Faça poucas. Antes de sugerir uma, confira a ficha do cliente. O que já está registrado não se pergunta de novo.
+- Problema (P): perguntas sobre dificuldades e insatisfações. Todo problema registrado leva a marca [fato] quando o cliente disse e [hipótese] quando é suposição nossa. Hipótese só vira fato quando o cliente confirma.
+- Implicação (I): perguntas sobre as consequências de um problema, como custo, tempo, retrabalho, risco e impacto em outras áreas. Use só número que o cliente disse ou que está em "Dados de referência", sempre com a fonte. Conta feita por nós leva a marca [estimativa] e a premissa ao lado.
+- Necessidade de solução (N): perguntas que levam o próprio cliente a dizer o valor de resolver, como "o que mudaria se isso fosse resolvido?".
+- Necessidade implícita é queixa vaga ("isso é lento"). Necessidade explícita é desejo declarado ("precisamos resolver isso até março"). Registre a explícita com as palavras do cliente. Só ela sustenta uma proposta.
+- Apresente a solução só para necessidades explícitas e ligue cada uma a um benefício do produto. Apresentar antes costuma gerar objeção.
+- Toda reunião tem um avanço pretendido: um compromisso concreto do cliente que move a venda, como agendar com o decisor, enviar dados ou aprovar um piloto. O resultado de cada contato é avanço, continuação (conversa boa, sem compromisso concreto), pedido ou sem venda. Continuação não conta como progresso.
+
+## Problemas que resolvemos
+
+[A PREENCHER] Para cada produto, os problemas do cliente que ele resolve, nas palavras do cliente. Um por linha, no formato produto — problema.
+
+## Cadeias de implicação
+
+[A PREENCHER] Para cada problema acima, as consequências que ele costuma gerar, em sequência. Exemplo: orçamento demora 5 dias, o cliente fecha com o concorrente, a meta do mês não é batida.
+
+## Dados de referência
+
+[A PREENCHER] Números confiáveis para mostrar o tamanho de um problema, cada um com fonte e data. Exemplo: custo médio da hora de um analista do setor.
+
+## Banco de perguntas
+
+[A PREENCHER] Perguntas que funcionam no nosso mercado, separadas por S, P, I e N. Acrescente as que derem certo nas reuniões.
+
+## Regras do time
+
+[A PREENCHER] Combinados do time sobre o método, como enviar proposta só depois de duas necessidades explícitas. Regra com data e decisor também vira nota em 02-Memoria/decisoes/.
 """
 
 F[CTX + "06-produtos/_index.md"] = indice(

@@ -107,7 +107,7 @@ Versão atual: """ + TAG + """
 
 ## Como criar o seu
 
-- **Você usa Claude (Cowork ou Claude Code):** abra o arquivo PROMPT-CLAUDE.md, selecione uma pasta vazia no Claude, cole o conteúdo na conversa e responda às perguntas.
+- **Você usa Claude:** instale o Google Drive para computador e crie uma pasta vazia dentro do Meu Drive (é o backup do seu cérebro). Abra o Claude Desktop, entre no Cowork, adicione essa pasta, cole o conteúdo do arquivo PROMPT-CLAUDE.md na conversa e responda às perguntas. Não precisa instalar Python, Git nem usar terminal.
 - **Você usa ChatGPT:** baixe o kit em """ + ZIP_URL + """ , anexe o ZIP em uma conversa nova, cole o conteúdo do arquivo PROMPT-GPT.md e responda às perguntas. No fim você baixa a sua pasta pronta.
 - **Nenhum dos dois funcionou, ou sem internet:** use o PROMPT-COMPLETO.md. Ele traz todos os arquivos dentro dele.
 

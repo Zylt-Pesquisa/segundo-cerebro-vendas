@@ -20,7 +20,8 @@ relacionados: [../AGENTS.md]
 - [Preferências](05-preferencias.md) — como o usuário quer que a IA trabalhe
 - [Produtos](06-produtos/_index.md) — uma ficha por produto ou serviço
 - [Processo comercial](07-processo-comercial.md) — etapas do funil, critérios, cadência e motivos de perda
+- [Método SPIN](08-metodo-spin.md) — como aplicamos o SPIN Selling: problemas que resolvemos, implicações, dados e perguntas
 
 ## Quando usar
 
-Leia 00, 02, 03 e 05 antes de qualquer resposta comercial. Abra 01, 06 e 07 quando o pedido envolver preço, produto, proposta ou etapa do funil. Este conteúdo muda pouco. Quando mudar, crie a versão nova e marque a antiga como substituída.
+Leia 00, 02, 03 e 05 antes de qualquer resposta comercial. Abra 01, 06 e 07 quando o pedido envolver preço, produto, proposta ou etapa do funil. Abra 08 para preparar reunião, registrar atendimento ou montar proposta. Este conteúdo muda pouco. Quando mudar, crie a versão nova e marque a antiga como substituída.

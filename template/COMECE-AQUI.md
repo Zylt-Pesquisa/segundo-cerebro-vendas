@@ -14,11 +14,11 @@ relacionados: [AGENTS.md, PADRAO-DE-ARQUIVOS.md]
 
 Esta pasta é a memória da sua operação comercial. Ela guarda quem é a {{EMPRESA}}, como vocês vendem, o que foi decidido, o que se aprendeu e como estão os clientes. A IA (Claude ou ChatGPT) lê essa pasta antes de te ajudar. Por isso ela responde com o contexto da sua empresa e escreve com a sua voz.
 
-A pasta é sua e da sua empresa. Fica no seu computador. Você decide se compartilha e com quem.
+A pasta é sua e da sua empresa. Fica no seu computador, de preferência dentro da pasta do Google Drive (ou do OneDrive), para ter backup automático. Você decide se compartilha e com quem.
 
 ## Como usar em 3 passos
 
-1. Abra uma conversa nova na IA e aponte para esta pasta (Claude: abra a pasta no projeto. ChatGPT: anexe o arquivo AGENTS.md e os arquivos do assunto).
+1. Abra uma conversa nova na IA e aponte para esta pasta (Claude: abra o Cowork no Claude Desktop e adicione esta pasta à conversa. ChatGPT: anexe o arquivo AGENTS.md e os arquivos do assunto). Sem a pasta, a IA responde sem a sua memória.
 2. Se você não instalou a skill usar-segundo-cerebro (veja abaixo), cole no projeto o texto da seção "Texto fixo para colar nas instruções do projeto". Faça isso uma única vez.
 3. Converse normalmente. Use as frases da seção seguinte.
 
@@ -28,7 +28,7 @@ Se você usa o Claude, existe também uma skill opcional, chamada usar-segundo-c
 
 - "Guarde isso no meu cérebro" — cola um texto, reunião ou conversa e a IA salva no lugar certo.
 - "Acabei de falar com o cliente X. Registre" — atualiza a ficha do cliente e o diário.
-- "Prepare minha reunião com o cliente X" — recebe um resumo de uma página.
+- "Prepare minha reunião com o cliente X" — recebe um resumo de uma página com as perguntas SPIN (situação, problema, implicação e necessidade) e o avanço a buscar.
 - "Escreva um follow-up para o cliente X" — recebe uma mensagem na voz da sua empresa.
 - "Organize minha caixa de entrada" — a IA sugere onde guardar o que está esperando.
 - "Continuar a entrevista" — completa o que ficou faltando sobre a sua empresa.
@@ -39,6 +39,10 @@ Se você usa o Claude, existe também uma skill opcional, chamada usar-segundo-c
 Use este texto se você não instalou a skill usar-segundo-cerebro, ou se usa o ChatGPT.
 
 Você é o Segundo Cérebro comercial da {{EMPRESA}}. Sua memória é a pasta de arquivos deste projeto. Antes de responder qualquer pedido, leia AGENTS.md e siga as regras dele. Se não conseguir ler a pasta, avise e peça os arquivos. Nunca invente informação da empresa. Fale em português do Brasil, simples e direto.
+
+## Backup
+
+Instale o Google Drive para computador (ou use o OneDrive) e mantenha esta pasta dentro da pasta sincronizada, por exemplo em Meu Drive. Assim tudo que a IA grava vai para a nuvem sozinho, com histórico de versões. Não use o conector do Google Drive do Claude para isso: a IA precisa ver a pasta no seu computador.
 
 ## Cuidados
 

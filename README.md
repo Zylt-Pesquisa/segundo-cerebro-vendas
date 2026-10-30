@@ -2,17 +2,17 @@
 
 Um kit para criar, no seu computador, o Segundo Cérebro da sua empresa: uma pasta de arquivos organizados que o Claude ou o ChatGPT lê antes de te ajudar a vender. A pasta é sua e da sua empresa. Este repositório só distribui o modelo vazio. Nenhum dado seu vem para cá.
 
-Versão atual: v1.0
+Versão atual: v1.1
 
 ## Como criar o seu
 
-- **Você usa Claude (Cowork ou Claude Code):** abra o arquivo PROMPT-CLAUDE.md, selecione uma pasta vazia no Claude, cole o conteúdo na conversa e responda às perguntas.
-- **Você usa ChatGPT:** baixe o kit em https://github.com/ORG/segundo-cerebro/archive/refs/tags/v1.0.zip , anexe o ZIP em uma conversa nova, cole o conteúdo do arquivo PROMPT-GPT.md e responda às perguntas. No fim você baixa a sua pasta pronta.
+- **Você usa Claude:** instale o Google Drive para computador e crie uma pasta vazia dentro do Meu Drive (é o backup do seu cérebro). Abra o Claude Desktop, entre no Cowork, adicione essa pasta, cole o conteúdo do arquivo PROMPT-CLAUDE.md na conversa e responda às perguntas. Não precisa instalar Python, Git nem usar terminal.
+- **Você usa ChatGPT:** baixe o kit em https://github.com/Zylt-Pesquisa/segundo-cerebro-vendas/archive/refs/tags/v1.1.zip , anexe o ZIP em uma conversa nova, cole o conteúdo do arquivo PROMPT-GPT.md e responda às perguntas. No fim você baixa a sua pasta pronta.
 - **Nenhum dos dois funcionou, ou sem internet:** use o PROMPT-COMPLETO.md. Ele traz todos os arquivos dentro dele.
 
 ## O que tem aqui
 
-- template: os 42 arquivos do Segundo Cérebro, com marcadores {{EMPRESA}} e {{DATA}} que a IA troca.
+- template: os 43 arquivos do Segundo Cérebro, com marcadores {{EMPRESA}} e {{DATA}} que a IA troca.
 - PROMPT-CLAUDE.md, PROMPT-GPT.md, PROMPT-COMPLETO.md: os prompts de criação.
 - skills: a skill usar-segundo-cerebro para Claude (ZIP pronto e guia de instalação). Opcional.
 - ferramentas: script que confere se uma pasta segue o padrão.

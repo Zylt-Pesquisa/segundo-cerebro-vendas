@@ -31,7 +31,7 @@ A IA lê muito texto e erra quando os arquivos são longos, vagos ou diferentes 
 - `fonte` — de onde veio a informação (entrevista inicial, reunião de AAAA-MM-DD, e-mail, conversa com a IA, documento).
 - `relacionados` — lista de caminhos relativos de arquivos ligados a este.
 
-Campos extras por tipo ficam abaixo dos comuns. Cliente: nome, responsavel, etapa_funil, produto, proximo_contato. Decisão: data, decisor, cliente, projeto, revisar_em, substituido_por. Aprendizado: data, origem, categoria. Projeto: responsavel, prazo, andamento. Diário: data. Inbox: origem, data, processado.
+Campos extras por tipo ficam abaixo dos comuns. Cliente: nome, responsavel, etapa_funil, produto, proximo_contato, ultimo_resultado. Decisão: data, decisor, cliente, projeto, revisar_em, substituido_por. Aprendizado: data, origem, categoria. Projeto: responsavel, prazo, andamento. Diário: data. Inbox: origem, data, processado.
 
 ## Regras de escrita
 

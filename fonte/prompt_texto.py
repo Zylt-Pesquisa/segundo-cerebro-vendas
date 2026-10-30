@@ -47,7 +47,7 @@ Faça esta conferência duas vezes: logo depois de criar a estrutura e de novo a
 ENTREVISTA_REF = """
 ## Passo 4 — Entrevista guiada e fechamento
 
-Abra o arquivo ENTREVISTA.md do kit e siga-o do começo ao fim. Ele traz as regras, os 9 blocos de perguntas e o fechamento.
+Abra o arquivo ENTREVISTA.md do kit e siga-o do começo ao fim. Ele traz as regras, os 10 blocos de perguntas e o fechamento.
 """
 
 # ------------------------------------------------------------------ PROMPT-CLAUDE
@@ -57,17 +57,18 @@ Este arquivo cria, no seu computador, o Segundo Cérebro da sua empresa: uma pas
 
 ## Como usar
 
-1. Abra o Claude (Cowork ou Claude Code).
-2. Selecione uma pasta vazia do seu computador para o Claude trabalhar.
-3. Cole este arquivo inteiro na conversa. Se preferir, anexe o arquivo e escreva: "Execute o prompt anexo".
-4. Responda às perguntas. A conversa leva de 40 a 60 minutos e você pode parar e continuar depois.
+1. Instale o Google Drive para computador (ou use o OneDrive da empresa). É o que faz o backup do seu cérebro.
+2. Dentro da pasta do Drive (Meu Drive), crie uma pasta vazia chamada Segundo Cerebro.
+3. Abra o Claude Desktop, entre no Cowork e adicione essa pasta à conversa. O Claude Code também funciona, mas é feito para quem programa.
+4. Cole este arquivo inteiro na conversa. Se preferir, anexe o arquivo e escreva: "Execute o prompt anexo".
+5. Responda às perguntas. A conversa leva de 40 a 60 minutos e você pode parar e continuar depois.
 
 """
 
 CLAUDE_P2 = """
 ## Passo 2 — Baixar o kit e criar a estrutura
 
-A pasta de destino é a que a pessoa selecionou. Se nenhuma pasta estiver selecionada, peça que ela selecione ou crie uma pasta vazia, sugerindo o nome "Segundo Cérebro - {{EMPRESA}}".
+A pasta de destino é a que a pessoa selecionou. Se nenhuma pasta estiver selecionada, peça que ela crie uma pasta vazia dentro da pasta do Google Drive (Meu Drive) ou do OneDrive, sugerindo o nome "Segundo Cerebro", e a adicione à conversa. Se o caminho da pasta escolhida não indicar Google Drive, Meu Drive, My Drive ou OneDrive, avise em uma frase que, fora dessas pastas, o cérebro fica sem backup, e pergunte se ela quer seguir assim ou trocar de pasta. Não peça nenhuma instalação técnica: Python, Git e terminal não são necessários.
 
 1. Baixe o kit (versão @@TAG@@) deste endereço, para uma pasta de trabalho temporária FORA da pasta da pessoa, e descompacte: @@ZIP@@
 2. O kit descompactado tem uma pasta única com as pastas template e ferramentas, mais arquivos de apoio (README e prompts) que você ignora. Copie o conteúdo da pasta template (não a pasta template em si) para a pasta de destino, mantendo os mesmos caminhos. São @@N@@ arquivos em @@PASTAS@@ pastas além da raiz.

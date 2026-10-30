@@ -217,27 +217,37 @@ F[M + "clientes/_index.md"] = indice(
     "Clientes",
     "Fichas de clientes e oportunidades da {{EMPRESA}} com etapa do funil e próximo contato.",
     [("Modelo de cliente", "_template-cliente.md", "modelo para criar a ficha de um cliente")],
-    "Abra a ficha antes de qualquer contato com o cliente. Uma ficha por cliente ou oportunidade, nome do arquivo em minúsculas com hífen. Liste os clientes com a etapa do funil na descrição.",
-    rel=["../../01-Contexto/07-processo-comercial.md"])
+    "Abra a ficha antes de qualquer contato com o cliente. Uma ficha por cliente ou oportunidade, nome do arquivo em minúsculas com hífen. Liste os clientes com a etapa do funil na descrição. As seções Situação, Problemas, Implicações e Necessidades explícitas seguem o método SPIN descrito em 01-Contexto/08-metodo-spin.md.",
+    rel=["../../01-Contexto/07-processo-comercial.md", "../../01-Contexto/08-metodo-spin.md"])
 
 F[M + "clientes/_template-cliente.md"] = fm(
     "cliente", "Modelo de cliente",
-    "Modelo. Copie para criar a ficha de um cliente ou oportunidade.",
-    status="modelo", fonte="estrutura inicial", rel=["_index.md"],
+    "Modelo. Copie para criar a ficha de um cliente ou oportunidade, organizada pelo método SPIN.",
+    status="modelo", fonte="estrutura inicial",
+    rel=["_index.md", "../../01-Contexto/08-metodo-spin.md"],
     extra={"nome": PH, "responsavel": PH, "etapa_funil": PH,
-           "produto": PH, "proximo_contato": "AAAA-MM-DD"}) + """# Nome do cliente
+           "produto": PH, "proximo_contato": "AAAA-MM-DD",
+           "ultimo_resultado": "avanco / continuacao / pedido / sem-venda"}) + """# Nome do cliente
 
 ## Quem é
 
 [A PREENCHER] Empresa ou pessoa, setor, porte e como chegou até nós.
 
-## Situação atual
+## Situação
 
-[A PREENCHER] Em que etapa está e qual é o momento da compra.
+[A PREENCHER] Fatos já confirmados sobre o cliente: estrutura, processo atual, ferramentas, volumes e momento da compra. Tudo que está aqui não se pergunta de novo.
 
-## Dor e interesse
+## Problemas
 
-[A PREENCHER] O que o cliente quer resolver, nas palavras dele.
+[A PREENCHER] Um por linha, com a marca [fato] (o cliente disse) ou [hipótese] (suposição nossa), a data e quem falou.
+
+## Implicações
+
+[A PREENCHER] Consequências de cada problema, ligadas a ele. Número só com fonte (quem disse e quando). Conta nossa leva [estimativa] e a premissa.
+
+## Necessidades explícitas
+
+[A PREENCHER] O que o cliente disse que quer resolver ou conseguir, entre aspas e com as palavras dele, com a data. Queixa vaga fica em Problemas.
 
 ## Decisores e contatos
 
@@ -245,11 +255,11 @@ F[M + "clientes/_template-cliente.md"] = fm(
 
 ## Histórico
 
-[A PREENCHER] Contatos em ordem do mais recente para o mais antigo, cada um com data, o que foi dito e o combinado.
+[A PREENCHER] Contatos em ordem do mais recente para o mais antigo, cada um com data, canal, o que foi dito, objeções, o combinado e o resultado (avanço, continuação, pedido ou sem venda).
 
 ## Próximo passo
 
-[A PREENCHER] A próxima ação, com data e responsável.
+[A PREENCHER] O avanço pretendido no próximo contato, com data e responsável.
 """
 
 # ---------------------------------------------------------------- DIAGNOSTICO (reservado)

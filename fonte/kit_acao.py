@@ -17,8 +17,8 @@ F[A + "_index.md"] = indice(
         ("Conectores", "conectores.md", "fontes e ferramentas externas e como cada uma entra no cérebro"),
         ("Automações", "automacoes/README.md", "reservado para rotinas automáticas futuras"),
         ("Salvar no cérebro", "skills/salvar-no-cerebro/SKILL.md", "guarda qualquer informação no lugar certo"),
-        ("Registrar atendimento", "skills/registrar-atendimento/SKILL.md", "atualiza cliente e diário depois de um contato"),
-        ("Preparar reunião com cliente", "skills/preparar-reuniao-cliente/SKILL.md", "monta um briefing de uma página"),
+        ("Registrar atendimento", "skills/registrar-atendimento/SKILL.md", "atualiza cliente e diário depois de um contato, separando o que foi dito pelo SPIN"),
+        ("Preparar reunião com cliente", "skills/preparar-reuniao-cliente/SKILL.md", "monta um briefing SPIN de uma página com o avanço a buscar"),
         ("Escrever follow-up", "skills/escrever-follow-up/SKILL.md", "redige mensagem na voz da empresa"),
         ("Triagem da caixa de entrada", "skills/triagem-inbox/SKILL.md", "organiza o material bruto"),
         ("Modelo de skill", "skills/template-skill/SKILL.md", "modelo para criar uma skill nova"),
@@ -134,39 +134,43 @@ Nível 1. Não invente fatos. Não grave senha, dado bancário ou documento pess
 
 F[S + "registrar-atendimento/SKILL.md"] = skill(
     "registrar-atendimento",
-    "Registra um contato com cliente na ficha dele e no diário. Use quando o usuário disser que falou, atendeu, ligou, reuniu ou trocou mensagens com um cliente ou lead, e quiser registrar.",
+    "Registra um contato com cliente na ficha dele e no diário, separando o que foi dito pelo método SPIN: situação, problemas, implicações, necessidades explícitas e o resultado do contato (avanço ou continuação). Use quando o usuário disser que falou, atendeu, ligou, reuniu ou trocou mensagens com um cliente ou lead, ou colar o resumo ou a transcrição de uma reunião, e quiser registrar.",
     """
 # Registrar atendimento
 
 ## Quando usar
 
-O usuário acabou de falar com um cliente e conta o que aconteceu.
+O usuário acabou de falar com um cliente e conta o que aconteceu, ou cola o resumo ou a transcrição da reunião.
 
 ## Antes de começar
 
-Leia `02-Memoria/clientes/_index.md` para achar a ficha do cliente, `01-Contexto/07-processo-comercial.md` para usar os nomes certos das etapas e `02-Memoria/decisoes/_index.md` para saber se alguma decisão vigente se aplica ao que o cliente pediu.
+Leia `01-Contexto/08-metodo-spin.md` para aplicar as marcas e as definições do SPIN, `02-Memoria/clientes/_index.md` para achar a ficha do cliente, `01-Contexto/07-processo-comercial.md` para usar os nomes certos das etapas e `02-Memoria/decisoes/_index.md` para saber se alguma decisão vigente se aplica ao que o cliente pediu.
 
 ## Passos
 
-1. Procure a ficha do cliente em `02-Memoria/clientes/`. Se não existir, crie copiando `_template-cliente.md` com o nome do cliente em minúsculas e hífen, e adicione ao índice.
-2. Acrescente no topo da seção Histórico uma entrada com data, canal, o que foi dito, objeções e o que ficou combinado.
-3. Atualize no frontmatter `etapa_funil`, `proximo_contato` e `atualizado_em`. Reescreva o `resumo` se a situação mudou.
-4. Se apareceu uma objeção nova ou uma lição concreta, proponha criar uma nota em `aprendizados/` já com "O que aprendemos" e "Como aplicar da próxima vez" preenchidos. Se não houver lição concreta, não proponha. Se houve uma decisão, proponha uma nota em `decisoes/`. Só crie depois de o usuário confirmar.
-5. Acrescente uma linha na nota de diário do dia. Se ela não existir, crie copiando `_template-diario.md` com o nome AAAA-MM-DD.md.
-6. Pergunte, no máximo, a etapa do funil e a data do próximo contato, se o usuário não disse. Responda em até três linhas com o que foi atualizado.
+1. Procure a ficha do cliente em `02-Memoria/clientes/`. Se não existir, crie copiando `_template-cliente.md` com o nome do cliente em minúsculas e hífen, e adicione ao índice. Se a ficha for do modelo antigo, sem as seções Problemas, Implicações e Necessidades explícitas, acrescente essas seções antes de Decisores e contatos, sem apagar nada.
+2. Se o usuário colou uma transcrição ou um texto longo, guarde o texto bruto em `02-Memoria/_inbox/` como manda a skill salvar-no-cerebro e ligue o item à ficha em `relacionados`.
+3. Separe o que foi dito e grave em cada seção da ficha, com a data do contato. Fatos novos sobre o cliente vão em Situação. Dificuldades vão em Problemas, com [fato] se o cliente disse e [hipótese] se foi o vendedor que deduziu. Consequências vão em Implicações, com o número e quem o disse; número sem confirmação do cliente leva [estimativa]. Desejos declarados vão em Necessidades explícitas, entre aspas, com as palavras do cliente.
+4. Se o cliente confirmou uma hipótese antiga, troque a marca para [fato] e anote a data. Não apague a linha.
+5. Classifique o resultado do contato como avanço, continuação, pedido ou sem venda, pelas definições do `08-metodo-spin.md`. Se não ficar claro, pergunte qual compromisso concreto o cliente assumiu.
+6. Acrescente no topo da seção Histórico uma entrada com data, canal, o que foi dito, objeções, o que ficou combinado e o resultado.
+7. Atualize no frontmatter `etapa_funil`, `proximo_contato`, `ultimo_resultado` e `atualizado_em`. Reescreva o `resumo` se a situação mudou. Em Próximo passo, escreva o avanço a buscar no próximo contato.
+8. Se apareceu uma objeção nova ou uma lição concreta, proponha criar uma nota em `aprendizados/` já com "O que aprendemos" e "Como aplicar da próxima vez" preenchidos. Se uma pergunta funcionou bem, proponha acrescentá-la ao Banco de perguntas do `08-metodo-spin.md`. Se houve uma decisão, proponha uma nota em `decisoes/`. Só crie depois de o usuário confirmar.
+9. Acrescente uma linha na nota de diário do dia. Se ela não existir, crie copiando `_template-diario.md` com o nome AAAA-MM-DD.md.
+10. Pergunte, no máximo, a etapa do funil, a data do próximo contato e o resultado, se o usuário não disse. Responda em até quatro linhas com o que foi atualizado e um alerta SPIN quando couber, como "ainda não há necessidade explícita registrada" ou "segunda continuação seguida".
 
 ## Saída esperada
 
-Ficha do cliente atualizada, diário do dia atualizado e, se couber, uma proposta de aprendizado ou decisão.
+Ficha do cliente atualizada nas seções SPIN, Histórico com o resultado do contato, diário do dia atualizado e, se couber, uma proposta de aprendizado, decisão ou pergunta nova.
 
 ## Regras
 
-Nível 1. Registre só o que o usuário contou. Não preencha motivos ou intenções do cliente por suposição.
+Nível 1. Registre só o que o usuário contou. Não preencha motivos ou intenções do cliente por suposição. Nunca marque como [fato] o que o cliente não disse, e nunca transforme queixa vaga em necessidade explícita.
 """)
 
 F[S + "preparar-reuniao-cliente/SKILL.md"] = skill(
     "preparar-reuniao-cliente",
-    "Monta um briefing de uma página antes de uma reunião ou ligação com cliente. Use quando o usuário pedir para preparar, se preparar ou revisar o que sabemos antes de falar com um cliente ou lead.",
+    "Monta um briefing SPIN de uma página antes de uma reunião ou ligação com cliente: o que já sabemos, as lacunas, perguntas de Situação, Problema, Implicação e Necessidade de solução, objeções prováveis e o avanço a buscar. Use quando o usuário pedir para preparar, se preparar, montar as perguntas ou revisar o que sabemos antes de falar com um cliente ou lead.",
     """
 # Preparar reunião com cliente
 
@@ -176,22 +180,28 @@ O usuário tem uma reunião, ligação ou visita com um cliente e quer chegar pr
 
 ## Antes de começar
 
-Leia a ficha em `02-Memoria/clientes/`. Leia `01-Contexto/02-icp.md`, `01-Contexto/03-tom-de-voz.md`, `02-Memoria/prioridades/atual.md`, a ficha do produto em `01-Contexto/06-produtos/`, as decisões de `02-Memoria/decisoes/` que se apliquem ao produto ou ao cliente e os itens recentes de `02-Memoria/_inbox/` e `02-Memoria/aprendizados/` que citem o cliente ou o produto.
+Leia `01-Contexto/08-metodo-spin.md` e a ficha em `02-Memoria/clientes/`. Leia `01-Contexto/02-icp.md`, `01-Contexto/03-tom-de-voz.md`, `02-Memoria/prioridades/atual.md`, a ficha do produto em `01-Contexto/06-produtos/`, as decisões de `02-Memoria/decisoes/` que se apliquem ao produto ou ao cliente e os itens recentes de `02-Memoria/_inbox/` e `02-Memoria/aprendizados/` que citem o cliente ou o produto. Se `03-Acao/conectores.md` tiver um CRM conectado, consulte o histórico do cliente nele, só para leitura.
 
 ## Passos
 
 1. Confirme com o usuário quem é o cliente, a data e o objetivo da reunião, se ainda não souber.
-2. Monte o briefing com estas partes: quem é o cliente, histórico em três linhas, objetivo da reunião, cinco perguntas de descoberta, objeções prováveis com resposta, produto ou oferta a apresentar e próximo passo sugerido.
-3. Cite o arquivo de onde veio cada fato. Se uma decisão vigente limita o que pode ser oferecido ou prometido (por exemplo, uma regra para cotar), destaque no briefing. Se faltar informação, diga o que falta em vez de supor.
-4. Ofereça salvar o briefing na nota de diário do dia.
+2. Se o usuário pedir e a ferramenta permitir busca na internet, pesquise informações públicas da empresa do cliente e cite o endereço de cada fato.
+3. Situação: liste o que já sabemos, com o arquivo de origem. Depois liste só as lacunas que importam para a venda. Elas viram no máximo três perguntas de Situação.
+4. Problema: junte os problemas [fato] da ficha e as [hipótese] tiradas de "Problemas que resolvemos" e das dores do ICP que combinam com este cliente. Escreva uma ou duas perguntas de Problema para cada um, dando prioridade às hipóteses que precisam ser confirmadas.
+5. Implicação: para os dois ou três problemas mais relevantes, monte a cadeia de consequências usando "Cadeias de implicação" e escreva perguntas de Implicação. Se houver número na ficha ou em "Dados de referência", mostre o tamanho do problema com a fonte. Se não houver, marque [estimativa] com a premissa ou não quantifique.
+6. Necessidade de solução: escreva perguntas que levem o cliente a dizer o valor de resolver esses problemas.
+7. Mostre as necessidades explícitas já registradas. A oferta a apresentar só entra no briefing se houver necessidade explícita, ligando cada necessidade a um benefício do produto. Se não houver, diga que o foco da reunião é descoberta.
+8. Liste as objeções prováveis com resposta. Destaque as decisões vigentes que limitam o que pode ser oferecido ou prometido, como uma regra para cotar.
+9. Defina o avanço pretendido e um avanço mínimo aceitável. Se o último resultado na ficha foi continuação, diga isso e sugira como pedir um compromisso concreto.
+10. Ofereça salvar o briefing na nota de diário do dia.
 
 ## Saída esperada
 
-Um briefing de até uma página, em passos curtos, pronto para ler em dois minutos.
+Um briefing de até uma página, pronto para ler em dois minutos, nesta ordem: cliente em três linhas, o que já sabemos, lacunas, perguntas de Situação, Problema, Implicação e Necessidade de solução, necessidades explícitas já ditas, oferta (se couber), objeções e avanço pretendido. No total, cerca de doze perguntas, com mais peso em Problema e Implicação.
 
 ## Regras
 
-Nível 2. Mostre ao usuário antes de considerar pronto. Não invente dados do cliente.
+Nível 2. Mostre ao usuário antes de considerar pronto. Não invente dados do cliente. Hipótese nunca aparece como fato. Não sugira pergunta de Situação cuja resposta já está nos arquivos. Se a ficha for do modelo antigo, use a seção Dor e interesse como fonte de problemas.
 """)
 
 F[S + "escrever-follow-up/SKILL.md"] = skill(

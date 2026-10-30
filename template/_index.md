@@ -17,7 +17,7 @@ relacionados: [AGENTS.md]
 - [CLAUDE](CLAUDE.md) — ponteiro que faz o Claude carregar o AGENTS
 - [Padrão de arquivos](PADRAO-DE-ARQUIVOS.md) — formato dos arquivos .md
 - [Entrevista guiada](ENTREVISTA.md) — roteiro para preencher o Contexto e fechar a criação do cérebro
-- [01-Contexto](01-Contexto/_index.md) — camada 1 — quem somos, negócio, processo, cliente ideal, produtos, voz, time, preferências
+- [01-Contexto](01-Contexto/_index.md) — camada 1 — quem somos, negócio, processo, cliente ideal, produtos, voz, time, preferências, método SPIN
 - [02-Memoria](02-Memoria/_index.md) — camada 2 — decisões, aprendizados, clientes, projetos, diário, prioridades, caixa de entrada, diagnóstico
 - [03-Acao](03-Acao/_index.md) — camada 3 — skills, conectores e automações
 - [_restrito](_restrito/README.md) — assuntos sensíveis; a IA só abre se o usuário pedir
