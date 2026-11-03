@@ -9,7 +9,10 @@ relacionados: [_index.md, ../../01-Contexto/12-sucesso-do-cliente.md]
 nome: A PREENCHER
 cliente: nome-da-ficha
 responsavel: A PREENCHER
+segmento: A PREENCHER
 inicio: AAAA-MM-DD
+primeiro_valor_previsto: AAAA-MM-DD
+primeiro_valor_real: AAAA-MM-DD
 saude: verde | amarelo | vermelho
 proxima_revisao: AAAA-MM-DD
 proximo_contato: AAAA-MM-DD
@@ -17,13 +20,21 @@ proximo_contato: AAAA-MM-DD
 
 # Plano de sucesso — nome do cliente
 
-## O que o cliente comprou para resolver
+## Resultado desejado
 
-[A PREENCHER] As necessidades explícitas da venda, entre aspas, com as palavras do cliente e a data. Ligue à ficha do cliente.
+[A PREENCHER] Resultado necessário: o que o cliente precisa alcançar, com as palavras dele (necessidades explícitas da venda) e a data. Experiência apropriada: como ele espera chegar lá (prazo, acompanhamento, esforço).
+
+## Encaixe no perfil
+
+[A PREENCHER] Se o cliente está dentro do ICP e, se não estiver, em que ponto foge e o risco que isso traz.
 
 ## Metas combinadas
 
 [A PREENCHER] Uma por linha: meta — como medir — linha de base — prazo.
+
+## Primeiro valor
+
+[A PREENCHER] Qual é o primeiro resultado que o cliente vai perceber, a data prevista e a data em que aconteceu.
 
 ## Promessas da venda
 
@@ -31,7 +42,7 @@ proximo_contato: AAAA-MM-DD
 
 ## Patrocinador e contatos
 
-[A PREENCHER] Quem defende o projeto no cliente, quem usa e quem decide a renovação. Sem dados sensíveis.
+[A PREENCHER] Quem defende o projeto no cliente, quem usa e quem decide a renovação. Ter mais de um contato reduz o risco. Sem dados sensíveis.
 
 ## Marcos
 
@@ -39,7 +50,7 @@ proximo_contato: AAAA-MM-DD
 
 ## Saúde
 
-[A PREENCHER] Avaliação mais recente com data, sinais observados e motivo da cor.
+[A PREENCHER] Avaliação mais recente com data, os critérios de 12-sucesso-do-cliente.md, os sinais observados e o motivo da cor.
 
 ## Valor entregue
 

@@ -24,7 +24,7 @@ relacionados: [../AGENTS.md]
 - [Prospecção](09-prospeccao.md) — metas de atividade, cadência, canais, gatilhos e roteiros de prospecção
 - [Objeções](10-objecoes.md) — biblioteca de objeções com a resposta que funciona e o pedido de compromisso
 - [Provas e autoridade](11-provas-e-autoridade.md) — cases, números, depoimentos e credenciais que podemos citar
-- [Sucesso do cliente](12-sucesso-do-cliente.md) — o que é sucesso para o cliente, sinais de saúde e risco, cadência de presença
+- [Sucesso do cliente](12-sucesso-do-cliente.md) — resultado desejado, tempo até o valor, saúde, risco, presença e retenção
 
 ## Quando usar
 

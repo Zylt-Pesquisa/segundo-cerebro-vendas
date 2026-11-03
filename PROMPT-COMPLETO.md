@@ -863,42 +863,54 @@ Só o que está aqui pode ser citado como prova em mensagens e propostas. Cada i
 ---
 tipo: contexto
 titulo: Sucesso do cliente
-resumo: O que é sucesso para o cliente da {{EMPRESA}}, sinais de saúde e risco, cadência de presença e critérios de expansão.
+resumo: Resultado desejado por produto, tempo até o valor, segmentos, saúde, sinais de risco, presença e métricas de retenção da {{EMPRESA}}.
 status: rascunho
 atualizado_em: {{DATA}}
 fonte: modelo do kit
-relacionados: [06-produtos/_index.md, 07-processo-comercial.md, ../02-Memoria/sucesso/_index.md]
+relacionados: [02-icp.md, 06-produtos/_index.md, 07-processo-comercial.md, ../02-Memoria/sucesso/_index.md]
 ---
 
 # Sucesso do cliente
 
-## O que é sucesso por produto
+## Resultado desejado por produto
 
-[A PREENCHER] Para cada produto, o resultado que o cliente precisa ver e em quanto tempo, no formato produto — resultado — prazo — como medir.
+[A PREENCHER] Para cada produto: resultado necessário (o que o cliente precisa alcançar e como medir) e experiência apropriada (como ele espera alcançar: prazo, acompanhamento, esforço). Formato: produto — resultado necessário — experiência apropriada.
+
+## Tempo até o primeiro valor
+
+[A PREENCHER] Para cada produto, qual é o primeiro resultado que o cliente percebe e em quantos dias ele deve acontecer depois da assinatura.
 
 ## Marcos da jornada
 
-[A PREENCHER] Etapas depois da venda (boas-vindas, implantação, primeiro resultado, revisão de valor, renovação) com o prazo de cada uma.
+[A PREENCHER] Etapas depois da venda (boas-vindas, implantação, primeiro valor, adoção, revisão de valor, renovação, expansão) com o prazo de cada uma.
 
-## Sinais de saúde
+## Segmentos e modelo de atendimento
 
-[A PREENCHER] O que indica que o cliente está bem: uso, resultados, engajamento, relação com o patrocinador.
+[A PREENCHER] Como os clientes são divididos (por valor, porte ou complexidade) e o nível de presença de cada segmento: atendimento próximo, leve ou digital.
+
+## Saúde do cliente
+
+[A PREENCHER] Os critérios que compõem a saúde (uso, metas atingidas, relação com o patrocinador, pagamento, chamados) e o que define verde, amarelo e vermelho.
 
 ## Sinais de risco
 
-[A PREENCHER] O que indica risco de cancelamento: queda de uso, troca do patrocinador, atraso de pagamento, reclamação, silêncio.
+[A PREENCHER] O que indica risco de cancelamento no nosso mercado, além dos sinais clássicos.
 
 ## Cadência de presença
 
-[A PREENCHER] Contatos proativos por tipo de conta, no formato tipo de conta — frequência — canal — objetivo. Presença traz valor, não só "passando para saber".
+[A PREENCHER] Contatos proativos por segmento, no formato segmento — frequência — canal — valor a levar. Presença traz valor, não só "passando para saber".
 
 ## Critérios de expansão
 
 [A PREENCHER] Quando faz sentido oferecer mais (novo produto, mais usuários, outra unidade) e quando pedir indicação ou depoimento.
 
+## Métricas de retenção
+
+[A PREENCHER] Como medimos cancelamento, renovação e expansão, os números atuais com data e fonte, e a meta.
+
 ## Responsáveis
 
-[A PREENCHER] Quem cuida do cliente depois da venda e como o vendedor participa.
+[A PREENCHER] Quem cuida do cliente depois da venda, como o vendedor participa e o que as outras áreas fazem pelo sucesso do cliente.
 <<<FIM>>>
 
 <<<ARQUIVO: 01-Contexto/_index.md>>>
@@ -928,7 +940,7 @@ relacionados: [../AGENTS.md]
 - [Prospecção](09-prospeccao.md) — metas de atividade, cadência, canais, gatilhos e roteiros de prospecção
 - [Objeções](10-objecoes.md) — biblioteca de objeções com a resposta que funciona e o pedido de compromisso
 - [Provas e autoridade](11-provas-e-autoridade.md) — cases, números, depoimentos e credenciais que podemos citar
-- [Sucesso do cliente](12-sucesso-do-cliente.md) — o que é sucesso para o cliente, sinais de saúde e risco, cadência de presença
+- [Sucesso do cliente](12-sucesso-do-cliente.md) — resultado desejado, tempo até o valor, saúde, risco, presença e retenção
 
 ## Quando usar
 
@@ -1434,7 +1446,10 @@ relacionados: [_index.md, ../../01-Contexto/12-sucesso-do-cliente.md]
 nome: A PREENCHER
 cliente: nome-da-ficha
 responsavel: A PREENCHER
+segmento: A PREENCHER
 inicio: AAAA-MM-DD
+primeiro_valor_previsto: AAAA-MM-DD
+primeiro_valor_real: AAAA-MM-DD
 saude: verde | amarelo | vermelho
 proxima_revisao: AAAA-MM-DD
 proximo_contato: AAAA-MM-DD
@@ -1442,13 +1457,21 @@ proximo_contato: AAAA-MM-DD
 
 # Plano de sucesso — nome do cliente
 
-## O que o cliente comprou para resolver
+## Resultado desejado
 
-[A PREENCHER] As necessidades explícitas da venda, entre aspas, com as palavras do cliente e a data. Ligue à ficha do cliente.
+[A PREENCHER] Resultado necessário: o que o cliente precisa alcançar, com as palavras dele (necessidades explícitas da venda) e a data. Experiência apropriada: como ele espera chegar lá (prazo, acompanhamento, esforço).
+
+## Encaixe no perfil
+
+[A PREENCHER] Se o cliente está dentro do ICP e, se não estiver, em que ponto foge e o risco que isso traz.
 
 ## Metas combinadas
 
 [A PREENCHER] Uma por linha: meta — como medir — linha de base — prazo.
+
+## Primeiro valor
+
+[A PREENCHER] Qual é o primeiro resultado que o cliente vai perceber, a data prevista e a data em que aconteceu.
 
 ## Promessas da venda
 
@@ -1456,7 +1479,7 @@ proximo_contato: AAAA-MM-DD
 
 ## Patrocinador e contatos
 
-[A PREENCHER] Quem defende o projeto no cliente, quem usa e quem decide a renovação. Sem dados sensíveis.
+[A PREENCHER] Quem defende o projeto no cliente, quem usa e quem decide a renovação. Ter mais de um contato reduz o risco. Sem dados sensíveis.
 
 ## Marcos
 
@@ -1464,7 +1487,7 @@ proximo_contato: AAAA-MM-DD
 
 ## Saúde
 
-[A PREENCHER] Avaliação mais recente com data, sinais observados e motivo da cor.
+[A PREENCHER] Avaliação mais recente com data, os critérios de 12-sucesso-do-cliente.md, os sinais observados e o motivo da cor.
 
 ## Valor entregue
 
