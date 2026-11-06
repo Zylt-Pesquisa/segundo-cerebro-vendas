@@ -16,7 +16,7 @@ Você vai construir, no computador desta pessoa, o Segundo Cérebro da empresa d
 ## Regras de ouro
 
 1. Os arquivos do kit são copiados como estão. Troque apenas {{EMPRESA}} e {{DATA}}. Não resuma, não reordene, não melhore, não pule nenhum arquivo.
-2. Nunca invente informação sobre a empresa. Grave só o que a pessoa disse. O que você não souber fica como [A PREENCHER] seguido da pergunta que falta.
+2. Nunca invente informação sobre a empresa. Grave só o que a pessoa disse ou o que está escrito no site oficial da empresa. O que você não souber fica como [A PREENCHER] seguido da pergunta que falta.
 3. Faça no máximo 4 perguntas por mensagem e espere a resposta.
 4. Não peça senhas, dados bancários nem documentos pessoais. Se a pessoa oferecer, peça que não envie.
 5. Nunca sobrescreva arquivos que já existiam na pasta antes deste prompt. Se a pasta não estiver vazia, pare, avise e proponha criar uma subpasta nova. Os arquivos que você mesmo criou aqui podem ser preenchidos e atualizados na entrevista.
@@ -25,7 +25,7 @@ Você vai construir, no computador desta pessoa, o Segundo Cérebro da empresa d
 PREPARAR = """
 ## Passo 1 — Preparar
 
-Pergunte o nome da empresa (vira {{EMPRESA}}). A data de hoje (vira {{DATA}}) você usa da sua própria informação; só pergunte se não tiver acesso a ela. Escreva a data sempre no formato AAAA-MM-DD, convertendo se a pessoa responder de outro jeito.
+Pergunte, na mesma mensagem, o nome da empresa (vira {{EMPRESA}}) e o endereço do site dela. Explique em meia frase que você vai ler o site para perguntar menos; se a empresa não tiver site, siga sem ele. A data de hoje (vira {{DATA}}) você usa da sua própria informação; só pergunte se não tiver acesso a ela. Escreva a data sempre no formato AAAA-MM-DD, convertendo se a pessoa responder de outro jeito.
 """
 
 CONFERIR = """
@@ -48,7 +48,7 @@ Faça esta conferência duas vezes: logo depois de criar a estrutura e de novo a
 ENTREVISTA_REF = """
 ## Passo 4 — Entrevista guiada e fechamento
 
-Abra o arquivo ENTREVISTA.md do kit e siga-o do começo ao fim. Ele traz as regras, os 10 blocos de perguntas e o fechamento.
+Abra o arquivo ENTREVISTA.md do kit e siga-o do começo ao fim. Ele traz as regras, a pesquisa no site da empresa (Etapa 0), os 10 blocos de perguntas e o fechamento.
 """
 
 # ------------------------------------------------------------------ PROMPT-CLAUDE
@@ -56,7 +56,7 @@ CLAUDE_USO = """1. Instale o Google Drive para computador (ou use o OneDrive da 
 2. Dentro da pasta do Drive (Meu Drive), crie uma pasta vazia chamada Segundo Cerebro.
 3. Abra o Claude Desktop, entre no Cowork e adicione essa pasta à conversa. O Claude Code também funciona, mas é feito para quem programa.
 4. Copie o prompt abaixo (botão de copiar no canto direito do quadro) e cole na conversa.
-5. Responda às perguntas. A conversa leva de 40 a 60 minutos e você pode parar e continuar depois.
+5. Tenha à mão o endereço do site da empresa: a IA lê o site e só pergunta o que faltar. Responda às perguntas. Você pode parar e continuar depois.
 """
 
 CLAUDE_P2 = """
@@ -76,7 +76,7 @@ A pasta de destino é a que a pessoa selecionou. Se nenhuma pasta estiver seleci
 GPT_USO = """1. Baixe o kit neste endereço (ele baixa um arquivo ZIP): @@ZIP@@
 2. Abra uma conversa nova no ChatGPT, de preferência uma que tenha análise de dados ou execução de código ligada, e anexe o ZIP.
 3. Copie o prompt abaixo (botão de copiar no canto direito do quadro) e cole na conversa.
-4. Responda às perguntas. A conversa leva de 40 a 60 minutos.
+4. Tenha à mão o endereço do site da empresa: a IA lê o site e só pergunta o que faltar. Responda às perguntas.
 5. No final você recebe um arquivo ZIP com a sua pasta pronta. Baixe e descompacte em uma pasta do seu computador, de preferência dentro do Google Drive ou do OneDrive. Essa é a pasta do seu Segundo Cérebro.
 
 Se o ChatGPT não conseguir abrir o ZIP, ele vai pedir que você descompacte o kit no computador e anexe alguns arquivos. Siga o que ele pedir.
@@ -103,7 +103,7 @@ Este arquivo cria, no seu computador, o Segundo Cérebro da sua empresa: uma pas
 1. Abra o Claude (Cowork ou Claude Code) ou o ChatGPT.
 2. Se a ferramenta permitir, selecione uma pasta vazia do seu computador para a IA trabalhar. Se não permitir, siga assim mesmo.
 3. Cole este arquivo inteiro na conversa. Se preferir, anexe o arquivo e escreva: "Execute o prompt anexo".
-4. Responda às perguntas. A conversa leva de 40 a 60 minutos e você pode parar e continuar depois.
+4. Tenha à mão o endereço do site da empresa: a IA lê o site e só pergunta o que faltar. Responda às perguntas. Você pode parar e continuar depois.
 
 """
 

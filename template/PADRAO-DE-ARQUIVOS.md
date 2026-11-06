@@ -28,7 +28,7 @@ A IA lê muito texto e erra quando os arquivos são longos, vagos ou diferentes 
 - `resumo` — uma frase de até 200 caracteres dizendo o que o arquivo contém. A IA usa o resumo para decidir se abre o arquivo. Reescreva o resumo sempre que o conteúdo mudar.
 - `status` — rascunho (ainda não revisado pela pessoa), vigente (revisado e confirmado; lacunas que sobrarem continuam marcadas com [A PREENCHER]), substituido (não vale mais), arquivado (histórico), modelo (template), reservado (ainda não usar).
 - `atualizado_em` — data AAAA-MM-DD da última alteração.
-- `fonte` — de onde veio a informação (entrevista inicial, reunião de AAAA-MM-DD, e-mail, conversa com a IA, documento).
+- `fonte` — de onde veio a informação (entrevista inicial, site da empresa, reunião de AAAA-MM-DD, e-mail, conversa com a IA, documento).
 - `relacionados` — lista de caminhos relativos de arquivos ligados a este.
 
 Campos extras por tipo ficam abaixo dos comuns. Cliente: nome, apelidos, id_crm, responsavel, etapa_funil, produto, proximo_contato, ultimo_resultado. Decisão: data, decisor, cliente, projeto, revisar_em, substituido_por. Aprendizado: data, origem, cliente, categoria. Projeto: responsavel, prazo, andamento. Diário: data, clientes. Inbox: origem, data, cliente, processado. Plano de sucesso (tipo cliente, em 02-Memoria/sucesso): nome, cliente, responsavel, inicio, saude, proxima_revisao, proximo_contato. Histórico antigo de cliente (tipo cliente, em 02-Memoria/clientes/historico): cliente. O campo `cliente` sempre leva o nome do arquivo da ficha do cliente, sem `.md` (por exemplo, casa-clara-esquadrias), ou a palavra vazio quando a nota não é sobre um cliente.
